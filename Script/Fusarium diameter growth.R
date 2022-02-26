@@ -52,7 +52,7 @@ Faith <- Faith %>% mutate(across(.cols = c(1:3),.fns = factor))
 theme_set(theme_test())
 
 Faith %>% group_by(Hours, Isolate.Code) %>%
-  summarise(Diameter.growth = mean(Diameter.growth)) %>%
+ summarise(Diameter.growth = mean(Diameter.growth)) %>%
   ggplot(aes(Hours, Diameter.growth, group = Isolate.Code, col = Isolate.Code)) +
   geom_line(size = 1) + scale_color_manual(name = 'Isolate codes', values =  c("#EEDFCC", "#76EEC6", "#00008B", "#FF8C00", "#006400", "#EE1289", "#528B8B", "#8B7500", "#0F0F0F", "#F0E68C", "#00FF00", "#8DB6CD", "#FF4500", "#EE0000", "#43CD80", "#C0FF3E", "#00F5FF", "#CDC9C9", "#545454", "#0000FF", "#8B008B", "#FFFF00", "#D2691E", "#8B7500", "#B452CD")) +
   theme(
@@ -72,7 +72,7 @@ ggsave('Diameter1.tiff',path = 'Plot',width = 12,height = 9,dpi = 300)
 
 # Alternatively Option Two
 
-# install.packages("devtools") # Uncomment this line and install the package if you dont have it.
+# install.packages("devtools") # Uncomment this line and install the package if you don't have it.
 
 # devtools::install_github("mtennekes/cols4all")
 
