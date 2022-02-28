@@ -104,7 +104,7 @@ Faith %>% group_by(Hours, Isolate.Code) %>%
     panel.background = element_blank(),
     axis.line = element_line()
   ) +
-  labs(y = 'Diameter growth')+
+  labs(x='Suspected Fusarium species', y=expression('Spore density for chlamydospores'~(10^4)))+
   guides(color=guide_legend(ncol = 1, byrow=FALSE))
 
 
