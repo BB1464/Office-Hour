@@ -1,0 +1,61 @@
+---
+title: "Demystifying R and R Studio"
+author: "Oluwafemi Oyedele"
+date: '2022-02-28'
+output: pdf_document
+---
+
+# Introduction to R and R Studio Environment
+
+# Data types and data structures in R
+
+# Apply family of functions in R
+
+# Introduction to the tidyverse
+
+- Data Import
+
+- Data wrangling
+
+- Data Visualization 
+
+# Design of Experiment in R
+
+# Introduction to linear, generalized linear, and mixed model in R
+
+# Post hoc test 
+
+# Multi-location trials using R
+
+
+# Communication using R Markdown
+
+# Geo-Spatial Analysis in R
+
+# Machine Learning in R
+
+- Supervised Machine Learning (Regression and Classification)
+
+- UnSupervised Machine Learning (Clustering and Dimension Reduction)
+
+
+# Duration of the Training is One Month but  I can extend it to ensure you follow along.
+
+
+# Proprosed Date: Monday 7th of March 2022 to 7th of April 2022
+
+# Duration: 1 hour 30 minute  from Monday to Friday
+
+# The Training shall be online
+
+
+# Bonus Topic: 
+
+# **Version Control using  gith and Github**
+
+# **Building of personal Website in R**
+
+
+
+
+# Amount: **50,000**
