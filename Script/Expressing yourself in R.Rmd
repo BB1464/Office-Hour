@@ -1,0 +1,24 @@
+---
+title: "Expressing yourself in R"
+subtitle: 
+author: "Oluwafemi Oyedele"
+institute: "Research Fellow, IITA"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: ['default','uio','uio-fonts']
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+- Brief overview of the R environment
+
+- Introduction to the tidyverse
+
+```{r}
+library(tidyverse)
+```
+
