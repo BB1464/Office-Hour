@@ -113,6 +113,3 @@ gss_cat %>%
   mutate(relig=fct_reorder(.f = relig,tvhours)) %>%
   ggplot(aes(tvhours,relig))+geom_point()
 
- # Introduction to Swirl
-library(swirl)
-swirl()
