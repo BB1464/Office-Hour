@@ -1,106 +1,38 @@
-library(agridat)
-library(desplot)
+# Import SixSigma package
+library(SixSigma)
 
-data(yates.oats)
+# Design the experiment (2^3)
+ExperimentDesign <- expand.grid(A = gl(2, 1, labels = c("-", "+")),
+                                B = gl(2, 1, labels = c("-", "+")),
+                                C = gl(2, 1, labels = c("-", "+")))
 
+# Randomize the experiment
+ExperimentDesign$ord <- sample(1:8, 8)
+ExperimentDesign[order(ExperimentDesign$ord), ]
 
-###########################################################################
-###########################################################################
-###                                                                     ###
-###                  DESIGN OF FIELD EXPERIMENT LAYOUT                  ###
-###                                                                     ###
-###########################################################################
-###########################################################################
+# Create replicates
+ss.data.doe1 <- data.frame(repl = rep(1:2, each = 8),
+                           rbind(ExperimentDesign))
+ss.data.doe1
 
-
-desplot(yates.oats,block~col+row,col=nitro,text=gen,cex=1,out1=block,out2=gen,out2.gpar=list(col='gray50',lwd=1,lty=1))
-
-
-
-
-############################################################################
-############################################################################
-###                                                                      ###
-###             DESIGN OF FIELD EXPERIMENT LAYOUT APPROACH 2             ###
-###                                                                      ###
-############################################################################
-############################################################################
-
-
-data(yates.oats)
-dat <- yates.oats
+# Add responses
+ss.data.doe1$response <- c(5.33, 6.99, 4.23, 6.61,
+                           2.26, 5.75, 3.26, 6.24,
+                           5.7, 7.71, 5.13, 6.76,
+                           2.79, 4.57, 2.48, 6.18)
+ss.data.doe1
 
 
 
-libs(desplot)
-# Experiment design & yield heatmap
-desplot(dat, block ~ col*row, col.regions=c("black","yellow"),
-        out1=block, num=nitro, col=gen,
-        cex=1, aspect=511/176, # true aspect
-        main="yates.oats")
 
+#-------- PAU Student Randomization Scrpt for 4 Factors -------------------
+#PAU Script
+# Design the experiment (2^3)
+ExperimentalDesign <- expand.grid(Genotypes = gl(4, 1, labels = c("a", "b",'c','d')),
+                                REP = gl(3, 1, labels = c(1,2,3)),
+                                Explant = gl(3, 1, labels = c("T1", "T2",'T3')),
+                                Media_Types = gl(2, 1, labels = c('t','m')),
+                                Seed_per_plant =  gl(10,1, labels = c(1,2,3,4,5,6,
+                                                                      7,8,9,10)))
 
-# Roughly linear gradient across the field.  The right-half of each
-# block has lower yield.  The blocking is inadequate!
-
-libs("lattice")
-xyplot(yield ~ col|factor(nitro), dat,
-       type = c('p', 'r'), xlab='col', as.table = TRUE,
-       main="yates.oats")
-
-libs(lme4)
-# Typical split-plot analysis. Non-significant gen differences
-m3 <- lmer(yield ~ factor(nitro) * gen + (1|block/gen), data=dat)
-# Residuals still show structure
-xyplot(resid(m3) ~ dat$col, xlab='col', type=c('p','smooth'),
-       main="yates.oats")
-
-# Add a linear trend for column
-m4 <- lmer(yield ~ col + factor(nitro) * gen + (1|block/gen), data=dat)
-# xyplot(resid(m4) ~ dat$col, type=c('p','smooth'), xlab='col')
-
-## Compare fits
-AIC(m3,m4)
-
-
-
-# --- nlme ---
-
-libs(nlme)
-libs(emmeans)
-# create unbalance
-dat2 <- yates.oats[-c(1,2,3,5,8,13,21,34,55),]
-m5l <- lme(yield ~ factor(nitro) + gen, random = ~1 | block/gen,
-           data = dat2)
-
-# asreml r 4 has a bug with asreml( factor(nitro))
-dat2$nitrof <- factor(dat2$nitro)
-
-# --- asreml4  ---
-libs(asreml)
-m5a <- asreml(yield ~ nitrof + gen,
-              random = ~ block + block:gen, data=dat2)
-libs(lucid)
-vc(m5l)
-vc(m5a)
-
-emmeans::emmeans(m5l, "gen")
-predict(m5a, data=dat2, classify="gen")$pvals
-
-# ----------
-
-if(0){
-
-  # Demonstrate use of regress package, compare to lme
-
-  libs(regress)
-  m6 <- regress(yield ~ nitrof + gen, ~block + I(block:gen), identity=TRUE,
-                verbose=1, data=dat)
-  summary(m6)
-
-  # ordinal causes clash with VarCorr
-  if(is.element("package:ordinal", search())) detach(package:ordinal)
-
-  m7 <- lme(yield ~ nitrof + gen, random = ~ 1|block/gen, data=dat)
-  lme4::VarCorr(m7)
-}
+ExperimentalDesign$Number_of_leaf<-c('') #To add column
