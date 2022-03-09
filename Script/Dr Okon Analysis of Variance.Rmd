@@ -1,0 +1,57 @@
+---
+title: "Analysis of Variance"
+author: "Oluwafemi Oyedele"
+date: '2022-03-09'
+output: html_document
+---
+
+
+###########################################################################
+###########################################################################
+###                                                                     ###
+###                     IMPORT THE REQUIRED LIBRARY                     ###
+###                                                                     ###
+###########################################################################
+###########################################################################
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(readxl)
+library(agricolae)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+dat <- read_excel(here::here('Data/NaCl experiment data.xlsx'))
+```
+
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+dat <- dat %>% 
+  mutate_at(.vars = c(1:3),.funs = as.factor)
+
+dat <- dat %>% 
+  mutate_if(is.character,as.numeric)
+
+glimpse(dat)
+```
+
+
+# Let me run a for loop
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+for (i in 4:ncol(dat)) {
+  print(paste('---',names(dat[i]),'---'))
+  model <- lm(dat[[i]]~Rep+NaCl*Cultivar,data=dat)
+  CV=cv.model(model)
+  print(CV)
+print(anova(model))
+lala=HSD.test(model,'NaCl',console = TRUE)
+lala=HSD.test(model,'Cultivar',console = TRUE)
+lala=HSD.test(model,c('NaCl','Cultivar'),console = TRUE)
+print(lala$comparison)
+}
+```
+
+
