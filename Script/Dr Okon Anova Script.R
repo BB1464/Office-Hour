@@ -93,3 +93,78 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
 
  # Save the Output
  ggsave('SWP.png',width = 9,height = 7,dpi = 300)
+
+
+ # Chl a
+
+ dat$NaCl <- dat$NaCl <- factor(dat$NaCl,levels = c('0 mM','50 mM','160 mM'))
+
+ ggplot(data = dat,aes(x = Cultivar,y=`Chl a`, fill = NaCl))+
+   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
+   scale_fill_brewer(palette = 'Set1')+
+   theme_classic()+
+   coord_cartesian(expand = c(0,0),ylim = c(0,2.5))+
+   ylab('Chl a')+
+   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+
+
+
+ # Save the Output
+ ggsave('Chl a.png',width = 9,height = 7,dpi = 300)
+
+
+
+ # Chl b
+
+ ggplot(data = dat,aes(x = Cultivar,y=`Chl b`, fill = NaCl))+
+   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
+   scale_fill_brewer(palette = 'Set1')+
+   theme_classic()+
+   coord_cartesian(expand = c(0,0),ylim = c(0,2.5))+
+   ylab('Chl b')+
+   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+
+
+
+ # Save the Output
+ ggsave('Chl b.png',width = 9,height = 7,dpi = 300)
+
+
+
+
+ # Chl a/b
+
+ ggplot(data = dat,aes(x = Cultivar,y=`ChI a/b`, fill = NaCl))+
+   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
+   scale_fill_brewer(palette = 'Set1')+
+   theme_classic()+
+   coord_cartesian(expand = c(0,0))+
+   ylab('Chl a/b')+
+   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+
+
+
+ # Save the Output
+ ggsave('Chl a_b.png',width = 9,height = 7,dpi = 300)
+
+
+
+
+ # Carotenoid
+
+ ggplot(data = dat,aes(x = Cultivar,y=Carotenoid, fill = NaCl))+
+   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
+   scale_fill_brewer(palette = 'Set1')+
+   theme_classic()+
+   coord_cartesian(expand = c(0,0))+
+   ylab('Carotenoid')+
+   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+
+
+
+ # Save the Output
+ ggsave('Carotenoid.png',width = 9,height = 7,dpi = 300)
