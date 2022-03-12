@@ -1,0 +1,71 @@
+---
+title: "Ben Result Output"
+author: "Ben"
+date: "3/7/2022"
+output: html_document
+---
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+setwd(dir = '~/../Desktop')
+```
+```{r, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+library(readxl)
+
+library(tidyverse)
+
+library(agricolae)
+```
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+data <- read_excel('Copy of BG BEN.xlsx',na = '.')
+```
+
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+
+
+colSums(is.na(data))
+
+dat=data %>% filter(across(.cols = everything(),.fns = ~!is.na(.)))
+
+colSums(is.na(dat))
+
+str(dat)
+
+dat=dat %>% mutate_at(.vars = c(1:7),.funs = factor)
+dat=dat %>% mutate_at(.vars = c(8:21),.funs = as.numeric)
+
+str(dat)
+```
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+dat1 <- dat %>% select(1:7,9,18)
+```
+
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
+for (i in 8:ncol(dat1)) {
+  print(paste('----',names(dat[i]),'----'))
+  model <- lm(dat1[[i]]~Replicate+Block+Accession*Location*WaterRegimes*Year,data=dat1)
+print(anova(model))  
+output=HSD.test(model,'Accession',console = TRUE)
+output=HSD.test(model,'Location',console = TRUE)
+output=HSD.test(model,'WaterRegimes',console = TRUE)
+output=HSD.test(model,'Year',console = TRUE)
+output=HSD.test(model,c('Accession','Location'),console = TRUE)
+output=HSD.test(model,c('Accession','WaterRegimes'),console = TRUE)
+output=HSD.test(model,c('Accession','Year'),console = TRUE)
+output=HSD.test(model,c('Location','WaterRegimes'),console = TRUE)
+output=HSD.test(model,c('Location','Year'),console = TRUE)
+output=HSD.test(model,c('WaterRegimes','Year'),console = TRUE)
+output=HSD.test(model,c('Accession','Location','WaterRegimes'),console = TRUE)
+output=HSD.test(model,c('Accession','WaterRegimes','Year'),console = TRUE)
+output=HSD.test(model,c('Location','WaterRegimes','Year'),console = TRUE)
+output=HSD.test(model,c('Accession','Location','WaterRegimes','Year'),console = FALSE)
+print(output$groups)
+}
+```
+
