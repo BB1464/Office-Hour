@@ -1,0 +1,71 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: T Test Analysis
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE,echo=FALSE,warning=FALSE,message=FALSE}
+library(readxl) # Read Excel Files
+library(tidyverse) # Easily Install and Load the 'Tidyverse'
+library(report) # Automated Reporting of Results and Statistical Models
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+data <- read_excel('Data/T-TEST ANALYSIS.xlsx')
+```
+
+# Analysis for Co
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Co~data$TREATMENT)
+```
+# Interpretation of the result for Co against Treatment using the report function in R  
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Co~data$TREATMENT) %>% report()
+```
+
+# Analysis for Cr
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Cr~data$TREATMENT)
+```
+
+# Interpretation of the result for Cr against Treatment using the report function in R  
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Cr~data$TREATMENT) %>% report()
+```
+
+# Analysis for Cd
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Cd~data$TREATMENT)
+```
+# Interpretation of the result for Cd against Treatment using the report function in R
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Cd~data$TREATMENT) %>% report()
+```
+
+# Analysis for Pb
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Pb~data$TREATMENT)
+```
+
+# Interpretation for Pb
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Pb~data$TREATMENT) %>% report()
+```
+
+# Analysis for Ni
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Ni~data$TREATMENT)
+```
+# Interpretation for Ni
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+t.test(data$Ni~data$TREATMENT) %>% report()
+```
+
