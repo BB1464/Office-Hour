@@ -46,7 +46,7 @@ dat$NaCl <- factor(dat$NaCl,levels = c('0 mM','50 mM','160 mM'))
 
 ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
-  stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
+  stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(0.9),width=.9,colour='black')+
   scale_fill_brewer(palette = 'Set1')+
   theme_classic()+
   coord_cartesian(expand = c(0,0))+
