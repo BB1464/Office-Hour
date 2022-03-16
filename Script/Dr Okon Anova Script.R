@@ -44,14 +44,15 @@ dat$NaCl <- factor(dat$NaCl,levels = c('0 mM','50 mM','160 mM'))
 
 # Salt Tolerance
 
+# I modified this script
 ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
-  stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(0.9),width=.9,colour='black')+
-  scale_fill_brewer(palette = 'Set1')+
+ stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(width = 0.9,preserve = NULL),width=.6,colour='black',size=0.7)+
+  scale_fill_manual(name='NaCl',values = c("darkgray", "#D4D4D4", "#737373"))+
   theme_classic()+
   coord_cartesian(expand = c(0,0))+
   ylab('Salt Tolerance')+
-  theme(text = element_text(family = 'serif',face = 'bold',size = 12))
+  theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = c(0.1,0.79),legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 # Save the Output
