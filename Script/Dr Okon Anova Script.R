@@ -48,7 +48,7 @@ dat$NaCl <- factor(dat$NaCl,levels = c('0 mM','50 mM','160 mM'))
 ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
   stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
  stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(width = 0.9,preserve = NULL),width=.6,colour='black',size=0.7)+
-  scale_fill_manual(name='NaCl',values = c("darkgray", "#D4D4D4", "#737373"))+
+  scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
   theme_classic()+
   coord_cartesian(expand = c(0,0))+
   ylab('Salt Tolerance')+
@@ -60,17 +60,16 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
 
 
 
-
  # Salt Tolerance Index
 
  ggplot(data = dat,aes(x = Cultivar,y=STI, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
    stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+  scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0))+
    ylab('Salt Tolerance Index')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 12))
+   theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = c(0.1,0.79),legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
@@ -84,11 +83,11 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
  ggplot(data = dat,aes(x = Cultivar,y=SWP, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
    stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0))+
    ylab('Stress Weighted Performance')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 12))
+   theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = 'top',legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
@@ -103,11 +102,11 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
  ggplot(data = dat,aes(x = Cultivar,y=`Chl a`, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
    stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+  scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0),ylim = c(0,2.5))+
    ylab('Chl a')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+   theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = 'top',legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
@@ -121,11 +120,11 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
  ggplot(data = dat,aes(x = Cultivar,y=`Chl b`, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
    stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0),ylim = c(0,2.5))+
    ylab('Chl b')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+  theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = 'top',legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
@@ -140,11 +139,11 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
  ggplot(data = dat,aes(x = Cultivar,y=`ChI a/b`, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
    stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0))+
    ylab('Chl a/b')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+ theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = 'top',legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
@@ -158,12 +157,12 @@ ggplot(data = dat,aes(x = Cultivar,y=ST, fill = NaCl))+
 
  ggplot(data = dat,aes(x = Cultivar,y=Carotenoid, fill = NaCl))+
    stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
-   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.7,colour='black')+
-   scale_fill_brewer(palette = 'Set1')+
+   stat_summary(geom = 'errorbar',fun.data = 'mean_se',position = position_dodge(.9),width=.5,colour='black')+
+scale_fill_manual(name='NaCl',values = c("#dfc27d", "#D4D4D4", "#737373"))+
    theme_classic()+
    coord_cartesian(expand = c(0,0))+
    ylab('Carotenoid')+
-   theme(text = element_text(family = 'serif',face = 'bold',size = 15))
+  theme(text = element_text(family = 'serif',face = 'bold',size = 12),legend.position = 'top',legend.title = element_text(family = 'serif',face = 'bold',size = 12),legend.text = element_text(family = 'serif',face = 'bold',size = 14),legend.background = element_blank(),axis.line = element_line(colour = 'black',size = 1),axis.ticks = element_line(colour = 'black',size = 1))
 
 
 
