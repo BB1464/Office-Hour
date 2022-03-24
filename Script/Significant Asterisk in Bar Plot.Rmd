@@ -228,7 +228,8 @@ sleep_mean_values %>%
   scale_y_continuous(limits = c(0, 26), expand = c(0, 0)) +
   guides(fill = FALSE)+
   labs(y='Mean Sleep',x='Vore')
-  # Rest of the code goes here
+  
+# Rest of the code goes here
 ```
 
 # Note that we have added a new datset to each geom_line. In addition, we need to define the aesthetic group = 1 to visualize a single line. Each text annotation needs a label. The labels are completely arbitrary. You would have to adapt them to your specific results. You may need to play around with the x and y values in the annotation to make them look good in your bar chart.
