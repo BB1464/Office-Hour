@@ -183,19 +183,24 @@ library(officer)
 
 # First Year Study Plan
 
+library(plotrix)
+library(tidyverse)
+
+set.seed(123)
+
 Ymd.format<-"%Y/%m/%d"
 
 gantt.info<-list(labels=
-                   c("Meta-Analysis","Research Proposal",'Startup of the Experiment',"Data collection"),
+                   c("Research Proposal","Meta-Analysis",'Startup of the Experiment',"Data collection",'Course Work'),
                  starts=
                    as.POSIXct(strptime(
-                     c("2022/06/01","2022/08/01","2022/08/01","2022/09/01"),
+                     c("2022/06/01","2022/07/01","2022/09/01","2022/09/01","2022/09/01"),
                      format=Ymd.format)),
                  ends=
                    as.POSIXct(strptime(
-                     c("2022/08/01","2022/08/31","2022/10/01","2022/12/31"),
+                     c("2022/08/01","2022/09/01","2022/10/01","2022/10/31","2022/12/31"),
                      format=Ymd.format)),
-                 priorities=c(1,2,3,4,5,6))
+                 priorities=c(1,2,3,4,5))
 
 
 vgridpos<-as.POSIXct(strptime(c("2022/01/01","2022/02/01","2022/03/01",
@@ -213,17 +218,19 @@ gantt.chart(gantt.info,main="First Year Study Plan (2022)",
 
 # Second Year Study Plan
 
+set.seed(123)
+
 
 Ymd.format<-"%Y/%m/%d"
 gantt.info<-list(labels=
-                   c("Data Collection","Writting of First Draft Thesis","Model calibration and Validation","Data Wrangling and Analysis","Writting of Manuscript"),
+                   c("Data Collection","Writting of First Draft Thesis","Model calibration and Validation","Data Wrangling and Analysis","Writting of Manuscript","Course Work"),
                  starts=
                    as.POSIXct(strptime(
-                     c("2022/01/01","2022/01/01","2022/09/01","2022/09/01","2022/09/01"),
+                     c("2022/01/01","2022/01/01","2022/09/01","2022/09/01","2022/09/01","2022/01/01"),
                      format=Ymd.format)),
                  ends=
                    as.POSIXct(strptime(
-                     c("2022/10/01","2022/07/31","2022/12/31","2022/12/01","2022/12/31"),
+                     c("2022/10/01","2022/07/31","2022/12/31","2022/12/01","2022/12/31","2022/09/01"),
                      format=Ymd.format)),
                  priorities=c(1,2,3,4,5,6))
 
@@ -243,6 +250,8 @@ gantt.chart(gantt.info,main="Second Year Study Plan (2023)",
 
 
 # Third Year Plan
+
+set.seed(123)
 
 Ymd.format<-"%Y/%m/%d"
 gantt.info<-list(labels=
@@ -273,6 +282,7 @@ gantt.chart(gantt.info,main="Third Year Study Plan (2024)",
 
 
 # Fourth Year
+set.seed(123)
 
 Ymd.format<-"%Y/%m/%d"
 gantt.info<-list(labels=
