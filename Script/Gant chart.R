@@ -223,7 +223,7 @@ set.seed(123)
 
 Ymd.format<-"%Y/%m/%d"
 gantt.info<-list(labels=
-                   c("Data Collection","Writting of First Draft Thesis","Model calibration and Validation","Data Wrangling and Analysis","Writting of Manuscript","Course Work"),
+                   c("Data Collection","Writting of First Draft Thesis","Data Wrangling and Analysis","Model Calibration and Validation","Writting of Manuscript","Course Work"),
                  starts=
                    as.POSIXct(strptime(
                      c("2022/01/01","2022/01/01","2022/09/01","2022/09/01","2022/09/01","2022/01/01"),
