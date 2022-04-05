@@ -105,6 +105,8 @@ pl <- pl + labs(x = "Date")
 pl <- pl + labs(y = "Items")
 pl <- pl + scale_color_manual(values = c("red", "blue"))
 pl <- pl + theme(legend.position = "none")
+
+
 pl <- pl + scale_x_date(name = "Dates"
                         ,  date_labels = "%d %b"
                         ,  date_breaks = "1 week"
