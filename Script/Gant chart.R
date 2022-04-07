@@ -218,6 +218,8 @@ gantt.chart(gantt.info,main="First Year Study Plan (2022)",
             priority.legend=FALSE,vgridpos=vgridpos,vgridlab=vgridlab,hgrid=TRUE)
 
 
+ggsave(filename = 'Graph/Ghant.png',width = 20,height = 8,dpi =400,bg = '#f5f5f5',plot = last_plot())
+
 # Second Year Study Plan
 
 set.seed(123)
