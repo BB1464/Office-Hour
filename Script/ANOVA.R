@@ -16,3 +16,9 @@ model <- frbd3fact(data = dat[5:6],replicationvector = dat$Replication,fact.A = 
 
 
 model
+
+
+# CRD Analysis
+model <- crd(data = dat[5:6],trt.vector = dat$Nitrogen,MultipleComparisonTest = 2)
+
+model
