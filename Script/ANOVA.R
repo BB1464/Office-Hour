@@ -22,3 +22,8 @@ model
 model <- crd(data = dat[5:6],trt.vector = dat$Nitrogen,MultipleComparisonTest = 2)
 
 model
+
+
+mod <- fcrd2fact(data = dat[5:6],fact.A = dat$Nitrogen,fact.B = dat$Phosphorus,Multiple.comparison.test = 2)
+
+mod
