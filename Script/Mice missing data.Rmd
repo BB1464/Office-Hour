@@ -1,0 +1,107 @@
+---
+title: "Data Analysis"
+output: word_document
+---
+```{r}
+setwd(dir='~/../Desktop')
+library(readxl)
+library(mice)
+library(VIM)
+library(tidyverse)
+library(agricolae)
+```
+```{r}
+data<-read_excel('Template.xlsx')
+```
+
+```{r}
+summary(data)
+md.pattern(data)#This display the missing data pattern
+
+mice_plot<-aggr(data,col=c('navyblue','yellow'),numbers=TRUE,sortVars=TRUE,labels=names(data),cex.axis=.7,gap=3,ylab=c('Missing data','Pattern'))
+
+
+#Missing data imputation
+imputed_Data<-mice(data,m=5,maxit=50,method='pmm', seed = 500)
+summary(imputed_Data)
+
+#Check imputed values
+imputed_Data$imp$Radicle_Length
+imputed_Data$imp$SEEDLING_LGTH_IN_CM
+imputed_Data$imp$NO._OF_LEAVES
+imputed_Data$imp$NO._OF_ROOTS
+
+#Get complete data (2nd out of 5)
+completeData<-complete(imputed_Data,1)
+completeData
+
+#---------- First Model -------------
+completeData<-completeData %>% mutate_if(is.character,factor)
+completeData$REP<-as.factor(completeData$REP)
+str(completeData)
+
+#----- Model 1 --------------------
+model1<-lm(Radicle_Length~REP+Genotypes*Explant*Media_Types*Seed_per_plant,data=completeData)
+
+anova(model1)
+
+#-----------Mean Seperation -----------
+duncan.test(model1,'Genotypes',console=T)
+duncan.test(model1,'Explant',console=T)
+duncan.test(model1,'Media_Types',console=T)
+duncan.test(model1,'Seed_per_plant',console=T)
+duncan.test(model1,c('Genotypes','Explant','Media_Types','Seed_per_plant'),console=T)
+
+
+#--------- Model 2 -------------
+model2<-lm(SEEDLING_LGTH_IN_CM~REP+Genotypes*Explant*Media_Types*Seed_per_plant,data=completeData)
+
+anova(model2)
+
+#-----------Mean Seperation -----------
+duncan.test(model2,'Genotypes',console=T)
+duncan.test(model2,'Explant',console=T)
+duncan.test(model2,'Media_Types',console=T)
+duncan.test(model2,'Seed_per_plant',console=T)
+duncan.test(model2,c('Genotypes','Explant','Media_Types','Seed_per_plant'),console=T)
+
+#-     Model 3 ----------
+model3<-lm(NO._OF_LEAVES~REP+Genotypes*Explant*Media_Types*Seed_per_plant,data=completeData)
+
+anova(model3)
+
+##--------- Interraction Plot ----------------
+library(extrafont)
+completeData %>% group_by(Explant,Media_Types) %>%
+  summarise(n=n(),NL=mean(NO._OF_LEAVES),sd=sd(NO._OF_LEAVES),se=sd/sqrt(n)) %>%
+  ungroup() %>%
+  ggplot(aes(Explant,NL,fill=Media_Types))+geom_col(position = position_dodge())+
+  geom_errorbar(aes(ymin=NL-se,ymax=NL+se),width=.2,position=position_dodge(.9))+
+  labs(y='Number of Leaves')+
+  theme_test()+
+  scale_fill_brewer(palette = 'Set1',name='Media Types')+
+  theme(axis.title = element_text(size = 12,face='bold',family = 'Time New Roman'),
+        legend.text = element_text(size=12,family = 'Time New Roman'),
+        legend.title =element_text(size=12,face='bold',family = 'Time New Roman'),
+        axis.text=element_text(size=12,face='bold',family = 'Time New Roman'))
+#-----------Mean Seperation -----------
+duncan.test(model3,'Genotypes',console=T)
+duncan.test(model3,'Explant',console=T)
+duncan.test(model3,'Media_Types',console=T)
+duncan.test(model2,'Seed_per_plant',console=T)
+duncan.test(model3,c('Genotypes','Explant','Media_Types','Seed_per_plant'),console=T)
+
+
+#-     Model 4 ----------
+model4<-lm(NO._OF_ROOTS~REP+Genotypes*Explant*Media_Types*Seed_per_plant,data=completeData)
+
+anova(model4)
+
+#-----------Mean Seperation -----------
+duncan.test(model4,'Genotypes',console=T)
+duncan.test(model4,'Explant',console=T)
+duncan.test(model4,'Media_Types',console=T)
+duncan.test(model4,'Seed_per_plant',console=T)
+duncan.test(model4,c('Genotypes','Explant','Media_Types','Seed_per_plant'),console=T)
+```
+

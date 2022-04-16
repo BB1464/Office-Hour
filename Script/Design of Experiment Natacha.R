@@ -12,12 +12,51 @@ setwd(dir = '~/../Desktop')
 
 library(tidyverse)
 library(doebioresearch)
+library(readxl)
+library(mice)
+library(VIM)
+library(tidyverse)
+library(agricolae)
 
-dat <- read_csv(file = 'Data/dat.csv')
+
+dat <- read_csv(file = 'Data/dat3.csv')
 
 
 
-dat1 <- dat1 %>% mutate(across(.cols = c(2:7),.fns = factor))
+dat <- dat %>% mutate(across(.cols = c(1:4),.fns = factor))
+
+
+
+# Missing data
+summary(data)
+md.pattern(data)#This display the missing data pattern
+
+
+# mice_plot<-aggr(data,col=c('navyblue','yellow'),numbers=TRUE,sortVars=TRUE,labels=names(data),cex.axis=.7,gap=3,ylab=c('Missing data','Pattern'))
+
+
+#Missing data imputation
+imputed_Data<-mice(data,m=5,maxit=50,method='pmm', seed = 500)
+summary(imputed_Data)
+
+# #Check imputed values
+# imputed_Data$imp$Radicle_Length
+# imputed_Data$imp$SEEDLING_LGTH_IN_CM
+# imputed_Data$imp$NO._OF_LEAVES
+# imputed_Data$imp$NO._OF_ROOTS
+
+
+#Get complete data (2nd out of 5)
+completeData<-complete(imputed_Data,1)
+completeData
+
+
+# Demo Mocel
+model <- crd(data = completeData[5:11],trt.vector = completeData$Accesion,MultipleComparisonTest = 3)
+
+
+model
+
 
 
 #################################################################
