@@ -41,3 +41,7 @@ funnel(mod)
 viz_funnel(mod)
 
 
+# View the summary output
+
+summary(mod)
+
