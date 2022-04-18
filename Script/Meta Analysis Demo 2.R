@@ -10,6 +10,7 @@
 library(metafor)
 library(metaviz)
 library(ggplot2)
+library(ggtext)
 
 dat <- dat.bcg
 
@@ -44,4 +45,6 @@ viz_funnel(mod)
 # View the summary output
 
 summary(mod)
+
+
 
