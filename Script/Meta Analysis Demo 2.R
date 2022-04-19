@@ -23,6 +23,12 @@ es <- escalc(measure = 'RR',ai = tpos,bi = tneg,ci = cpos,di = cneg,data=dat)
 
 mod <- rma.mv(yi = yi,V = vi,random = ~author|alloc,data=es)
 
+summary(mod)
+
+predict(object = mod)
+confint(mod)
+
+
 
 # Visualize the forest plot
 
@@ -47,4 +53,9 @@ viz_funnel(mod)
 summary(mod)
 
 
+# Test for publication bias
 
+ranktest(mod)
+# regtest(mod) # This is used for rma functions
+
+# If the P value is not statistically significant, then their is no evidence of publication bias.
