@@ -17,13 +17,19 @@ library(mice)
 library(VIM)
 library(tidyverse)
 library(agricolae)
+library(janitor)
 
 
-dat <- read_csv(file = 'Data/dat3.csv')
+# New dataset
+data <- read_csv('design.csv') %>% clean_names()
+
+
+data <- read_csv(file = 'Data/design to be send.csv') %>%
+  clean_names()
 
 
 
-dat <- dat %>% mutate(across(.cols = c(1:4),.fns = factor))
+data <- data %>% mutate(across(.cols = c(1:4),.fns = factor))
 
 
 
@@ -47,12 +53,12 @@ summary(imputed_Data)
 
 
 #Get complete data (2nd out of 5)
-completeData<-complete(imputed_Data,1)
+completeData<-complete(imputed_Data,2)
 completeData
 
 
 # Demo Mocel
-model <- crd(data = completeData[5:11],trt.vector = completeData$Accesion,MultipleComparisonTest = 3)
+model <- doebioresearch::crd(data = completeData[5:11],trt.vector = completeData$accesion,MultipleComparisonTest = 2)
 
 
 model
@@ -113,7 +119,7 @@ ExperimentalDesign <- expand.grid(State = gl(3, 1, labels = c("Oueme", "Zou",'Ke
 
 
 
-write.csv(x = ExperimentalDesign,'design.csv',row.names = FALSE)
+write.csv(x = ExperimentalDesign,'design2.csv',row.names = FALSE)
 
 
 

@@ -1,0 +1,67 @@
+---
+title: "Analysis of Variance"
+author: "Oluwafemi Oyedele"
+date: '2022-04-19'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(doebioresearch)
+library(readxl)
+library(mice)
+library(VIM)
+library(tidyverse)
+library(agricolae)
+library(janitor)
+library(report)
+
+#write_csv(x = completeData,file = 'Data/design2.csv')
+# New dataset
+data <- read_csv('Data/design2.csv') %>% clean_names()
+
+```
+
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+data <- data %>% mutate(across(.cols = c(1:4),.fns = factor))
+```
+
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+#################################################################
+##                            Model                            ##
+#################################################################
+
+set.seed(100)
+
+
+for (i in 5:ncol(data)) {
+print(paste('----',names(data[i]),'----'))
+
+model <- lm(data[[i]]~accesion,data=data)
+print(anova(model))
+print(report(anova(model)))
+
+CV <- cv.model(model)
+print(CV)
+
+post_hoc <- HSD.test(y = model,trt = 'accesion',console = TRUE)
+
+print(post_hoc$comparison)
+
+  
+}
+```
+
+
+
+
+
+
+
