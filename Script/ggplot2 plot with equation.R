@@ -45,7 +45,7 @@ df$y <- 2 + 3 * df$x + rnorm(100, sd = 40)
 my.formula <- y ~ x
 
 p <- ggplot(data = df, aes(x = x, y = y)) +
-  geom_smooth(method = "lm", se=FALSE, color="black", formula = my.formula) +
+  geom_smooth(method = "lm", se=FALSE, color="black", formula = my.formula)+
   stat_poly_eq(formula = my.formula,
                aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")),
                parse = TRUE) +
