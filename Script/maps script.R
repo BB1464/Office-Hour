@@ -45,3 +45,17 @@ dat$gn_name <- str_replace(string = dat$gn_name,pattern = 'State',replacement = 
 leaflet() %>%
   addTiles() %>%
   addMarkers(lng = dat$longitude,lat = dat$latitude,data = dat,label =~gn_name)
+
+
+
+# Leaflet map
+
+library(leaflet)
+
+popup <-  c('Robin','Jakub', 'Jannes')
+
+leaflet() %>%
+addProviderTiles('NASAGIBS.ViirsEarthAtNight2012') %>%
+addMarkers(lng = c(-3, 23, 11),
+             lat = c(52, 53, 49),
+             popup = popup,label = popup)
