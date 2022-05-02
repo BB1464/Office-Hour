@@ -38,9 +38,6 @@ summary(data)
 md.pattern(data)#This display the missing data pattern
 
 
-# mice_plot<-aggr(data,col=c('navyblue','yellow'),numbers=TRUE,sortVars=TRUE,labels=names(data),cex.axis=.7,gap=3,ylab=c('Missing data','Pattern'))
-
-
 #Missing data imputation
 imputed_Data<-mice(data,m=5,maxit=50,method='pmm', seed = 500)
 summary(imputed_Data)
