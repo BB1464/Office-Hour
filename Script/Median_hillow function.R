@@ -13,6 +13,11 @@ ggplot(data = iris)+
 ggplot(data = iris)+
   aes(x = Species,y = Sepal.Length)+
   geom_jitter(width = 0.25,col='gray')+
-  stat_summary(fun.data = median_hilow,col='red',size=1,fun.args = list(conf.int=0.50))+
+  stat_summary(fun.data = median_hilow,col='red',size=1,fun.args = list(conf.int=0.95))+
   scale_y_continuous(limits = c(0,10),breaks = seq(0,10,2))+
   theme_classic()
+
+
+
+
+
