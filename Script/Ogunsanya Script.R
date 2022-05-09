@@ -21,7 +21,7 @@ data1 <- data1 %>% mutate(across(.cols = c(1:4),.fns = factor))
 p1 <- ggplot(data = data1,mapping = aes(x = Species,y = `Stem Colour`,fill=Category...4))+geom_col()
 
 
-Leaf Margin colours
+# Leaf Margin colours
 p2 <- ggplot(data = data1,mapping = aes(x = Species,y = `Leaf Margin Colour`,fill=Category...8))+geom_col()
 
 

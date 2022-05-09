@@ -33,3 +33,12 @@ fviz_pca_biplot(pca)
 fviz_pca_var(pca)
 get_pca_var(pca)
 
+
+# How to decide on number of clusters to use
+fviz_nbclust(mtcars, kmeans)
+
+# Second Approach
+fviz_nbclust(mtcars, kmeans, method = "wss")
+
+# Visualize the clusters
+fviz_cluster(object = KM,data = mtcars)
