@@ -32,6 +32,7 @@ dat <- data %>% pivot_longer(cols = c(15:19),names_to = 'Week',values_to = 'Leaf
 
 
 
+
 dat2 <- dat %>% select(-c(2:4)) %>% mutate(across(.cols = c(1),.fns = factor))
 
 dat2 <- dat2 %>% drop_na()
