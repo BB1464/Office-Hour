@@ -25,5 +25,22 @@ p1 <- ggplot(data = data1,mapping = aes(x = Species,y = `Stem Colour`,fill=Categ
 p2 <- ggplot(data = data1,mapping = aes(x = Species,y = `Leaf Margin Colour`,fill=Category...8))+geom_col()
 
 
+#Petiole Colour
+ggplot(data = data1,aes(x = Species,y = `Petiole Colour`,fill=Category...8))+
+  geom_col()
+
+
+# Leaf density
+ggplot(data = data1,aes(x = Species,y = `Leaf density`,fill=Category...12))+
+  geom_col()
+
+# Leaf Colour
+ggplot(data = data1,aes(x = Species,y = `Leaf Colour-`,fill=Category...14))+
+  geom_col()
+
+
+
+
+
 
 plot_grid(p1,p2,nrow = 2,ncol = 1,rel_widths = c(1,1))
