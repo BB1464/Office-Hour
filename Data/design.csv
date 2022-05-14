@@ -1,1081 +1,221 @@
-State,REP,Villages,Accesion,Days to emergence,1-PLT Height(cm),1-Nbr of leaf/plant,1-Leaf length,2-Leaf width,Nb OF Suckers,Nb OF Stolons
-Oueme,1,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Zou,1,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Ketou,1,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Oueme,2,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Zou,2,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Ketou,2,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Oueme,3,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Zou,3,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Ketou,3,Hounvigue,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Oueme,1,Adjohoun,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Zou,1,Adjohoun,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Ketou,1,Adjohoun,O-B-H stolon  21,21,35.4,5,12.4,14.9,0,4
-Oueme,2,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Zou,2,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Ketou,2,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Oueme,3,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Zou,3,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Ketou,3,Adjohoun,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Oueme,1,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Zou,1,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Ketou,1,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Oueme,2,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Zou,2,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Ketou,2,Zounnou,O-B-H stolon  22,19,35.75,4,15.85,18.9,0,3
-Oueme,3,Zounnou,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Zou,3,Zounnou,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Ketou,3,Zounnou,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Oueme,1,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Zou,1,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Ketou,1,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Oueme,2,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Zou,2,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Ketou,2,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Oueme,3,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Zou,3,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Ketou,3,Sodji,O-B-H stolon  23,9,45.58,6,16.55,20.65,0,5
-Oueme,1,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Zou,1,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Ketou,1,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Oueme,2,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Zou,2,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Ketou,2,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Oueme,3,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Zou,3,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Ketou,3,Hounvigue,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Oueme,1,Adjohoun,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Zou,1,Adjohoun,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Ketou,1,Adjohoun,O-B-H stolon  24,9,28.7,6,11.15,13.9,0,4
-Oueme,2,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Zou,2,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Ketou,2,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Oueme,3,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Zou,3,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Ketou,3,Adjohoun,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Oueme,1,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Zou,1,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Ketou,1,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Oueme,2,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Zou,2,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Ketou,2,Zounnou,O-B-H stolon  25,9,43.08,4,16.4,17.75,0,4
-Oueme,3,Zounnou,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Zou,3,Zounnou,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Ketou,3,Zounnou,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Oueme,1,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Zou,1,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Ketou,1,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Oueme,2,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Zou,2,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Ketou,2,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Oueme,3,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Zou,3,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Ketou,3,Sodji,O-B-H stolon  26,9,40.21,4,15,17.85,0,2
-Oueme,1,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Zou,1,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Ketou,1,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Oueme,2,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Zou,2,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Ketou,2,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Oueme,3,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Zou,3,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Ketou,3,Hounvigue,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Oueme,1,Adjohoun,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Zou,1,Adjohoun,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Ketou,1,Adjohoun,O-B-H stolon  27,14,36.614,6,14.25,17.6,0,5
-Oueme,2,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Zou,2,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Ketou,2,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Oueme,3,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Zou,3,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Ketou,3,Adjohoun,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Oueme,1,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Zou,1,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Ketou,1,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Oueme,2,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Zou,2,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Ketou,2,Zounnou,O-B-H stolon  28,7,41.49,4,15.85,19.2,0,2
-Oueme,3,Zounnou,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Zou,3,Zounnou,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Ketou,3,Zounnou,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Oueme,1,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Zou,1,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Ketou,1,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Oueme,2,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Zou,2,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Ketou,2,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Oueme,3,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Zou,3,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Ketou,3,Sodji,O-B-H stolon  29,9,35.8,5,13.4,14.65,0,5
-Oueme,1,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Zou,1,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Ketou,1,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Oueme,2,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Zou,2,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Ketou,2,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Oueme,3,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Zou,3,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Ketou,3,Hounvigue,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Oueme,1,Adjohoun,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Zou,1,Adjohoun,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Ketou,1,Adjohoun,O-B-H corm  30,21,29.75,6,12.15,14.45,0,3
-Oueme,2,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Zou,2,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Ketou,2,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Oueme,3,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Zou,3,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Ketou,3,Adjohoun,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Oueme,1,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Zou,1,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Ketou,1,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Oueme,2,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Zou,2,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Ketou,2,Zounnou,O-B-H corm  31,21,22.9,5,11,11.5,0,3
-Oueme,3,Zounnou,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Zou,3,Zounnou,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Ketou,3,Zounnou,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Oueme,1,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Zou,1,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Ketou,1,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Oueme,2,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Zou,2,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Ketou,2,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Oueme,3,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Zou,3,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Ketou,3,Sodji,O-A-S stolon  21,9,30.25,4,11.6,13.01,0,3
-Oueme,1,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Zou,1,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Ketou,1,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Oueme,2,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Zou,2,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Ketou,2,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Oueme,3,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Zou,3,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Ketou,3,Hounvigue,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Oueme,1,Adjohoun,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Zou,1,Adjohoun,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Ketou,1,Adjohoun,O-A-S stolon  22,7,25.375,4,11.15,12.365,0,2
-Oueme,2,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Zou,2,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Ketou,2,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Oueme,3,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Zou,3,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Ketou,3,Adjohoun,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Oueme,1,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Zou,1,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Ketou,1,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Oueme,2,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Zou,2,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Ketou,2,Zounnou,O-A-S stolon  23,9,28.66,3,11.65,12.8,0,0
-Oueme,3,Zounnou,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Zou,3,Zounnou,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Ketou,3,Zounnou,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Oueme,1,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Zou,1,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Ketou,1,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Oueme,2,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Zou,2,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Ketou,2,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Oueme,3,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Zou,3,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Ketou,3,Sodji,O-A-S stolon  24,9,41.75,4,18,19.42,0,5
-Oueme,1,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Zou,1,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Ketou,1,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Oueme,2,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Zou,2,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Ketou,2,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Oueme,3,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Zou,3,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Ketou,3,Hounvigue,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Oueme,1,Adjohoun,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Zou,1,Adjohoun,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Ketou,1,Adjohoun,O-A-S stolon  25,9,39.66,3,18.9,20.4,0,6
-Oueme,2,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Zou,2,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Ketou,2,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Oueme,3,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Zou,3,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Ketou,3,Adjohoun,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Oueme,1,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Zou,1,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Ketou,1,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Oueme,2,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Zou,2,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Ketou,2,Zounnou,O-A-S stolon  26,9,29.83,4,14.1,15.65,0,4
-Oueme,3,Zounnou,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Zou,3,Zounnou,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Ketou,3,Zounnou,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Oueme,1,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Zou,1,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Ketou,1,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Oueme,2,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Zou,2,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Ketou,2,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Oueme,3,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Zou,3,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Ketou,3,Sodji,O-A-S stolon  27,9,28.62,4,14.08,16.17,0,5
-Oueme,1,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Zou,1,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Ketou,1,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Oueme,2,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Zou,2,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Ketou,2,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Oueme,3,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Zou,3,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Ketou,3,Hounvigue,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Oueme,1,Adjohoun,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Zou,1,Adjohoun,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Ketou,1,Adjohoun,O-A-S stolon  28,7,33.5,6,14.1,15.1,0,5
-Oueme,2,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Zou,2,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Ketou,2,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Oueme,3,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Zou,3,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Ketou,3,Adjohoun,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Oueme,1,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Zou,1,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Ketou,1,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Oueme,2,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Zou,2,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Ketou,2,Zounnou,O-A-S stolon  29,9,35.375,5,15,16.3,0,2
-Oueme,3,Zounnou,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Zou,3,Zounnou,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Ketou,3,Zounnou,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Oueme,1,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Zou,1,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Ketou,1,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Oueme,2,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Zou,2,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Ketou,2,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Oueme,3,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Zou,3,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Ketou,3,Sodji,O-A-S stolon  30,9,28.5,4,14.75,15.55,0,5
-Oueme,1,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Zou,1,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Ketou,1,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Oueme,2,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Zou,2,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Ketou,2,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Oueme,3,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Zou,3,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Ketou,3,Hounvigue,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Oueme,1,Adjohoun,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Zou,1,Adjohoun,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Ketou,1,Adjohoun,O-A-S stolon  31,9,32.16,3,14.12,14.19,0,6
-Oueme,2,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Zou,2,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Ketou,2,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Oueme,3,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Zou,3,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Ketou,3,Adjohoun,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Oueme,1,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Zou,1,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Ketou,1,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Oueme,2,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Zou,2,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Ketou,2,Zounnou,O-A-S stolon  32,9,32.83,4,15.755,17.305,0,6
-Oueme,3,Zounnou,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Zou,3,Zounnou,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Ketou,3,Zounnou,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Oueme,1,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Zou,1,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Ketou,1,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Oueme,2,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Zou,2,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Ketou,2,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Oueme,3,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Zou,3,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Ketou,3,Sodji,O-A-S corm  33,9,28.75,21,9.56,9.86,8,6
-Oueme,1,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Zou,1,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Ketou,1,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Oueme,2,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Zou,2,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Ketou,2,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Oueme,3,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Zou,3,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Ketou,3,Hounvigue,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Oueme,1,Adjohoun,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Zou,1,Adjohoun,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Ketou,1,Adjohoun,O-A-S corm  34,9,29.25,8,10.775,12.45,0,5
-Oueme,2,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Zou,2,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Ketou,2,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Oueme,3,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Zou,3,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Ketou,3,Adjohoun,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Oueme,1,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Zou,1,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Ketou,1,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Oueme,2,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Zou,2,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Ketou,2,Zounnou,O-A-S corm  35,21,38.9,6,15,16.8,0,1
-Oueme,3,Zounnou,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Zou,3,Zounnou,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Ketou,3,Zounnou,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Oueme,1,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Zou,1,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Ketou,1,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Oueme,2,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Zou,2,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Ketou,2,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Oueme,3,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Zou,3,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Ketou,3,Sodji,O-A-S corm  36,21,24.42,7,15,15.25,2,2
-Oueme,1,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Zou,1,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Ketou,1,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Oueme,2,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Zou,2,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Ketou,2,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Oueme,3,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Zou,3,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Ketou,3,Hounvigue,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Oueme,1,Adjohoun,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Zou,1,Adjohoun,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Ketou,1,Adjohoun,O-A-S corm  37,10,33.1,5,14.65,16.75,2,0
-Oueme,2,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Zou,2,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Ketou,2,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Oueme,3,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Zou,3,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Ketou,3,Adjohoun,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Oueme,1,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Zou,1,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Ketou,1,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Oueme,2,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Zou,2,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Ketou,2,Zounnou,Z-D-Z stolon 21,21,17.25,4,8.2,8.65,0,4
-Oueme,3,Zounnou,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Zou,3,Zounnou,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Ketou,3,Zounnou,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Oueme,1,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Zou,1,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Ketou,1,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Oueme,2,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Zou,2,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Ketou,2,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Oueme,3,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Zou,3,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Ketou,3,Sodji,P-K-S stolon 13,14,22.25,5,9.53,10.66,4,0
-Oueme,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  22,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  22,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  22,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  22,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  22,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  22,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  23,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  23,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  23,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  23,,,,,,,
-Zou,1,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  23,,,,,,,
-Zou,2,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  23,,,,,,,
-Zou,3,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  25,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  25,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  25,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  25,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  25,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  25,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  26,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  26,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  26,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  26,,,,,,,
-Zou,1,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  26,,,,,,,
-Zou,2,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  26,,,,,,,
-Zou,3,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  28,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  28,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  28,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  28,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  28,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  28,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  29,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  29,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  29,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  29,,,,,,,
-Zou,1,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  29,,,,,,,
-Zou,2,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  29,,,,,,,
-Zou,3,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,1,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,1,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,1,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,2,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,2,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,2,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,3,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,3,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,3,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,1,Adjohoun,O-B-H corm  30,,,,,,,
-Zou,1,Adjohoun,O-B-H corm  30,,,,,,,
-Ketou,1,Adjohoun,O-B-H corm  30,,,,,,,
-Oueme,2,Adjohoun,O-B-H corm  31,,,,,,,
-Zou,2,Adjohoun,O-B-H corm  31,,,,,,,
-Ketou,2,Adjohoun,O-B-H corm  31,,,,,,,
-Oueme,3,Adjohoun,O-B-H corm  31,,,,,,,
-Zou,3,Adjohoun,O-B-H corm  31,,,,,,,
-Ketou,3,Adjohoun,O-B-H corm  31,,,,,,,
-Oueme,1,Zounnou,O-B-H corm  31,,,,,,,
-Zou,1,Zounnou,O-B-H corm  31,,,,,,,
-Ketou,1,Zounnou,O-B-H corm  31,,,,,,,
-Oueme,2,Zounnou,O-B-H corm  31,,,,,,,
-Zou,2,Zounnou,O-B-H corm  31,,,,,,,
-Ketou,2,Zounnou,O-B-H corm  31,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  21,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  21,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  21,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  21,,,,,,,
-Zou,1,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  21,,,,,,,
-Zou,2,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  21,,,,,,,
-Zou,3,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  23,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  23,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  23,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  23,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  23,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  23,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  24,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  24,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  24,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  24,,,,,,,
-Zou,1,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  24,,,,,,,
-Zou,2,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  24,,,,,,,
-Zou,3,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  26,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  26,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  26,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  26,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  26,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  26,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  27,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  27,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  27,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  27,,,,,,,
-Zou,1,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  27,,,,,,,
-Zou,2,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  27,,,,,,,
-Zou,3,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  29,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  29,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  29,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  29,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  29,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  29,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  30,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  30,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  30,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  30,,,,,,,
-Zou,1,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  30,,,,,,,
-Zou,2,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  30,,,,,,,
-Zou,3,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  32,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  32,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  32,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  32,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  32,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  32,,,,,,,
-Oueme,3,Zounnou,O-A-S corm  33,,,,,,,
-Zou,3,Zounnou,O-A-S corm  33,,,,,,,
-Ketou,3,Zounnou,O-A-S corm  33,,,,,,,
-Oueme,1,Sodji,O-A-S corm  33,,,,,,,
-Zou,1,Sodji,O-A-S corm  33,,,,,,,
-Ketou,1,Sodji,O-A-S corm  33,,,,,,,
-Oueme,2,Sodji,O-A-S corm  33,,,,,,,
-Zou,2,Sodji,O-A-S corm  33,,,,,,,
-Ketou,2,Sodji,O-A-S corm  33,,,,,,,
-Oueme,3,Sodji,O-A-S corm  33,,,,,,,
-Zou,3,Sodji,O-A-S corm  33,,,,,,,
-Ketou,3,Sodji,O-A-S corm  33,,,,,,,
-Oueme,1,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,1,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,1,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,2,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,2,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,2,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,3,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,3,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,3,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,1,Adjohoun,O-A-S corm  34,,,,,,,
-Zou,1,Adjohoun,O-A-S corm  34,,,,,,,
-Ketou,1,Adjohoun,O-A-S corm  34,,,,,,,
-Oueme,2,Adjohoun,O-A-S corm  35,,,,,,,
-Zou,2,Adjohoun,O-A-S corm  35,,,,,,,
-Ketou,2,Adjohoun,O-A-S corm  35,,,,,,,
-Oueme,3,Adjohoun,O-A-S corm  35,,,,,,,
-Zou,3,Adjohoun,O-A-S corm  35,,,,,,,
-Ketou,3,Adjohoun,O-A-S corm  35,,,,,,,
-Oueme,1,Zounnou,O-A-S corm  35,,,,,,,
-Zou,1,Zounnou,O-A-S corm  35,,,,,,,
-Ketou,1,Zounnou,O-A-S corm  35,,,,,,,
-Oueme,2,Zounnou,O-A-S corm  35,,,,,,,
-Zou,2,Zounnou,O-A-S corm  35,,,,,,,
-Ketou,2,Zounnou,O-A-S corm  35,,,,,,,
-Oueme,3,Zounnou,O-A-S corm  36,,,,,,,
-Zou,3,Zounnou,O-A-S corm  36,,,,,,,
-Ketou,3,Zounnou,O-A-S corm  36,,,,,,,
-Oueme,1,Sodji,O-A-S corm  36,,,,,,,
-Zou,1,Sodji,O-A-S corm  36,,,,,,,
-Ketou,1,Sodji,O-A-S corm  36,,,,,,,
-Oueme,2,Sodji,O-A-S corm  36,,,,,,,
-Zou,2,Sodji,O-A-S corm  36,,,,,,,
-Ketou,2,Sodji,O-A-S corm  36,,,,,,,
-Oueme,3,Sodji,O-A-S corm  36,,,,,,,
-Zou,3,Sodji,O-A-S corm  36,,,,,,,
-Ketou,3,Sodji,O-A-S corm  36,,,,,,,
-Oueme,1,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,1,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,1,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,2,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,2,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,2,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,3,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,3,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,3,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,1,Adjohoun,O-A-S corm  37,,,,,,,
-Zou,1,Adjohoun,O-A-S corm  37,,,,,,,
-Ketou,1,Adjohoun,O-A-S corm  37,,,,,,,
-Oueme,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Zou,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Ketou,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Oueme,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Zou,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Ketou,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Oueme,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Zou,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Ketou,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Oueme,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Zou,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Ketou,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Oueme,3,Zounnou,P-K-S stolon 13,,,,,,,
-Zou,3,Zounnou,P-K-S stolon 13,,,,,,,
-Ketou,3,Zounnou,P-K-S stolon 13,,,,,,,
-Oueme,1,Sodji,P-K-S stolon 13,,,,,,,
-Zou,1,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,1,Sodji,P-K-S stolon 13,,,,,,,
-Oueme,2,Sodji,P-K-S stolon 13,,,,,,,
-Zou,2,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,2,Sodji,P-K-S stolon 13,,,,,,,
-Oueme,3,Sodji,P-K-S stolon 13,,,,,,,
-Zou,3,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,3,Sodji,P-K-S stolon 13,,,,,,,
-Oueme,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  21,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  21,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  22,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  22,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  22,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  22,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  22,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  22,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  22,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  22,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  23,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  23,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  23,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  23,,,,,,,
-Zou,1,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  23,,,,,,,
-Zou,2,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  23,,,,,,,
-Zou,3,Sodji,O-B-H stolon  23,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  23,,,,,,,
-Oueme,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  24,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  24,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  25,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  25,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  25,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  25,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  25,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  25,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  25,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  25,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  26,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  26,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  26,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  26,,,,,,,
-Zou,1,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  26,,,,,,,
-Zou,2,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  26,,,,,,,
-Zou,3,Sodji,O-B-H stolon  26,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  26,,,,,,,
-Oueme,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,1,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,2,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Zou,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Ketou,3,Hounvigue,O-B-H stolon  27,,,,,,,
-Oueme,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Zou,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Ketou,1,Adjohoun,O-B-H stolon  27,,,,,,,
-Oueme,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Zou,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Ketou,2,Adjohoun,O-B-H stolon  28,,,,,,,
-Oueme,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Zou,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Ketou,3,Adjohoun,O-B-H stolon  28,,,,,,,
-Oueme,1,Zounnou,O-B-H stolon  28,,,,,,,
-Zou,1,Zounnou,O-B-H stolon  28,,,,,,,
-Ketou,1,Zounnou,O-B-H stolon  28,,,,,,,
-Oueme,2,Zounnou,O-B-H stolon  28,,,,,,,
-Zou,2,Zounnou,O-B-H stolon  28,,,,,,,
-Ketou,2,Zounnou,O-B-H stolon  28,,,,,,,
-Oueme,3,Zounnou,O-B-H stolon  29,,,,,,,
-Zou,3,Zounnou,O-B-H stolon  29,,,,,,,
-Ketou,3,Zounnou,O-B-H stolon  29,,,,,,,
-Oueme,1,Sodji,O-B-H stolon  29,,,,,,,
-Zou,1,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,1,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,2,Sodji,O-B-H stolon  29,,,,,,,
-Zou,2,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,2,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,3,Sodji,O-B-H stolon  29,,,,,,,
-Zou,3,Sodji,O-B-H stolon  29,,,,,,,
-Ketou,3,Sodji,O-B-H stolon  29,,,,,,,
-Oueme,1,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,1,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,1,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,2,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,2,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,2,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,3,Hounvigue,O-B-H corm  30,,,,,,,
-Zou,3,Hounvigue,O-B-H corm  30,,,,,,,
-Ketou,3,Hounvigue,O-B-H corm  30,,,,,,,
-Oueme,1,Adjohoun,O-B-H corm  30,,,,,,,
-Zou,1,Adjohoun,O-B-H corm  30,,,,,,,
-Ketou,1,Adjohoun,O-B-H corm  30,,,,,,,
-Oueme,2,Adjohoun,O-B-H corm  31,,,,,,,
-Zou,2,Adjohoun,O-B-H corm  31,,,,,,,
-Ketou,2,Adjohoun,O-B-H corm  31,,,,,,,
-Oueme,3,Adjohoun,O-B-H corm  31,,,,,,,
-Zou,3,Adjohoun,O-B-H corm  31,,,,,,,
-Ketou,3,Adjohoun,O-B-H corm  31,,,,,,,
-Oueme,1,Zounnou,O-B-H corm  31,,,,,,,
-Zou,1,Zounnou,O-B-H corm  31,,,,,,,
-Ketou,1,Zounnou,O-B-H corm  31,,,,,,,
-Oueme,2,Zounnou,O-B-H corm  31,,,,,,,
-Zou,2,Zounnou,O-B-H corm  31,,,,,,,
-Ketou,2,Zounnou,O-B-H corm  31,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  21,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  21,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  21,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  21,,,,,,,
-Zou,1,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  21,,,,,,,
-Zou,2,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  21,,,,,,,
-Zou,3,Sodji,O-A-S stolon  21,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  21,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  22,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  22,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  23,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  23,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  23,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  23,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  23,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  23,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  23,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  23,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  24,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  24,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  24,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  24,,,,,,,
-Zou,1,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  24,,,,,,,
-Zou,2,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  24,,,,,,,
-Zou,3,Sodji,O-A-S stolon  24,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  24,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  25,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  25,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  26,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  26,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  26,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  26,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  26,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  26,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  26,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  26,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  27,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  27,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  27,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  27,,,,,,,
-Zou,1,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  27,,,,,,,
-Zou,2,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  27,,,,,,,
-Zou,3,Sodji,O-A-S stolon  27,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  27,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  28,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  28,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  29,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  29,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  29,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  29,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  29,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  29,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  29,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  29,,,,,,,
-Oueme,3,Zounnou,O-A-S stolon  30,,,,,,,
-Zou,3,Zounnou,O-A-S stolon  30,,,,,,,
-Ketou,3,Zounnou,O-A-S stolon  30,,,,,,,
-Oueme,1,Sodji,O-A-S stolon  30,,,,,,,
-Zou,1,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,1,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,2,Sodji,O-A-S stolon  30,,,,,,,
-Zou,2,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,2,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,3,Sodji,O-A-S stolon  30,,,,,,,
-Zou,3,Sodji,O-A-S stolon  30,,,,,,,
-Ketou,3,Sodji,O-A-S stolon  30,,,,,,,
-Oueme,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,1,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,2,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Zou,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Ketou,3,Hounvigue,O-A-S stolon  31,,,,,,,
-Oueme,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Zou,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Ketou,1,Adjohoun,O-A-S stolon  31,,,,,,,
-Oueme,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Zou,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Ketou,2,Adjohoun,O-A-S stolon  32,,,,,,,
-Oueme,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Zou,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Ketou,3,Adjohoun,O-A-S stolon  32,,,,,,,
-Oueme,1,Zounnou,O-A-S stolon  32,,,,,,,
-Zou,1,Zounnou,O-A-S stolon  32,,,,,,,
-Ketou,1,Zounnou,O-A-S stolon  32,,,,,,,
-Oueme,2,Zounnou,O-A-S stolon  32,,,,,,,
-Zou,2,Zounnou,O-A-S stolon  32,,,,,,,
-Ketou,2,Zounnou,O-A-S stolon  32,,,,,,,
-Oueme,3,Zounnou,O-A-S corm  33,,,,,,,
-Zou,3,Zounnou,O-A-S corm  33,,,,,,,
-Ketou,3,Zounnou,O-A-S corm  33,,,,,,,
-Oueme,1,Sodji,O-A-S corm  33,,,,,,,
-Zou,1,Sodji,O-A-S corm  33,,,,,,,
-Ketou,1,Sodji,O-A-S corm  33,,,,,,,
-Oueme,2,Sodji,O-A-S corm  33,,,,,,,
-Zou,2,Sodji,O-A-S corm  33,,,,,,,
-Ketou,2,Sodji,O-A-S corm  33,,,,,,,
-Oueme,3,Sodji,O-A-S corm  33,,,,,,,
-Zou,3,Sodji,O-A-S corm  33,,,,,,,
-Ketou,3,Sodji,O-A-S corm  33,,,,,,,
-Oueme,1,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,1,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,1,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,2,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,2,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,2,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,3,Hounvigue,O-A-S corm  34,,,,,,,
-Zou,3,Hounvigue,O-A-S corm  34,,,,,,,
-Ketou,3,Hounvigue,O-A-S corm  34,,,,,,,
-Oueme,1,Adjohoun,O-A-S corm  34,,,,,,,
-Zou,1,Adjohoun,O-A-S corm  34,,,,,,,
-Ketou,1,Adjohoun,O-A-S corm  34,,,,,,,
-Oueme,2,Adjohoun,O-A-S corm  35,,,,,,,
-Zou,2,Adjohoun,O-A-S corm  35,,,,,,,
-Ketou,2,Adjohoun,O-A-S corm  35,,,,,,,
-Oueme,3,Adjohoun,O-A-S corm  35,,,,,,,
-Zou,3,Adjohoun,O-A-S corm  35,,,,,,,
-Ketou,3,Adjohoun,O-A-S corm  35,,,,,,,
-Oueme,1,Zounnou,O-A-S corm  35,,,,,,,
-Zou,1,Zounnou,O-A-S corm  35,,,,,,,
-Ketou,1,Zounnou,O-A-S corm  35,,,,,,,
-Oueme,2,Zounnou,O-A-S corm  35,,,,,,,
-Zou,2,Zounnou,O-A-S corm  35,,,,,,,
-Ketou,2,Zounnou,O-A-S corm  35,,,,,,,
-Oueme,3,Zounnou,O-A-S corm  36,,,,,,,
-Zou,3,Zounnou,O-A-S corm  36,,,,,,,
-Ketou,3,Zounnou,O-A-S corm  36,,,,,,,
-Oueme,1,Sodji,O-A-S corm  36,,,,,,,
-Zou,1,Sodji,O-A-S corm  36,,,,,,,
-Ketou,1,Sodji,O-A-S corm  36,,,,,,,
-Oueme,2,Sodji,O-A-S corm  36,,,,,,,
-Zou,2,Sodji,O-A-S corm  36,,,,,,,
-Ketou,2,Sodji,O-A-S corm  36,,,,,,,
-Oueme,3,Sodji,O-A-S corm  36,,,,,,,
-Zou,3,Sodji,O-A-S corm  36,,,,,,,
-Ketou,3,Sodji,O-A-S corm  36,,,,,,,
-Oueme,1,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,1,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,1,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,2,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,2,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,2,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,3,Hounvigue,O-A-S corm  37,,,,,,,
-Zou,3,Hounvigue,O-A-S corm  37,,,,,,,
-Ketou,3,Hounvigue,O-A-S corm  37,,,,,,,
-Oueme,1,Adjohoun,O-A-S corm  37,,,,,,,
-Zou,1,Adjohoun,O-A-S corm  37,,,,,,,
-Ketou,1,Adjohoun,O-A-S corm  37,,,,,,,
-Oueme,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Zou,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Ketou,2,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Oueme,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Zou,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Ketou,3,Adjohoun,Z-D-Z stolon 21,,,,,,,
-Oueme,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Zou,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Ketou,1,Zounnou,Z-D-Z stolon 21,,,,,,,
-Oueme,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Zou,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Ketou,2,Zounnou,Z-D-Z stolon 21,,,,,,,
-Oueme,3,Zounnou,P-K-S stolon 13,,,,,,,
-Zou,3,Zounnou,P-K-S stolon 13,,,,,,,
-Ketou,3,Zounnou,P-K-S stolon 13,,,,,,,
-Oueme,1,Sodji,P-K-S stolon 13,,,,,,,
-Zou,1,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,1,Sodji,P-K-S stolon 13,,,,,,,
-Oueme,2,Sodji,P-K-S stolon 13,,,,,,,
-Zou,2,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,2,Sodji,P-K-S stolon 13,,,,,,,
-Oueme,3,Sodji,P-K-S stolon 13,,,,,,,
-Zou,3,Sodji,P-K-S stolon 13,,,,,,,
-Ketou,3,Sodji,P-K-S stolon 13,,,,,,,
+"Accession","REP","Nutrient"
+"a","1","T1"
+"b","1","T1"
+"c","1","T1"
+"d","1","T1"
+"e","1","T1"
+"f","1","T1"
+"g","1","T1"
+"h","1","T1"
+"i","1","T1"
+"j","1","T1"
+"k","1","T1"
+"a","2","T1"
+"b","2","T1"
+"c","2","T1"
+"d","2","T1"
+"e","2","T1"
+"f","2","T1"
+"g","2","T1"
+"h","2","T1"
+"i","2","T1"
+"j","2","T1"
+"k","2","T1"
+"a","3","T1"
+"b","3","T1"
+"c","3","T1"
+"d","3","T1"
+"e","3","T1"
+"f","3","T1"
+"g","3","T1"
+"h","3","T1"
+"i","3","T1"
+"j","3","T1"
+"k","3","T1"
+"a","4","T1"
+"b","4","T1"
+"c","4","T1"
+"d","4","T1"
+"e","4","T1"
+"f","4","T1"
+"g","4","T1"
+"h","4","T1"
+"i","4","T1"
+"j","4","T1"
+"k","4","T1"
+"a","5","T1"
+"b","5","T1"
+"c","5","T1"
+"d","5","T1"
+"e","5","T1"
+"f","5","T1"
+"g","5","T1"
+"h","5","T1"
+"i","5","T1"
+"j","5","T1"
+"k","5","T1"
+"a","1","T2"
+"b","1","T2"
+"c","1","T2"
+"d","1","T2"
+"e","1","T2"
+"f","1","T2"
+"g","1","T2"
+"h","1","T2"
+"i","1","T2"
+"j","1","T2"
+"k","1","T2"
+"a","2","T2"
+"b","2","T2"
+"c","2","T2"
+"d","2","T2"
+"e","2","T2"
+"f","2","T2"
+"g","2","T2"
+"h","2","T2"
+"i","2","T2"
+"j","2","T2"
+"k","2","T2"
+"a","3","T2"
+"b","3","T2"
+"c","3","T2"
+"d","3","T2"
+"e","3","T2"
+"f","3","T2"
+"g","3","T2"
+"h","3","T2"
+"i","3","T2"
+"j","3","T2"
+"k","3","T2"
+"a","4","T2"
+"b","4","T2"
+"c","4","T2"
+"d","4","T2"
+"e","4","T2"
+"f","4","T2"
+"g","4","T2"
+"h","4","T2"
+"i","4","T2"
+"j","4","T2"
+"k","4","T2"
+"a","5","T2"
+"b","5","T2"
+"c","5","T2"
+"d","5","T2"
+"e","5","T2"
+"f","5","T2"
+"g","5","T2"
+"h","5","T2"
+"i","5","T2"
+"j","5","T2"
+"k","5","T2"
+"a","1","T3"
+"b","1","T3"
+"c","1","T3"
+"d","1","T3"
+"e","1","T3"
+"f","1","T3"
+"g","1","T3"
+"h","1","T3"
+"i","1","T3"
+"j","1","T3"
+"k","1","T3"
+"a","2","T3"
+"b","2","T3"
+"c","2","T3"
+"d","2","T3"
+"e","2","T3"
+"f","2","T3"
+"g","2","T3"
+"h","2","T3"
+"i","2","T3"
+"j","2","T3"
+"k","2","T3"
+"a","3","T3"
+"b","3","T3"
+"c","3","T3"
+"d","3","T3"
+"e","3","T3"
+"f","3","T3"
+"g","3","T3"
+"h","3","T3"
+"i","3","T3"
+"j","3","T3"
+"k","3","T3"
+"a","4","T3"
+"b","4","T3"
+"c","4","T3"
+"d","4","T3"
+"e","4","T3"
+"f","4","T3"
+"g","4","T3"
+"h","4","T3"
+"i","4","T3"
+"j","4","T3"
+"k","4","T3"
+"a","5","T3"
+"b","5","T3"
+"c","5","T3"
+"d","5","T3"
+"e","5","T3"
+"f","5","T3"
+"g","5","T3"
+"h","5","T3"
+"i","5","T3"
+"j","5","T3"
+"k","5","T3"
+"a","1","T4"
+"b","1","T4"
+"c","1","T4"
+"d","1","T4"
+"e","1","T4"
+"f","1","T4"
+"g","1","T4"
+"h","1","T4"
+"i","1","T4"
+"j","1","T4"
+"k","1","T4"
+"a","2","T4"
+"b","2","T4"
+"c","2","T4"
+"d","2","T4"
+"e","2","T4"
+"f","2","T4"
+"g","2","T4"
+"h","2","T4"
+"i","2","T4"
+"j","2","T4"
+"k","2","T4"
+"a","3","T4"
+"b","3","T4"
+"c","3","T4"
+"d","3","T4"
+"e","3","T4"
+"f","3","T4"
+"g","3","T4"
+"h","3","T4"
+"i","3","T4"
+"j","3","T4"
+"k","3","T4"
+"a","4","T4"
+"b","4","T4"
+"c","4","T4"
+"d","4","T4"
+"e","4","T4"
+"f","4","T4"
+"g","4","T4"
+"h","4","T4"
+"i","4","T4"
+"j","4","T4"
+"k","4","T4"
+"a","5","T4"
+"b","5","T4"
+"c","5","T4"
+"d","5","T4"
+"e","5","T4"
+"f","5","T4"
+"g","5","T4"
+"h","5","T4"
+"i","5","T4"
+"j","5","T4"
+"k","5","T4"

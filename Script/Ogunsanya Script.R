@@ -84,7 +84,7 @@ p11 <- ggplot(data = data1,mapping = aes(x = Species,y = Vigour,fill=Category...
   theme(axis.title.y = element_text(family = 'serif',size = 10))
 
 
-plot_grid(p6,p2,p3,p4,p5,p1,p7,p8,p9,p10,nrow = 4,ncol = 4,rel_widths = c(1,1),labels = 'AUTO',label_size = 8,label_fontfamily = 'serif')
+plot_grid(p6,p2,p3,p4,p5,p1,p7,p8,p9,p10,p11,nrow = 4,ncol = 4,rel_widths = c(1,1),labels = 'AUTO',label_size = 8,label_fontfamily = 'serif')
 
 
 ggsave(path = here::here('Plot'),'Demo.png',width = 17,height = 12,dpi = 450)
@@ -94,4 +94,17 @@ ggsave(path = here::here('Plot'),'Demo.png',width = 17,height = 12,dpi = 450)
 
 # Analysis for Pot Experiment
 
-data1 <- read_excel('Data/Copy of Mature trait data pot exp.xlsx')
+data <- read_excel('Data/Copy of Mature trait data pot exp.xlsx')
+
+# Stem Color for Pot Experiment
+ggplot(data = data,aes(x = Specie,`Stem Colour`,fill=Category...4))+geom_col()+scale_fill_brewer(name='',palette = 'Set1')+
+theme(axis.title.y = element_text(family = 'serif',size = 10))
+
+
+# Leaf Color
+ggplot(data = data,aes(x = Specie,`Leaf colour`,fill=Category...6))+geom_col()+scale_fill_brewer(name='',palette = 'Set1')+
+theme(axis.title.y = element_text(family = 'serif',size = 14))
+
+# Leaf Margin Color
+ggplot(data = data,aes(x = Specie,`Leaf margin colour`,fill=Category...8))+geom_col()+scale_fill_brewer(name='',palette = 'Set1')+
+  theme(axis.title.y = element_text(family = 'serif',size = 14))
