@@ -16,13 +16,30 @@ data1 <- read_excel('Data/Copy of Field data Mature trait.xlsx')
 
 data1 <- data1 %>% mutate(across(.cols = c(1:2),.fns = factor))
 
+# Demo
+data1 %>% count(Species,Category...4) %>%
+  mutate(Perc_Stem_Color=n/sum(n)) %>%
+  ggplot(mapping = aes(x = Species,y = Perc_Stem_Color,fill=Category...4))+
+  geom_col()+
+  scale_y_continuous(labels = scales::percent)
 
-# Stem Colour
+
+
+data1 %>% count(Species,Category...4) %>%
+  mutate(Perc_Stem_Color=round(n/sum(n),1)) %>%
+  ggplot(mapping = aes(x = Species,y = Perc_Stem_Color,fill=Category...4))+
+  geom_col()+
+  scale_y_continuous(labels = scales::percent)+
+  geom_text(aes(label=Perc_Stem_Color),position = position_dodge(.2),hjust=1)
+
+
+
+# Stem Color
 p1 <- ggplot(data = data1,mapping = aes(x = Species,y = `Stem Colour`,fill=Category...6))+geom_col()+scale_fill_brewer(name='',palette = 'Set1')+
   theme(axis.title.y = element_text(family = 'serif',size = 10))
 
 
-# Leaf Margin colours
+# Leaf Margin color
 p2 <- ggplot(data = data1,mapping = aes(x = Species,y = `Leaf Margin Colour`,fill=Category...8))+geom_col()+
   scale_fill_brewer(name='',palette = 'Set1')+
   theme(axis.title.y = element_text(family = 'serif',size = 10))
