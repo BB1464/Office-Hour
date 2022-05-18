@@ -10,7 +10,7 @@ library(tidyverse)
 library(readxl)
 library(factoextra)
 library(ggsci)
-
+library(fpc)
 
 # Import the data set into R
 
@@ -67,6 +67,12 @@ ggsave(path = here::here('Plot'),'heatmap.png',width = 10,height = 7,dpi = 400)
 fviz_nbclust(x = scale,kmeans,method = 'wss')
 
 
+# Determine the optimum number of clusters with the fpc package
+ClustK <- kmeansruns(data = scale,krange = 1:8,iter.max = 1000)
+
+# Select the Best Clusters
+ClustK$bestk
+
 # Perform the hierarchical clusters
 
 Clusters <- hclust(d = DT,method = 'ward.D')
@@ -88,10 +94,10 @@ pca <- dat8 %>% select(where(is.numeric)) %>%
 # Get the Eigene Values
 
 get_eig(X = pca)
+
 fviz_eig(X = pca,addlabels = TRUE)
 
 ggsave(path = here::here('Plot'),'screeplot.png',width = 10,height = 7,dpi = 400)
-
 
 fviz_pca_biplot(X = pca)
 
