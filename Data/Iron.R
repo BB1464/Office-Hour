@@ -11,7 +11,7 @@ library(readxl)
 library(agricolae)
 library(report)
 
-data <- read_excel(here::here('Data/IronBioavailabilityF.xls'))
+data <- read_excel(here::here('Data/Copy of IronBioavailabilityFA.xls'))
 
 head(data)
 
@@ -50,7 +50,7 @@ stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
   scale_fill_brewer(palette = 'Set1')+
   theme_test()+
   theme(axis.line = element_line(),legend.position = c(0.1,0.9),text = element_text(family = 'serif',size = 12))+
-  labs(y='Haemoglobin Concentration')
+  labs(y='Haemoglobin Concentration',x=NULL)
 
 # Export the image as png
 
