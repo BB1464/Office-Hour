@@ -3,7 +3,6 @@ library(tidyverse)
 data(mtcars)
 head(mtcars)
 
-
 sleep_mean_values %>%
   ggplot(aes(vore,mean_sleep))+
   geom_col()+
