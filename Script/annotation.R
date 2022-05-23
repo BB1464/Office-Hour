@@ -17,4 +17,5 @@ ggplot(data = NULL,mapping = aes(x = c(1:4),y = c(1:4)))+
 
 ggplot(data = mpg,aes(x = year,y = displ))+
   annotate(geom = 'rect',xmin = 2000,xmax = 2002,ymin = 2.9,ymax = 3.5,fill='gray')+
-  stat_summary(geom = 'line',fun = 'mean')
+  stat_summary(geom = 'line',fun = 'mean')+
+  theme_light()
