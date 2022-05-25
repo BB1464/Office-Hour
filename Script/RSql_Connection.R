@@ -21,7 +21,7 @@ dbWriteTable(conn = con,name = 'who',value = who)
 rm(who,population)
 
 # Query data from the data base
-# The source of the databse connection profile
+# The source of the database connection profile
 tbl(src = con, 'Who')
 
 tbl(src = con,'population')
