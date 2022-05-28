@@ -21,3 +21,6 @@ ggplot(data = dat,aes(fill=Reg))+geom_sf(show.legend = FALSE)+
   theme_void()
 
 
+# Save the Plot
+
+ggsave('Africa_Taro.png',width = 10,height = 8,dpi = 500,path = here::here('Plot'))
