@@ -36,10 +36,27 @@ ggplot(dat) +
   geom_text_repel(aes(label=name_long, geometry=geometry),
                   stat="sf_coordinates",
                   point.padding = NA, #allows points to overlap centroid
-                  colour='darkgrey', size=3
+                  colour='black', size=3
   ) +
   scale_fill_manual(values = c('white','blue'))
 
 
 # Save the Plot
 ggsave('Africa_Taro2.png',width = 10,height = 8,dpi = 500,path = here::here('Plot'))
+
+
+# Afrimap Tutorial
+library(ggplot2)
+library(ggrepel)
+
+ggplot(africountries) +
+  geom_sf(aes(fill = pop_est)) +
+  scale_fill_viridis_c() +
+  theme_void() +
+  geom_text_repel(aes(label=name_long, geometry=geometry),
+                  stat="sf_coordinates",
+                  point.padding = NA, #allows points to overlap centroid
+                  colour='darkgrey', size=3
+  ) +
+  labs(title = "Population by country 2000", fill = "Population Estimate")
+
