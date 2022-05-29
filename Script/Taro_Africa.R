@@ -7,10 +7,8 @@ library(afrilearndata)
 
 data("africountries")
 
-africountries |>
-  mutate()
 
-dat <- dat |> mutate(name=fct_recode(name,'IV'="Côte d'Ivoire"))
+dat <- africountries |> mutate(name=fct_recode(name,'IV'="Côte d'Ivoire"))
 
 dat <- dat |>
   mutate(Reg=name%in%c('Burundi','Central African Rep.','Benin','IV','Cameroon','Congo','Dem. Rep. Congo','Egypt','Ethiopia','Gabon','Ghana','Guinea','Madagascar','Liberia','Nigeria','Rwanda','Sierra Leone','Togo','Chad'))
@@ -24,3 +22,24 @@ ggplot(data = dat,aes(fill=Reg))+geom_sf(show.legend = FALSE)+
 # Save the Plot
 
 ggsave('Africa_Taro.png',width = 10,height = 8,dpi = 500,path = here::here('Plot'))
+
+
+
+# Second Approach
+
+library(ggplot2)
+library(ggrepel)
+
+ggplot(dat) +
+  geom_sf(aes(fill=Reg),show.legend = FALSE) +
+  theme_void() +
+  geom_text_repel(aes(label=name_long, geometry=geometry),
+                  stat="sf_coordinates",
+                  point.padding = NA, #allows points to overlap centroid
+                  colour='darkgrey', size=3
+  ) +
+  scale_fill_manual(values = c('white','blue'))
+
+
+# Save the Plot
+ggsave('Africa_Taro2.png',width = 10,height = 8,dpi = 500,path = here::here('Plot'))
