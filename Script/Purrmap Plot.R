@@ -96,3 +96,38 @@ anova(mtcars_model$model[[1]]) # Return the summary
 
 
 
+
+
+
+library(tidyverse);library(broom)
+
+
+iris |>
+  pivot_longer(-Species) |>
+  group_by(name) |>
+  nest() |>
+  mutate(model = map(.x = data, .f = ~ lm(formula = value ~ Species, data = .))) |>
+  mutate(anova = map(.x = model, .f = anova)) |>
+  pluck("anova") |>
+  set_names(names(iris[,1:4]))
+
+
+
+
+
+my_dat <- iris |>
+  pivot_longer(-Species) |>
+  group_by(name) |>
+  nest() |>
+  mutate(model = map(.x = data, .f = ~ lm(formula = value ~ Species, data = .))) |>
+  mutate(anova = map(.x = model, .f = anova))
+
+
+
+my_dat %>%
+  mutate(tidied_anova = map(.x = anova, .f = tidy))%>%
+  ungroup()%>%
+  pluck('tidied_anova')%>%
+  setNames(my_dat$name)
+
+
