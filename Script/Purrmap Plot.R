@@ -131,3 +131,22 @@ my_dat %>%
   setNames(my_dat$name)
 
 
+# ADD Post Hoc Test
+
+my_dat %>%
+  pluck('model')%>%
+  map(.,.f = ~HSD.test(y = .x,trt = c('Species'),console = TRUE)) |>
+  set_names(my_dat$name)
+
+
+my_dat %>%
+  mutate(tidied_hsd = map(model, .f = ~HSD.test(y = .x,trt = c('Species'),console = TRUE)))
+
+
+
+my_dat <- iris |>
+  pivot_longer(-Species) |>
+  group_by(name) |>
+  nest() |>
+  mutate(model = map(.x = data, .f = ~ lm(formula = value ~ Species, data = .))) |>
+  mutate(anova = map(.x = model, .f = anova))
