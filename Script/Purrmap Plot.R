@@ -1,4 +1,6 @@
 library(tidyverse)
+library(broom)
+library(agricolae)
 
 Plot <- iris |> select(1,2,5) |>
   group_by(Species) |> nest() |> mutate(plot=map2(.x = data,.y = Species,~ggplot(data = .x)+theme_minimal()+geom_line(aes(x = Sepal.Length,y = Sepal.Width))))
@@ -8,6 +10,10 @@ print(Plot$plot)
 
 
 Plot |> pull()
+
+# Save the plot to path
+
+map2(paste(.x=Plot$Species,'.png'),.y=Plot$plot,.f = ggsave,height=6,width=10,dpi=400,path='Plot')
 
 
 
@@ -124,6 +130,7 @@ my_dat <- iris |>
 
 
 
+
 my_dat %>%
   mutate(tidied_anova = map(.x = anova, .f = tidy))%>%
   ungroup()%>%
@@ -150,3 +157,15 @@ my_dat <- iris |>
   nest() |>
   mutate(model = map(.x = data, .f = ~ lm(formula = value ~ Species, data = .))) |>
   mutate(anova = map(.x = model, .f = anova))
+
+
+# Correct Map Function with anova, HSD and CV
+
+my_dat <- iris |>
+  pivot_longer(-Species) |>
+  group_by(name) |>
+  nest() |>
+  mutate(model = map(.x = data, .f = ~ lm(formula = value ~ Species, data = .x))) |>
+  mutate(anova = map(.x = model, .f = anova)) |>
+  mutate(HSD = map(.x = model, .f = ~ HSD.test(y = .x, trt = c("Species"), console = TRUE))) |>
+  mutate(CV = map(.x = model, .f = ~ cv.model(.x)))
