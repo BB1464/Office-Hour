@@ -11,7 +11,6 @@ dt <- iris |> pivot_longer(-Species) |>
   mutate(HSD=map(.x = model,.f = ~HSD.test(y = .x,trt = 'Species',console = TRUE))) |>
   mutate(tidied=map(.x = model,.f = tidy))
 
-
 dt|>
   pluck('anova') |> set_names(dt$name)
 
