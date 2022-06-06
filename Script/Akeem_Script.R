@@ -21,4 +21,4 @@ dat3 <- dat1 |> separate(col = ...1,into = c('Colour','Rep'))
 mod <- lm(value~Rep+Colour+name,data=dat3)
 anova(mod)
 
-HSD.test(y = mod,trt = name,console = TRUE)
+HSD.test(y = mod,trt = 'name',console = TRUE)
