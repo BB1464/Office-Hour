@@ -1,0 +1,105 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance for Afternoon High
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontsize: 12pt
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+## Working with Afternoon High THI that has three sheet  
+
+```{r}
+library(tidyverse)
+library(rio)
+library(readxl)
+library(agricolae)
+library(here)
+library(broom)
+```
+
+# Import the three sheet as a list into R
+
+```{r}
+dat <- import_list(here::here('Data/Afternoon High THI.xls'))
+```
+
+
+# Respiratory rate
+
+```{r}
+data1 <- dat[[1]]
+
+#names <- names(data1[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the first model for Respiratory Rate  
+```{r}
+for (i in 5:ncol(data1)) {
+  print(paste('----',names(data1[i]),'----'))
+  
+mod <- lm(data1[[i]]~Colour*Sex,data=data1)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE,main = 'Sex')
+print(lala)
+}
+```
+
+# Pulse Rate (Sheet Two for Afternoon High THI)
+
+```{r}
+data2 <- dat[[2]]
+
+#names <- names(data2[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the second model for Pulse Rate
+```{r}
+for (i in 5:ncol(data2)) {
+  print(paste('----',names(data2[i]),'----'))
+  
+mod <- lm(data2[[i]]~Colour*Sex,data=data2)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE,main = 'Sex')
+print(lala)
+}
+
+```
+
+
+# Rectal Temperature (Sheet three)
+
+```{r}
+data3 <- dat[[3]]
+
+#names <- names(data3[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the Third model for Rectal Temperature
+```{r}
+for (i in 5:ncol(data3)) {
+  print(paste('----',names(data3[i]),'----'))
+  
+mod <- lm(data1[[i]]~Colour*Sex,data=data3)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE,main = 'Sex')
+print(lala$parameters)
+}
+```
