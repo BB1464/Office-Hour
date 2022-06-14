@@ -11,7 +11,7 @@
 
 <meta name="author" content="Oluwafemi OYEDELE" />
 
-<meta name="date" content="2022-06-12" />
+<meta name="date" content="2022-06-13" />
 
 <title>Analysis of Variance for Morning Low</title>
 
@@ -1530,7 +1530,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Analysis of Variance for Morning Low</h1>
 <h4 class="author">Oluwafemi OYEDELE</h4>
-<h4 class="date">2022-06-12</h4>
+<h4 class="date">2022-06-13</h4>
 
 </div>
 
@@ -21061,8 +21061,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.94444      a
 ## Doe    51.77778      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   4.555556 24 52.86111 4.037703 6.283565
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BL/BR:Doe     48.33333 0.5773503 3  48  49 48.0  48 48.5
+## BLK:Buck      54.00000 2.6457513 3  52  57 52.5  53 55.0
+## BLK:Doe       51.66667 3.5118846 3  48  55 50.0  52 53.5
+## BRN:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BRN:Doe       56.00000 1.0000000 3  55  57 55.5  56 56.5
+## WHT:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WHT:Doe       49.33333 2.3094011 3  48  52 48.0  48 50.0
+## WT/BLK:Buck   53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BLK:Doe    53.33333 4.6188022 3  48  56 52.0  56 56.0
+## WT/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WT/BR:Doe     52.00000 0.0000000 3  52  52 52.0  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Doe       56.00000      a
+## BRN:Buck      54.33333     ab
+## WT/BR:Buck    54.33333     ab
+## BLK:Buck      54.00000     ab
+## WHT:Buck      54.00000     ab
+## BL/BR:Buck    53.66667     ab
+## WT/BLK:Buck   53.33333     ab
+## WT/BLK:Doe    53.33333     ab
+## WT/BR:Doe     52.00000     ab
+## BLK:Doe       51.66667     ab
+## WHT:Doe       49.33333      b
+## BL/BR:Doe     48.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM2 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21128,8 +21169,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.33333      a
 ## Doe    51.44444      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      4.25 24 52.38889 3.935096 6.069178
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]      std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 2.000000 3  52  56 53.0  54 55.0
+## BL/BR:Doe     50.00000 2.000000 3  48  52 49.0  50 51.0
+## BLK:Buck      54.66667 2.309401 3  52  56 54.0  56 56.0
+## BLK:Doe       51.33333 1.154701 3  50  52 51.0  52 52.0
+## BRN:Buck      54.00000 2.000000 3  52  56 53.0  54 55.0
+## BRN:Doe       56.00000 0.000000 3  56  56 56.0  56 56.0
+## WHT:Buck      51.00000 2.000000 3  49  53 50.0  51 52.0
+## WHT:Doe       50.66667 2.309401 3  48  52 50.0  52 52.0
+## WT/BLK:Buck   52.66667 1.154701 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    50.00000 3.464102 3  46  52 49.0  52 52.0
+## WT/BR:Buck    53.66667 2.081666 3  52  56 52.5  53 54.5
+## WT/BR:Doe     50.66667 2.309401 3  48  52 50.0  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Doe       56.00000      a
+## BLK:Buck      54.66667      a
+## BL/BR:Buck    54.00000      a
+## BRN:Buck      54.00000      a
+## WT/BR:Buck    53.66667      a
+## WT/BLK:Buck   52.66667      a
+## BLK:Doe       51.33333      a
+## WHT:Buck      51.00000      a
+## WHT:Doe       50.66667      a
+## WT/BR:Doe     50.66667      a
+## BL/BR:Doe     50.00000      a
+## WT/BLK:Doe    50.00000      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM3 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21195,8 +21277,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    51.50000      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##       5.5 24 52.61111 4.457628 6.904254
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.33333 2.0816660 3  48  52 49.5  51 51.5
+## BLK:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BLK:Doe       52.33333 3.5118846 3  49  56 50.5  52 54.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       53.66667 2.0816660 3  52  56 52.5  53 54.5
+## WHT:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Doe       50.00000 3.4641016 3  46  52 49.0  52 52.0
+## WT/BLK:Buck   53.33333 1.1547005 3  52  54 53.0  54 54.0
+## WT/BLK:Doe    50.66667 2.3094011 3  48  52 50.0  52 52.0
+## WT/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## WT/BR:Doe     52.00000 4.0000000 3  48  56 50.0  52 54.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.33333      a
+## BRN:Buck      54.00000      a
+## BRN:Doe       53.66667      a
+## WHT:Buck      53.66667      a
+## WT/BR:Buck    53.66667      a
+## BL/BR:Buck    53.33333      a
+## WT/BLK:Buck   53.33333      a
+## BLK:Doe       52.33333      a
+## WT/BR:Doe     52.00000      a
+## WT/BLK:Doe    50.66667      a
+## BL/BR:Doe     50.33333      a
+## WHT:Doe       50.00000      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM4 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21262,8 +21385,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.23529      a
 ## Doe    52.00000      a
+## $statistics
+##    MSerror Df Mean      CV
+##   3.586957 23 52.6 3.60062
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12         5.120705  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max   Q25  Q50   Q75
+## BL/BR:Buck    52.00000 1.0000000 3  51  53 51.50 52.0 52.50
+## BL/BR:Doe     51.66667 3.2145503 3  48  54 50.50 53.0 53.50
+## BLK:Buck      53.66667 1.5275252 3  52  55 53.00 54.0 54.50
+## BLK:Doe       53.33333 2.3094011 3  52  56 52.00 52.0 54.00
+## BRN:Buck      53.33333 0.5773503 3  53  54 53.00 53.0 53.50
+## BRN:Doe       53.33333 2.3094011 3  52  56 52.00 52.0 54.00
+## WHT:Buck      53.50000 0.7071068 2  53  54 53.25 53.5 53.75
+## WHT:Doe       49.66667 2.5166115 3  47  52 48.50 50.0 51.00
+## WT/BLK:Buck   53.00000 2.0000000 3  51  55 52.00 53.0 54.00
+## WT/BLK:Doe    50.00000 2.0000000 3  48  52 49.00 50.0 51.00
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.50 54.0 54.50
+## WT/BR:Doe     54.00000 1.0000000 3  53  55 53.50 54.0 54.50
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    54.00000      a
+## WT/BR:Doe     54.00000      a
+## BLK:Buck      53.66667      a
+## WHT:Buck      53.50000      a
+## BLK:Doe       53.33333      a
+## BRN:Buck      53.33333      a
+## BRN:Doe       53.33333      a
+## WT/BLK:Buck   53.00000      a
+## BL/BR:Buck    52.00000      a
+## BL/BR:Doe     51.66667      a
+## WT/BLK:Doe    50.00000      a
+## WHT:Doe       49.66667      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM5 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21329,8 +21493,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.50000      a
 ## Doe    51.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.888889 24 52.66667 3.227228 5.003811
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BL/BR:Doe     50.66667 2.3094011 3  48  52 50.0  52 52.0
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       53.00000 2.6457513 3  51  56 51.5  52 54.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       54.66667 2.3094011 3  52  56 54.0  56 56.0
+## WHT:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Doe       50.00000 2.0000000 3  48  52 49.0  50 51.0
+## WT/BLK:Buck   53.33333 2.0816660 3  51  55 52.5  54 54.5
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Doe       54.66667      a
+## BL/BR:Buck    53.66667      a
+## BRN:Buck      53.66667      a
+## WHT:Buck      53.66667      a
+## WT/BR:Buck    53.66667      a
+## WT/BLK:Buck   53.33333      a
+## BLK:Buck      53.00000      a
+## BLK:Doe       53.00000      a
+## WT/BLK:Doe    51.66667      a
+## WT/BR:Doe     51.00000      a
+## BL/BR:Doe     50.66667      a
+## WHT:Doe       50.00000      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM6 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21396,8 +21601,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.11111      a
 ## Doe    52.22222      a
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##       4.5 24 52.66667 4.027823 6.245133
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.33333 5.6862407 3  44  55 48.0  52 53.5
+## BLK:Buck      52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BLK:Doe       54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BRN:Buck      53.00000 1.7320508 3  52  55 52.0  52 53.5
+## BRN:Doe       54.33333 2.0816660 3  52  56 53.5  55 55.5
+## WHT:Buck      55.33333 1.5275252 3  54  57 54.5  55 56.0
+## WHT:Doe       50.33333 1.5275252 3  49  52 49.5  50 51.0
+## WT/BLK:Buck   52.00000 1.7320508 3  50  53 51.5  53 53.0
+## WT/BLK:Doe    52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WT/BR:Buck    53.00000 0.0000000 3  53  53 53.0  53 53.0
+## WT/BR:Doe     52.33333 1.1547005 3  51  53 52.0  53 53.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## BRN:Doe       54.33333      a
+## BLK:Doe       54.00000      a
+## BL/BR:Buck    53.33333      a
+## BRN:Buck      53.00000      a
+## WT/BR:Buck    53.00000      a
+## WT/BR:Doe     52.33333      a
+## BLK:Buck      52.00000      a
+## WT/BLK:Buck   52.00000      a
+## WT/BLK:Doe    52.00000      a
+## BL/BR:Doe     50.33333      a
+## WHT:Doe       50.33333      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM7 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21463,8 +21709,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.66667      a
 ## Doe    51.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   4.722222 24 52.66667 4.126077 6.397476
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BL/BR:Doe     49.66667 4.9328829 3  44  53 48.0  52 52.5
+## BLK:Buck      52.33333 1.1547005 3  51  53 52.0  53 53.0
+## BLK:Doe       53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BRN:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BRN:Doe       52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WHT:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WHT:Doe       52.00000 4.0000000 3  48  56 50.0  52 54.0
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    51.66667 1.1547005 3  51  53 51.0  51 52.0
+## WT/BR:Buck    55.66667 1.5275252 3  54  57 55.0  56 56.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.66667      a
+## WHT:Buck      54.33333      a
+## BL/BR:Buck    53.66667      a
+## BLK:Doe       53.66667      a
+## BRN:Buck      53.33333      a
+## WT/BLK:Buck   52.66667      a
+## BLK:Buck      52.33333      a
+## BRN:Doe       52.33333      a
+## WHT:Doe       52.00000      a
+## WT/BLK:Doe    51.66667      a
+## WT/BR:Doe     50.66667      a
+## BL/BR:Doe     49.66667      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM8 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21530,8 +21817,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    51.55556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.666667 24 52.55556 3.107175 4.807506
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BL/BR:Doe     49.66667 2.0816660 3  48  52 48.5  49 50.5
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       54.66667 2.3094011 3  52  56 54.0  56 56.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       53.33333 2.3094011 3  52  56 52.0  52 54.0
+## WHT:Buck      55.00000 1.7320508 3  53  56 54.5  56 56.0
+## WHT:Doe       49.66667 3.2145503 3  46  52 48.5  51 51.5
+## WT/BLK:Buck   53.00000 0.0000000 3  53  53 53.0  53 53.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BR:Doe     51.00000 0.0000000 3  51  51 51.0  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.00000      a
+## BLK:Doe       54.66667      a
+## BL/BR:Buck    53.66667     ab
+## BRN:Buck      53.66667     ab
+## BRN:Doe       53.33333     ab
+## BLK:Buck      53.00000     ab
+## WT/BLK:Buck   53.00000     ab
+## WT/BR:Buck    53.00000     ab
+## WT/BLK:Doe    51.00000     ab
+## WT/BR:Doe     51.00000     ab
+## BL/BR:Doe     49.66667      b
+## WHT:Doe       49.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM9 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21597,8 +21925,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.66667      a
 ## Doe    50.83333      b
+## $statistics
+##    MSerror Df  Mean       CV      MSD
+##   4.361111 24 52.25 3.996799 6.148002
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BL/BR:Doe     49.33333 5.0332230 3  44  54 47.0  50 52.0
+## BLK:Buck      51.66667 1.5275252 3  50  53 51.0  52 52.5
+## BLK:Doe       53.33333 2.3094011 3  52  56 52.0  52 54.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       51.00000 2.6457513 3  48  53 50.0  52 52.5
+## WHT:Buck      55.33333 1.5275252 3  54  57 54.5  55 56.0
+## WHT:Doe       50.00000 2.0000000 3  48  52 49.0  50 51.0
+## WT/BLK:Buck   52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## WT/BR:Buck    54.66667      a
+## BL/BR:Buck    54.33333      a
+## BRN:Buck      54.00000      a
+## BLK:Doe       53.33333      a
+## WT/BLK:Buck   52.00000      a
+## BLK:Buck      51.66667      a
+## BRN:Doe       51.00000      a
+## WT/BLK:Doe    51.00000      a
+## WT/BR:Doe     50.33333      a
+## WHT:Doe       50.00000      a
+## BL/BR:Doe     49.33333      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM10 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21664,8 +22033,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.33333      a
 ## Doe    51.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.472222 24 52.52778 2.993331 4.628915
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.00000 1.7320508 3  53  56 54.5  56 56.0
+## BL/BR:Doe     51.66667 2.3094011 3  49  53 51.0  53 53.0
+## BLK:Buck      52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BLK:Doe       53.33333 2.3094011 3  52  56 52.0  52 54.0
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WHT:Buck      55.00000 2.0000000 3  53  57 54.0  55 56.0
+## WHT:Doe       50.00000 1.7320508 3  48  51 49.5  51 51.0
+## WT/BLK:Buck   51.66667 1.5275252 3  50  53 51.0  52 52.5
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BR:Doe     51.66667 1.1547005 3  51  53 51.0  51 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    55.00000      a
+## WHT:Buck      55.00000      a
+## BRN:Buck      53.66667     ab
+## BLK:Doe       53.33333     ab
+## BLK:Buck      52.33333     ab
+## WT/BR:Buck    52.33333     ab
+## BRN:Doe       52.00000     ab
+## BL/BR:Doe     51.66667     ab
+## WT/BLK:Buck   51.66667     ab
+## WT/BLK:Doe    51.66667     ab
+## WT/BR:Doe     51.66667     ab
+## WHT:Doe       50.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM11 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21731,8 +22141,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    51.16667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   3.861111 24 52.47222 3.744783 5.784843
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BL/BR:Doe     47.66667 3.5118846 3  44  51 46.0  48 49.5
+## BLK:Buck      52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BLK:Doe       54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BRN:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.66667 2.3094011 3  52  56 54.0  56 56.0
+## WHT:Doe       49.00000 4.3588989 3  44  52 47.5  51 51.5
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.66667      a
+## WHT:Buck      54.66667      a
+## WT/BR:Buck    54.33333      a
+## BLK:Doe       54.00000      a
+## BL/BR:Buck    53.66667      a
+## WT/BLK:Doe    53.33333     ab
+## BLK:Buck      52.66667     ab
+## WT/BLK:Buck   52.66667     ab
+## BRN:Doe       51.66667     ab
+## WT/BR:Doe     51.33333     ab
+## WHT:Doe       49.00000     ab
+## BL/BR:Doe     47.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM12 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21798,8 +22249,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   4.305556 24 52.22222 3.973372 6.108717
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BL/BR:Doe     47.00000 3.4641016 3  45  51 45.0  45 48.0
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       54.66667 2.3094011 3  52  56 54.0  56 56.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WHT:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WHT:Doe       49.66667 4.0414519 3  45  52 48.5  52 52.0
+## WT/BLK:Buck   52.66667 1.5275252 3  51  54 52.0  53 53.5
+## WT/BLK:Doe    51.00000 2.0000000 3  49  53 50.0  51 52.0
+## WT/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.66667      a
+## BLK:Doe       54.66667      a
+## BRN:Buck      54.00000      a
+## WT/BR:Buck    53.66667      a
+## WHT:Buck      53.33333      a
+## BLK:Buck      53.00000     ab
+## WT/BLK:Buck   52.66667     ab
+## BRN:Doe       52.33333     ab
+## WT/BLK:Doe    51.00000     ab
+## WT/BR:Doe     50.66667     ab
+## WHT:Doe       49.66667     ab
+## BL/BR:Doe     47.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM13 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21865,8 +22357,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   3.722222 24 52.22222 3.694416 5.679846
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     48.00000 1.7320508 3  46  49 47.5  49 49.0
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       53.33333 2.3094011 3  52  56 52.0  52 54.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.66667 2.0816660 3  50  54 50.5  51 52.5
+## WHT:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## WHT:Doe       49.33333 4.6188022 3  44  52 48.0  52 52.0
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    55.00000 1.7320508 3  53  56 54.5  56 56.0
+## WT/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.00000      a
+## WHT:Buck      54.66667      a
+## BLK:Buck      54.00000      a
+## BRN:Buck      54.00000      a
+## BLK:Doe       53.33333     ab
+## BL/BR:Buck    53.00000     ab
+## WT/BLK:Buck   52.00000     ab
+## BRN:Doe       51.66667     ab
+## WT/BLK:Doe    51.00000     ab
+## WT/BR:Doe     50.66667     ab
+## WHT:Doe       49.33333     ab
+## BL/BR:Doe     48.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM14 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21932,8 +22465,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.66667      a
 ## Doe    50.77778      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.666667 24 52.22222 3.127008 4.807506
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     47.66667 1.5275252 3  46  49 47.0  48 48.5
+## BLK:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BLK:Doe       53.33333 2.3094011 3  52  56 52.0  52 54.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       49.00000 3.6055513 3  45  52 47.5  50 51.0
+## WT/BLK:Buck   52.00000 1.7320508 3  50  53 51.5  53 53.0
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## WHT:Buck      54.66667      a
+## WT/BR:Buck    54.00000      a
+## BRN:Buck      53.66667     ab
+## BLK:Doe       53.33333     ab
+## BL/BR:Buck    53.00000     ab
+## BRN:Doe       52.00000    abc
+## WT/BLK:Buck   52.00000    abc
+## WT/BLK:Doe    51.66667    abc
+## WT/BR:Doe     51.00000    abc
+## WHT:Doe       49.00000     bc
+## BL/BR:Doe     47.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM15 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -21999,8 +22573,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck       54.0      a
 ## Doe        50.5      b
+## $statistics
+##    MSerror Df  Mean       CV      MSD
+##   2.472222 24 52.25 3.009244 4.628915
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     45.66667 0.5773503 3  45  46 45.5  46 46.0
+## BLK:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BLK:Doe       54.66667 2.3094011 3  52  56 54.0  56 56.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WHT:Buck      55.66667 0.5773503 3  55  56 55.5  56 56.0
+## WHT:Doe       48.66667 3.0550505 3  46  52 47.0  48 50.0
+## WT/BLK:Buck   53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.00000 1.7320508 3  52  55 52.0  52 53.5
+## WT/BR:Doe     50.33333 1.1547005 3  49  51 50.0  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.66667      a
+## BLK:Doe       54.66667     ab
+## BL/BR:Buck    54.00000     ab
+## BRN:Buck      54.00000     ab
+## BLK:Buck      53.66667     ab
+## WT/BLK:Buck   53.66667     ab
+## WT/BR:Buck    53.00000    abc
+## BRN:Doe       52.66667    abc
+## WT/BLK:Doe    51.00000     bc
+## WT/BR:Doe     50.33333     bc
+## WHT:Doe       48.66667     cd
+## BL/BR:Doe     45.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM16 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22066,8 +22681,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    49.77778      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##       2.5 24 51.83333 3.050429 4.654847
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BL/BR:Doe     46.66667 1.5275252 3  45  48 46.0  47 47.5
+## BLK:Buck      52.33333 1.1547005 3  51  53 52.0  53 53.0
+## BLK:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.33333 2.0816660 3  49  53 50.5  52 52.5
+## WHT:Buck      56.66667 0.5773503 3  56  57 56.5  57 57.0
+## WHT:Doe       47.00000 3.4641016 3  45  51 45.0  45 48.0
+## WT/BLK:Buck   52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BLK:Doe    51.33333 1.5275252 3  50  53 50.5  51 52.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      56.66667      a
+## BRN:Buck      54.00000     ab
+## WT/BR:Buck    54.00000     ab
+## BL/BR:Buck    53.66667     ab
+## WT/BLK:Buck   52.66667     ab
+## BLK:Buck      52.33333     ab
+## BLK:Doe       51.66667      b
+## BRN:Doe       51.33333     bc
+## WT/BLK:Doe    51.33333     bc
+## WT/BR:Doe     50.66667    bcd
+## WHT:Doe       47.00000     cd
+## BL/BR:Doe     46.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM17 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22133,8 +22789,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.11111      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df Mean      CV      MSD
+##   3.444444 24   52 3.56908 5.463803
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BL/BR:Doe     49.00000 1.0000000 3  48  50 48.5  49 49.5
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       53.66667 3.2145503 3  50  56 52.5  55 55.5
+## BRN:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BRN:Doe       52.33333 3.0550505 3  49  55 51.0  53 54.0
+## WHT:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Doe       46.66667 3.0550505 3  44  50 45.0  46 48.0
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WT/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BR:Doe     51.66667 2.0816660 3  50  54 50.5  51 52.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.33333      a
+## BLK:Doe       53.66667      a
+## WHT:Buck      53.66667      a
+## BLK:Buck      53.33333      a
+## WT/BLK:Buck   52.66667      a
+## BL/BR:Buck    52.33333      a
+## BRN:Doe       52.33333      a
+## WT/BR:Buck    52.33333      a
+## WT/BLK:Doe    52.00000     ab
+## WT/BR:Doe     51.66667     ab
+## BL/BR:Doe     49.00000     ab
+## WHT:Doe       46.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM18 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22200,8 +22897,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.44444      a
 ## Doe    50.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   4.166667 24 52.13889 3.915008 6.009382
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     48.33333 5.0332230 3  43  53 46.0  49 51.0
+## BLK:Buck      52.66667 1.5275252 3  51  54 52.0  53 53.5
+## BLK:Doe       53.00000 1.7320508 3  52  55 52.0  52 53.5
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       52.66667 2.8867513 3  51  56 51.0  51 53.5
+## WHT:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WHT:Doe       47.00000 1.7320508 3  46  49 46.0  46 47.5
+## WT/BLK:Buck   54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WT/BLK:Doe    52.66667 1.5275252 3  51  54 52.0  53 53.5
+## WT/BR:Buck    53.00000 1.7320508 3  52  55 52.0  52 53.5
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BLK:Buck   54.33333      a
+## BRN:Buck      53.66667      a
+## WHT:Buck      53.66667      a
+## BL/BR:Buck    53.33333      a
+## BLK:Doe       53.00000     ab
+## WT/BR:Buck    53.00000     ab
+## BLK:Buck      52.66667     ab
+## BRN:Doe       52.66667     ab
+## WT/BLK:Doe    52.66667     ab
+## WT/BR:Doe     51.33333     ab
+## BL/BR:Doe     48.33333     ab
+## WHT:Doe       47.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM19 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22267,8 +23005,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.22222      a
 ## Doe    51.00000      b
+## $statistics
+##    MSerror Df     Mean       CV     MSD
+##   2.916667 24 52.11111 3.277276 5.02781
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 2.5166115 3  51  56 52.0  53 54.5
+## BL/BR:Doe     49.66667 2.5166115 3  47  52 48.5  50 51.0
+## BLK:Buck      52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BLK:Doe       53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BRN:Buck      54.00000 1.7320508 3  52  55 53.5  55 55.0
+## BRN:Doe       54.66667 2.3094011 3  52  56 54.0  56 56.0
+## WHT:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WHT:Doe       45.33333 2.0816660 3  43  47 44.5  46 46.5
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     50.33333 2.0816660 3  48  52 49.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Doe       54.66667      a
+## BRN:Buck      54.00000      a
+## WT/BR:Buck    54.00000      a
+## WHT:Buck      53.66667      a
+## BL/BR:Buck    53.33333      a
+## BLK:Doe       53.33333      a
+## WT/BLK:Doe    52.66667      a
+## BLK:Buck      52.33333      a
+## WT/BLK:Buck   52.00000      a
+## WT/BR:Doe     50.33333     ab
+## BL/BR:Doe     49.66667     ab
+## WHT:Doe       45.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM20 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22334,8 +23113,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    50.66667      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      1.75 24 52.13889 2.537215 3.894525
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       53.66667 2.0816660 3  52  56 52.5  53 54.5
+## WHT:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WHT:Doe       43.66667 0.5773503 3  43  44 43.5  44 44.0
+## WT/BLK:Buck   54.00000 1.7320508 3  53  56 53.0  53 54.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     51.66667 1.1547005 3  51  53 51.0  51 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    54.33333      a
+## WT/BLK:Buck   54.00000      a
+## BRN:Buck      53.66667      a
+## BRN:Doe       53.66667      a
+## BL/BR:Buck    53.33333      a
+## BLK:Doe       53.33333      a
+## WHT:Buck      53.33333      a
+## BLK:Buck      53.00000      a
+## WT/BR:Doe     51.66667      a
+## WT/BLK:Doe    51.00000      a
+## BL/BR:Doe     50.66667      a
+## WHT:Doe       43.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM21 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22401,8 +23221,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    49.16667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.416667 24 51.52778 3.016942 4.576609
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BL/BR:Doe     46.66667 2.0816660 3  45  49 45.5  46 47.5
+## BLK:Buck      55.66667 1.5275252 3  54  57 55.0  56 56.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       52.66667 2.3094011 3  50  54 52.0  54 54.0
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       43.66667 1.5275252 3  42  45 43.0  44 44.5
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## WT/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.66667      a
+## BRN:Buck      54.00000     ab
+## WHT:Buck      54.00000     ab
+## BL/BR:Buck    53.66667     ab
+## WT/BR:Buck    53.66667     ab
+## BRN:Doe       52.66667     ab
+## WT/BLK:Buck   52.33333     ab
+## BLK:Doe       51.00000     bc
+## WT/BR:Doe     50.66667     bc
+## WT/BLK:Doe    50.33333     bc
+## BL/BR:Doe     46.66667     cd
+## WHT:Doe       43.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM22 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22468,8 +23329,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    49.61111      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##         1 24 51.66667 1.935484 2.943984
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     46.33333 0.5773503 3  46  47 46.0  46 46.5
+## BLK:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BLK:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WHT:Doe       46.66667 1.1547005 3  46  48 46.0  46 47.0
+## WT/BLK:Buck   53.33333 1.1547005 3  52  54 53.0  54 54.0
+## WT/BLK:Doe    48.66667 0.5773503 3  48  49 48.5  49 49.0
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.00000      a
+## WT/BR:Buck    54.33333     ab
+## BRN:Buck      53.66667     ab
+## BRN:Doe       53.66667     ab
+## WT/BLK:Buck   53.33333    abc
+## BL/BR:Buck    53.00000    abc
+## WHT:Buck      53.00000    abc
+## BLK:Doe       51.66667     bc
+## WT/BR:Doe     50.66667     cd
+## WT/BLK:Doe    48.66667     de
+## WHT:Doe       46.66667      e
+## BL/BR:Doe     46.33333      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM23 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22535,8 +23437,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    49.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.694444 24 51.72222 2.516729 3.832208
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BL/BR:Doe     48.00000 1.0000000 3  47  49 47.5  48 48.5
+## BLK:Buck      54.33333 1.1547005 3  53  55 54.0  55 55.0
+## BLK:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## BRN:Buck      54.33333 2.0816660 3  52  56 53.5  55 55.5
+## BRN:Doe       52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WHT:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WHT:Doe       46.00000 0.0000000 3  46  46 46.0  46 46.0
+## WT/BLK:Buck   52.66667 3.0550505 3  50  56 51.0  52 54.0
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.33333      a
+## BRN:Buck      54.33333      a
+## WT/BR:Buck    54.33333      a
+## WHT:Buck      53.33333     ab
+## BL/BR:Buck    52.66667     ab
+## BRN:Doe       52.66667     ab
+## WT/BLK:Buck   52.66667     ab
+## BLK:Doe       51.33333    abc
+## WT/BR:Doe     50.66667    abc
+## WT/BLK:Doe    50.33333     bc
+## BL/BR:Doe     48.00000     cd
+## WHT:Doe       46.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM24 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22602,8 +23545,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.11111      a
 ## Doe    49.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.027778 24 51.97222 2.739926 4.192235
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     49.33333 3.2145503 3  47  53 47.5  48 50.5
+## BLK:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BLK:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       45.66667 1.1547005 3  45  47 45.0  45 46.0
+## WT/BLK:Buck   53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WT/BR:Doe     52.00000 1.0000000 3  51  53 51.5  52 52.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    54.66667      a
+## BLK:Buck      54.33333     ab
+## BL/BR:Buck    54.00000     ab
+## BRN:Buck      54.00000     ab
+## WHT:Buck      54.00000     ab
+## WT/BLK:Buck   53.66667     ab
+## WT/BR:Doe     52.00000    abc
+## BRN:Doe       51.00000    abc
+## BLK:Doe       50.66667    abc
+## WT/BLK:Doe    50.33333     bc
+## BL/BR:Doe     49.33333     cd
+## WHT:Doe       45.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM25 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22669,8 +23653,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.00000      a
 ## Doe    48.94444      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.305556 24 51.47222 2.219856 3.363823
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BL/BR:Doe     46.00000 0.0000000 3  46  46 46.0  46 46.0
+## BLK:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BLK:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BRN:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BRN:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       44.66667 1.5275252 3  43  46 44.0  45 45.5
+## WT/BLK:Buck   52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WT/BR:Doe     51.33333 1.1547005 3  50  52 51.0  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.00000      a
+## WT/BR:Buck    55.00000      a
+## BRN:Buck      54.33333     ab
+## BL/BR:Buck    53.66667    abc
+## BLK:Buck      53.66667    abc
+## WT/BLK:Buck   52.33333   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BR:Doe     51.33333    bcd
+## BLK:Doe       50.33333     cd
+## WT/BLK:Doe    50.00000      d
+## BL/BR:Doe     46.00000      e
+## WHT:Doe       44.66667      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM26 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22736,8 +23761,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    50.16667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.111111 24 52.02778 2.026019 3.103232
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BL/BR:Doe     48.66667 0.5773503 3  48  49 48.5  49 49.0
+## BLK:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       52.66667 1.5275252 3  51  54 52.0  53 53.5
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       45.00000 1.0000000 3  44  46 44.5  45 45.5
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BR:Doe     52.00000 1.7320508 3  51  54 51.0  51 52.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.00000      a
+## WHT:Buck      55.00000      a
+## BL/BR:Buck    54.33333     ab
+## BRN:Buck      54.00000    abc
+## WT/BR:Buck    53.00000    abc
+## BRN:Doe       52.66667    abc
+## WT/BLK:Buck   52.00000    abc
+## WT/BR:Doe     52.00000    abc
+## WT/BLK:Doe    51.66667    bcd
+## BLK:Doe       51.00000     cd
+## BL/BR:Doe     48.66667      d
+## WHT:Doe       45.00000      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM27 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22803,8 +23869,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    49.77778      b
+## $statistics
+##    MSerror Df     Mean       CV     MSD
+##   2.111111 24 51.77778 2.806158 4.27751
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 2.6457513 3  51  56 53.0  55 55.5
+## BL/BR:Doe     48.66667 1.5275252 3  47  50 48.0  49 49.5
+## BLK:Buck      55.66667 1.5275252 3  54  57 55.0  56 56.5
+## BLK:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BRN:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## BRN:Doe       50.00000 2.0000000 3  48  52 49.0  50 51.0
+## WHT:Buck      53.00000 0.0000000 3  53  53 53.0  53 53.0
+## WHT:Doe       45.33333 1.5275252 3  44  47 44.5  45 46.0
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.66667      a
+## BL/BR:Buck    54.00000     ab
+## BRN:Buck      54.00000     ab
+## WT/BR:Buck    54.00000     ab
+## WHT:Buck      53.00000     ab
+## BLK:Doe       52.00000    abc
+## WT/BLK:Buck   52.00000    abc
+## WT/BLK:Doe    51.66667    abc
+## WT/BR:Doe     51.00000     bc
+## BRN:Doe       50.00000     bc
+## BL/BR:Doe     48.66667     cd
+## WHT:Doe       45.33333      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM28 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22870,8 +23977,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    50.05556      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      2.25 24 51.80556 2.895442 4.415976
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     47.66667 1.5275252 3  46  49 47.0  48 48.5
+## BLK:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BLK:Doe       52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BRN:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BRN:Doe       53.66667 3.7859389 3  51  58 51.5  52 55.0
+## WHT:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WHT:Doe       45.00000 1.7320508 3  43  46 44.5  46 46.0
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WT/BR:Doe     50.66667 1.1547005 3  50  52 50.0  50 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.33333      a
+## BRN:Buck      54.33333      a
+## BRN:Doe       53.66667      a
+## WT/BR:Buck    53.66667      a
+## BL/BR:Buck    53.33333      a
+## WHT:Buck      53.00000      a
+## WT/BLK:Buck   52.66667      a
+## BLK:Doe       52.33333      a
+## WT/BLK:Doe    51.00000     ab
+## WT/BR:Doe     50.66667     ab
+## BL/BR:Doe     47.66667     bc
+## WHT:Doe       45.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM29 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -22937,8 +24085,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.94444      a
 ## Doe    50.38889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.805556 24 52.16667 3.210823 4.931112
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BLK:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       52.00000 3.4641016 3  50  56 50.0  50 53.0
+## WHT:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WHT:Doe       46.66667 1.5275252 3  45  48 46.0  47 47.5
+## WT/BLK:Buck   52.66667 1.5275252 3  51  54 52.0  53 53.5
+## WT/BLK:Doe    51.66667 1.5275252 3  50  53 51.0  52 52.5
+## WT/BR:Buck    55.00000 1.7320508 3  53  56 54.5  56 56.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.00000      a
+## BLK:Buck      54.66667     ab
+## BRN:Buck      54.00000     ab
+## BL/BR:Buck    53.66667     ab
+## WHT:Buck      53.66667     ab
+## WT/BLK:Buck   52.66667     ab
+## BRN:Doe       52.00000     ab
+## WT/BLK:Doe    51.66667     ab
+## WT/BR:Doe     51.33333    abc
+## BLK:Doe       50.66667    abc
+## BL/BR:Doe     50.00000     bc
+## WHT:Doe       46.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM30 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23004,8 +24193,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    50.94444      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.055556 24 52.33333 2.739594 4.220851
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.66667 2.0816660 3  49  53 49.5  50 51.5
+## BLK:Buck      55.33333 0.5773503 3  55  56 55.0  55 55.5
+## BLK:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## BRN:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BRN:Doe       53.00000 2.0000000 3  51  55 52.0  53 54.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Doe    49.66667 2.5166115 3  47  52 48.5  50 51.0
+## WT/BR:Buck    54.00000 1.7320508 3  53  56 53.0  53 54.5
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.33333      a
+## WHT:Buck      55.00000     ab
+## WT/BR:Buck    54.00000    abc
+## BRN:Buck      53.66667   abcd
+## BL/BR:Buck    53.33333   abcd
+## BRN:Doe       53.00000   abcd
+## BLK:Doe       51.33333   abcd
+## WT/BLK:Buck   51.00000    bcd
+## BL/BR:Doe     50.66667     cd
+## WHT:Doe       50.66667     cd
+## WT/BR:Doe     50.33333     cd
+## WT/BLK:Doe    49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM31 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23071,8 +24301,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.50000      a
 ## Doe    51.61111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.916667 24 52.55556 2.634236 4.075761
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 1.1547005 3  52  54 53.0  54 54.0
+## BL/BR:Doe     51.00000 2.6457513 3  48  53 50.0  52 52.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       54.33333 2.0816660 3  52  56 53.5  55 55.5
+## BRN:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## BRN:Doe       54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WHT:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    49.00000 2.0000000 3  47  51 48.0  49 50.0
+## WT/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Doe       54.33333      a
+## BLK:Buck      54.00000      a
+## BRN:Buck      54.00000      a
+## BRN:Doe       54.00000      a
+## WHT:Buck      53.66667      a
+## WT/BR:Buck    53.66667      a
+## BL/BR:Buck    53.33333      a
+## WT/BLK:Buck   52.33333     ab
+## BL/BR:Doe     51.00000     ab
+## WT/BR:Doe     51.00000     ab
+## WHT:Doe       50.33333     ab
+## WT/BLK:Doe    49.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM32 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23138,8 +24409,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.05556      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.833333 24 52.55556 2.576334 3.986173
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BLK:Doe       53.00000 2.6457513 3  51  56 51.5  52 54.0
+## BRN:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BLK:Buck   52.66667 1.5275252 3  51  54 52.0  53 53.5
+## WT/BLK:Doe    50.00000 2.0000000 3  48  52 49.0  50 51.0
+## WT/BR:Buck    55.33333 1.1547005 3  54  56 55.0  56 56.0
+## WT/BR:Doe     50.66667 1.1547005 3  50  52 50.0  50 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.33333      a
+## BL/BR:Buck    55.00000      a
+## WHT:Buck      54.00000     ab
+## BLK:Buck      53.66667    abc
+## BRN:Buck      53.66667    abc
+## BLK:Doe       53.00000    abc
+## WT/BLK:Buck   52.66667    abc
+## BRN:Doe       51.66667    abc
+## BL/BR:Doe     51.00000     bc
+## WT/BR:Doe     50.66667     bc
+## WHT:Doe       50.00000      c
+## WT/BLK:Doe    50.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM33 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23205,8 +24517,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.11111      a
 ## Doe    50.77778      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.138889 24 51.94444 2.054478 3.141783
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 0.0000000 3  53  53 53.0  53 53.0
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.00000 1.7320508 3  52  55 53.5  55 55.0
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    49.66667 1.5275252 3  48  51 49.0  50 50.5
+## WT/BR:Buck    52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.33333      a
+## WHT:Buck      54.00000     ab
+## BL/BR:Buck    53.00000    abc
+## BRN:Buck      53.00000    abc
+## WT/BR:Buck    52.33333   abcd
+## WT/BLK:Buck   52.00000   abcd
+## BRN:Doe       51.33333   abcd
+## BL/BR:Doe     51.00000    bcd
+## BLK:Doe       51.00000    bcd
+## WHT:Doe       51.00000    bcd
+## WT/BR:Doe     50.66667     cd
+## WT/BLK:Doe    49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM34 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23272,8 +24625,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    50.38889      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      0.75 24 51.97222 1.666324 2.549565
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BLK:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WHT:Doe       49.66667 1.1547005 3  49  51 49.0  49 50.0
+## WT/BLK:Buck   52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BLK:Doe    49.66667 0.5773503 3  49  50 49.5  50 50.0
+## WT/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## BRN:Buck      54.00000     ab
+## WHT:Buck      53.66667     ab
+## BL/BR:Buck    53.33333    abc
+## WT/BR:Buck    53.33333    abc
+## WT/BLK:Buck   52.33333   abcd
+## BRN:Doe       51.66667   bcde
+## WT/BR:Doe     51.00000    cde
+## BLK:Doe       50.33333     de
+## BL/BR:Doe     50.00000     de
+## WHT:Doe       49.66667      e
+## WT/BLK:Doe    49.66667      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM35 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23339,8 +24733,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.16667      a
 ## Doe    50.27778      b
+## $statistics
+##    MSerror Df     Mean       CV     MSD
+##   1.805556 24 51.72222 2.597935 3.95586
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BLK:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.00000 1.7320508 3  52  55 53.5  55 55.0
+## WHT:Doe       49.33333 1.5275252 3  48  51 48.5  49 50.0
+## WT/BLK:Buck   51.33333 1.5275252 3  50  53 50.5  51 52.0
+## WT/BLK:Doe    49.33333 1.5275252 3  48  51 48.5  49 50.0
+## WT/BR:Buck    53.66667 2.0816660 3  52  56 52.5  53 54.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.33333      a
+## WHT:Buck      54.00000      a
+## BRN:Buck      53.66667     ab
+## WT/BR:Buck    53.66667     ab
+## BLK:Buck      52.00000    abc
+## BLK:Doe       51.33333    abc
+## WT/BLK:Buck   51.33333    abc
+## BRN:Doe       51.00000    abc
+## WT/BR:Doe     50.66667    abc
+## BL/BR:Doe     50.00000     bc
+## WHT:Doe       49.33333      c
+## WT/BLK:Doe    49.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM36 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23406,8 +24841,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.66667      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.138889 24 52.16667 2.803503 4.305559
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BLK:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WHT:Doe       48.33333 3.2145503 3  46  52 46.5  47 49.5
+## WT/BLK:Buck   54.00000 1.7320508 3  53  56 53.0  53 54.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.33333 1.1547005 3  53  55 54.0  55 55.0
+## WT/BR:Doe     51.00000 1.7320508 3  49  52 50.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    54.33333      a
+## BRN:Buck      54.00000      a
+## WT/BLK:Buck   54.00000      a
+## BL/BR:Buck    53.66667      a
+## WHT:Buck      53.33333      a
+## BLK:Buck      52.66667      a
+## BLK:Doe       52.33333     ab
+## WT/BLK:Doe    51.00000     ab
+## WT/BR:Doe     51.00000     ab
+## BL/BR:Doe     50.66667     ab
+## BRN:Doe       50.66667     ab
+## WHT:Doe       48.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM37 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23473,8 +24949,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.38889      a
 ## Doe    50.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.416667 24 52.61111 2.262332 3.504042
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BLK:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## BRN:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      55.33333 0.5773503 3  55  56 55.0  55 55.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    54.66667 2.0816660 3  53  57 53.5  54 55.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## BL/BR:Buck    55.00000      a
+## WT/BR:Buck    54.66667     ab
+## BRN:Buck      54.33333    abc
+## BLK:Buck      53.66667   abcd
+## WT/BLK:Buck   53.33333  abcde
+## BLK:Doe       51.33333   bcde
+## BRN:Doe       51.33333   bcde
+## WT/BR:Doe     51.00000    cde
+## BL/BR:Doe     50.66667     de
+## WHT:Doe       50.66667     de
+## WT/BLK:Doe    50.00000      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM38 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23540,8 +25057,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df  Mean       CV      MSD
+##   2.083333 24 52.25 2.762441 4.249275
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BLK:Doe       51.66667 2.0816660 3  50  54 50.5  51 52.5
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WHT:Buck      55.33333 2.0816660 3  53  57 54.5  56 56.5
+## WHT:Doe       49.33333 2.0816660 3  47  51 48.5  50 50.5
+## WT/BLK:Buck   54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WT/BLK:Doe    52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BR:Buck    53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## WT/BLK:Buck   54.33333     ab
+## BRN:Buck      54.00000    abc
+## BLK:Buck      53.33333   abcd
+## WT/BR:Buck    53.33333   abcd
+## BL/BR:Buck    52.66667   abcd
+## WT/BLK:Doe    52.66667   abcd
+## BLK:Doe       51.66667   abcd
+## WT/BR:Doe     50.33333    bcd
+## BL/BR:Doe     50.00000     cd
+## BRN:Doe       50.00000     cd
+## WHT:Doe       49.33333      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM39 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23607,8 +25165,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    50.88889      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      1.25 24 52.33333 2.136371 3.291474
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BL/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       51.66667 1.5275252 3  50  53 51.0  52 52.5
+## BRN:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BRN:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WHT:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WHT:Doe       49.00000 2.0000000 3  47  51 48.0  49 50.0
+## WT/BLK:Buck   52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BLK:Doe    50.33333 1.1547005 3  49  51 50.0  51 51.0
+## WT/BR:Buck    53.33333 1.1547005 3  52  54 53.0  54 54.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.66667      a
+## BRN:Buck      54.33333     ab
+## WHT:Buck      54.33333     ab
+## BLK:Buck      53.33333    abc
+## WT/BR:Buck    53.33333    abc
+## WT/BLK:Buck   52.66667    abc
+## BRN:Doe       52.00000   abcd
+## BLK:Doe       51.66667   abcd
+## BL/BR:Doe     51.33333    bcd
+## WT/BR:Doe     51.00000     cd
+## WT/BLK:Doe    50.33333     cd
+## WHT:Doe       49.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM40 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23674,8 +25273,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.38889      a
 ## Doe    51.00000      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   2.305556 24 52.19444 2.909133 4.470162
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 1.1547005 3  52  54 53.0  54 54.0
+## BL/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BLK:Buck      53.33333 2.0816660 3  51  55 52.5  54 54.5
+## BLK:Doe       52.33333 2.3094011 3  51  55 51.0  51 53.0
+## BRN:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BRN:Doe       52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WHT:Buck      53.00000 1.7320508 3  52  55 52.0  52 53.5
+## WHT:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BLK:Buck   53.00000 1.7320508 3  52  55 52.0  52 53.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.33333 2.3094011 3  52  56 52.0  52 54.0
+## WT/BR:Doe     49.66667 0.5773503 3  49  50 49.5  50 50.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.33333      a
+## BL/BR:Buck    53.33333     ab
+## BLK:Buck      53.33333     ab
+## WT/BR:Buck    53.33333     ab
+## WHT:Buck      53.00000     ab
+## WT/BLK:Buck   53.00000     ab
+## BRN:Doe       52.66667     ab
+## BLK:Doe       52.33333     ab
+## WT/BLK:Doe    51.00000     ab
+## BL/BR:Doe     50.33333     ab
+## WHT:Doe       50.00000     ab
+## WT/BR:Doe     49.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM41 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23741,8 +25381,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.16667      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.388889 24 52.11111 2.261536 3.469518
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BRN:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       49.66667 1.5275252 3  48  51 49.0  50 50.5
+## WT/BLK:Buck   52.33333 1.1547005 3  51  53 52.0  53 53.0
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.00000      a
+## WHT:Buck      54.00000      a
+## WT/BR:Buck    53.66667      a
+## BLK:Buck      53.00000     ab
+## BLK:Doe       52.33333     ab
+## WT/BLK:Buck   52.33333     ab
+## BL/BR:Buck    52.00000     ab
+## BRN:Doe       51.66667     ab
+## WT/BLK:Doe    51.33333     ab
+## BL/BR:Doe     50.66667     ab
+## WT/BR:Doe     50.66667     ab
+## WHT:Doe       49.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM42 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23808,8 +25489,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.05556      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.555556 24 52.36111 2.381957 3.671793
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## WHT:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BLK:Buck   54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BLK:Doe    49.00000 1.0000000 3  48  50 48.5  49 49.5
+## WT/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WT/BR:Doe     51.00000 1.7320508 3  50  53 50.0  50 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.00000      a
+## WT/BLK:Buck   54.33333     ab
+## BL/BR:Buck    54.00000     ab
+## WHT:Buck      54.00000     ab
+## WT/BR:Buck    53.66667     ab
+## BRN:Buck      53.33333     ab
+## WHT:Doe       51.33333    abc
+## BL/BR:Doe     51.00000     bc
+## BLK:Doe       51.00000     bc
+## WT/BR:Doe     51.00000     bc
+## BRN:Doe       50.66667     bc
+## WT/BLK:Doe    49.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM43 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23875,8 +25597,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.44444      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df  Mean       CV      MSD
+##   1.222222 24 52.25 2.115869 3.254697
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       52.00000 1.7320508 3  51  54 51.0  51 52.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WHT:Doe       50.66667 1.5275252 3  49  52 50.0  51 51.5
+## WT/BLK:Buck   51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BLK:Doe    50.33333 1.5275252 3  49  52 49.5  50 51.0
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     51.66667 0.5773503 3  51  52 51.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    54.33333      a
+## BLK:Buck      54.00000     ab
+## BRN:Buck      54.00000     ab
+## WHT:Buck      53.66667    abc
+## BL/BR:Buck    53.33333   abcd
+## BLK:Doe       52.00000   abcd
+## WT/BR:Doe     51.66667   abcd
+## WT/BLK:Buck   51.33333   abcd
+## BL/BR:Doe     51.00000    bcd
+## BRN:Doe       50.66667     cd
+## WHT:Doe       50.66667     cd
+## WT/BLK:Doe    50.33333      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM44 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -23942,8 +25705,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    51.16667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.277778 24 52.38889 2.157687 3.327845
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BLK:Buck      52.66667 1.1547005 3  52  54 52.0  52 53.0
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      54.33333 2.8867513 3  51  56 53.5  56 56.0
+## BRN:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WHT:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.33333      a
+## WT/BR:Buck    54.33333      a
+## WHT:Buck      53.66667     ab
+## BL/BR:Buck    53.33333    abc
+## WT/BLK:Buck   53.33333    abc
+## BLK:Buck      52.66667    abc
+## BRN:Doe       52.00000    abc
+## WT/BLK:Doe    51.66667    abc
+## WT/BR:Doe     51.33333    abc
+## BLK:Doe       51.00000     bc
+## WHT:Doe       50.66667     bc
+## BL/BR:Doe     50.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM45 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24009,8 +25813,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.388889 24 52.16667 2.259127 3.469518
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BLK:Doe       52.00000 1.7320508 3  51  54 51.0  51 52.5
+## BRN:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      54.66667 2.3094011 3  52  56 54.0  56 56.0
+## WHT:Doe       49.66667 0.5773503 3  49  50 49.5  50 50.0
+## WT/BLK:Buck   52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## WT/BR:Buck    54.00000     ab
+## BL/BR:Buck    53.66667    abc
+## BLK:Buck      53.66667    abc
+## BRN:Buck      53.00000   abcd
+## WT/BLK:Buck   52.66667   abcd
+## BLK:Doe       52.00000   abcd
+## BL/BR:Doe     51.00000    bcd
+## BRN:Doe       50.66667    bcd
+## WT/BLK:Doe    50.66667    bcd
+## WT/BR:Doe     50.33333     cd
+## WHT:Doe       49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM46 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24076,8 +25921,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    50.83333      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##         1 24 52.30556 1.911843 2.943984
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BRN:Buck      53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    55.33333 1.5275252 3  54  57 54.5  55 56.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.33333      a
+## WHT:Buck      54.66667      a
+## BRN:Buck      53.66667     ab
+## BLK:Buck      53.33333    abc
+## BL/BR:Buck    53.00000    abc
+## WT/BLK:Buck   52.66667   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BLK:Doe    51.33333    bcd
+## WT/BR:Doe     51.00000    bcd
+## BL/BR:Doe     50.66667     cd
+## WHT:Doe       50.66667     cd
+## BLK:Doe       50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM47 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24143,8 +26029,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    50.55556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.027778 24 52.22222 1.941307 2.984593
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.33333 1.1547005 3  52  54 53.0  54 54.0
+## BLK:Doe       50.66667 1.5275252 3  49  52 50.0  51 51.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    55.66667 0.5773503 3  55  56 55.5  56 56.0
+## WT/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.66667      a
+## BRN:Buck      54.00000      a
+## WHT:Buck      54.00000      a
+## BL/BR:Buck    53.33333     ab
+## BLK:Buck      53.33333     ab
+## WT/BLK:Buck   53.00000    abc
+## BRN:Doe       51.00000    bcd
+## BL/BR:Doe     50.66667    bcd
+## BLK:Doe       50.66667    bcd
+## WHT:Doe       50.66667    bcd
+## WT/BLK:Doe    50.33333     cd
+## WT/BR:Doe     50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM48 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24210,8 +26137,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.22222      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV     MSD
+##   1.333333 24 52.13889 2.214663 3.39942
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     51.00000 1.7320508 3  49  52 50.5  52 52.0
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BRN:Buck      52.66667 2.0816660 3  51  55 51.5  52 53.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## WT/BLK:Buck   51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WT/BR:Doe     51.00000 0.0000000 3  51  51 51.0  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## BLK:Buck      54.00000     ab
+## WT/BR:Buck    53.66667     ab
+## BL/BR:Buck    53.00000     ab
+## BRN:Buck      52.66667     ab
+## BLK:Doe       52.00000     ab
+## WT/BLK:Buck   51.33333     ab
+## BL/BR:Doe     51.00000      b
+## WT/BLK:Doe    51.00000      b
+## WT/BR:Doe     51.00000      b
+## BRN:Doe       50.66667      b
+## WHT:Doe       50.66667      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM49 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24277,8 +26245,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.50000      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.472222 24 52.11111 2.328393 3.572088
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BL/BR:Doe     50.33333 2.0816660 3  48  52 49.5  51 51.5
+## BLK:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BLK:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## BRN:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BRN:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## WHT:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WT/BR:Doe     50.66667 1.1547005 3  50  52 50.0  50 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.33333      a
+## WT/BR:Buck    54.33333      a
+## BL/BR:Buck    53.66667     ab
+## BLK:Buck      53.33333     ab
+## BRN:Buck      53.00000     ab
+## WT/BLK:Buck   52.33333     ab
+## WT/BLK:Doe    51.33333     ab
+## BLK:Doe       50.66667      b
+## BRN:Doe       50.66667      b
+## WHT:Doe       50.66667      b
+## WT/BR:Doe     50.66667      b
+## BL/BR:Doe     50.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM50 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24344,8 +26353,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    50.33333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.583333 24 52.11111 2.414659 3.704432
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 2.0816660 3  52  56 53.5  55 55.5
+## BL/BR:Doe     49.66667 0.5773503 3  49  50 49.5  50 50.0
+## BLK:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BLK:Doe       50.00000 0.0000000 3  50  50 50.0  50 50.0
+## BRN:Buck      54.33333 2.0816660 3  52  56 53.5  55 55.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      55.33333 1.1547005 3  54  56 55.0  56 56.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    49.66667 0.5773503 3  49  50 49.5  50 50.0
+## WT/BR:Buck    53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## BL/BR:Buck    54.33333     ab
+## BRN:Buck      54.33333     ab
+## BLK:Buck      53.33333    abc
+## WT/BR:Buck    53.33333    abc
+## WT/BLK:Buck   52.66667    abc
+## BRN:Doe       51.00000     bc
+## WT/BR:Doe     51.00000     bc
+## WHT:Doe       50.66667     bc
+## BLK:Doe       50.00000      c
+## BL/BR:Doe     49.66667      c
+## WT/BLK:Doe    49.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM51 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24411,8 +26461,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    51.33333      b
+## $statistics
+##     MSerror Df     Mean       CV      MSD
+##   0.8888889 24 52.52778 1.794877 2.775615
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BRN:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    51.66667 1.1547005 3  51  53 51.0  51 52.0
+## WT/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.66667      a
+## WHT:Buck      54.00000     ab
+## BRN:Buck      53.66667    abc
+## WT/BR:Buck    53.66667    abc
+## BLK:Buck      53.33333   abcd
+## WT/BLK:Buck   53.00000   abcd
+## BLK:Doe       52.33333   abcd
+## WT/BLK:Doe    51.66667    bcd
+## BRN:Doe       51.33333    bcd
+## WHT:Doe       51.00000     cd
+## WT/BR:Doe     51.00000     cd
+## BL/BR:Doe     50.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM52 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24478,8 +26569,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.222222 24 52.30556 2.113622 3.254697
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BL/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BLK:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## BLK:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      54.33333 2.0816660 3  52  56 53.5  55 55.5
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   53.33333 1.1547005 3  52  54 53.0  54 54.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BR:Doe     51.00000 0.0000000 3  51  51 51.0  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## WHT:Buck      54.33333      a
+## BRN:Buck      54.00000     ab
+## BL/BR:Buck    53.66667    abc
+## WT/BLK:Buck   53.33333   abcd
+## WT/BR:Buck    53.33333   abcd
+## WHT:Doe       51.00000    bcd
+## WT/BLK:Doe    51.00000    bcd
+## WT/BR:Doe     51.00000    bcd
+## BRN:Doe       50.66667     cd
+## BL/BR:Doe     50.33333      d
+## BLK:Doe       50.33333      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM53 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24545,8 +26677,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck         54      a
 ## Doe          51      b
+## $statistics
+##    MSerror Df Mean       CV      MSD
+##   1.444444 24 52.5 2.289239 3.538228
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 1.1547005 3  52  54 52.0  52 53.0
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BLK:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WHT:Buck      55.33333 0.5773503 3  55  56 55.0  55 55.5
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.33333      a
+## BLK:Buck      54.00000     ab
+## BRN:Buck      54.00000     ab
+## WT/BLK:Buck   54.00000     ab
+## WT/BR:Buck    54.00000     ab
+## BL/BR:Buck    52.66667    abc
+## BLK:Doe       51.33333     bc
+## WT/BLK:Doe    51.33333     bc
+## WT/BR:Doe     51.33333     bc
+## WHT:Doe       51.00000     bc
+## BL/BR:Doe     50.66667     bc
+## BRN:Doe       50.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM54 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24612,8 +26785,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    51.00000      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##         1 24 52.27778 1.912859 2.943984
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     49.00000 1.0000000 3  48  50 48.5  49 49.5
+## BLK:Buck      54.00000 1.7320508 3  52  55 53.5  55 55.0
+## BLK:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## BRN:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WHT:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.00000      a
+## BLK:Buck      54.00000      a
+## BRN:Buck      54.00000      a
+## WHT:Buck      54.00000      a
+## WT/BLK:Buck   53.00000     ab
+## WT/BLK:Doe    52.33333     ab
+## WT/BR:Buck    52.33333     ab
+## BLK:Doe       51.33333    abc
+## BRN:Doe       51.33333    abc
+## WHT:Doe       51.33333    abc
+## WT/BR:Doe     50.66667     bc
+## BL/BR:Doe     49.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM55 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24677,8 +26891,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   50.94444      a
 ## Doe    50.44444      a
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   64.55556 24 50.69444 15.84917 23.65387
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]        std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    36.66667 27.4286954 3   5  53 28.5  52 52.5
+## BL/BR:Doe     50.00000  1.7320508 3  49  52 49.0  49 50.5
+## BLK:Buck      54.00000  1.7320508 3  53  56 53.0  53 54.5
+## BLK:Doe       50.66667  1.5275252 3  49  52 50.0  51 51.5
+## BRN:Buck      54.00000  1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.66667  0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.33333  1.5275252 3  53  56 53.5  54 55.0
+## WHT:Doe       49.33333  2.0816660 3  47  51 48.5  50 50.5
+## WT/BLK:Buck   52.66667  2.0816660 3  51  55 51.5  52 53.5
+## WT/BLK:Doe    50.66667  0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    54.00000  1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     50.33333  0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.33333      a
+## BLK:Buck      54.00000      a
+## BRN:Buck      54.00000      a
+## WT/BR:Buck    54.00000      a
+## WT/BLK:Buck   52.66667      a
+## BRN:Doe       51.66667      a
+## BLK:Doe       50.66667      a
+## WT/BLK:Doe    50.66667      a
+## WT/BR:Doe     50.33333      a
+## BL/BR:Doe     50.00000      a
+## WHT:Doe       49.33333      a
+## BL/BR:Buck    36.66667      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM56 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24744,8 +26999,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.00000      a
 ## Doe    50.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.472222 24 51.91667 2.337114 3.572088
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 1.1547005 3  52  54 52.0  52 53.0
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WHT:Doe       50.66667 2.5166115 3  48  53 49.5  51 52.0
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    51.33333 1.5275252 3  50  53 50.5  51 52.0
+## WT/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BR:Doe     51.00000 0.0000000 3  51  51 51.0  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      53.66667      a
+## WHT:Buck      53.66667      a
+## BLK:Buck      53.00000     ab
+## WT/BR:Buck    53.00000     ab
+## BL/BR:Buck    52.66667     ab
+## WT/BLK:Buck   52.00000     ab
+## WT/BLK:Doe    51.33333     ab
+## BLK:Doe       51.00000     ab
+## BRN:Doe       51.00000     ab
+## WT/BR:Doe     51.00000     ab
+## WHT:Doe       50.66667     ab
+## BL/BR:Doe     50.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM57 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24811,8 +27107,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.05556      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.833333 24 52.47222 2.580425 3.986173
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     49.66667 2.0816660 3  48  52 48.5  49 50.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       51.00000 0.0000000 3  51  51 51.0  51 51.0
+## BRN:Buck      55.66667 0.5773503 3  55  56 55.5  56 56.0
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   52.33333 2.0816660 3  50  54 51.5  53 53.5
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    54.00000 2.6457513 3  52  57 52.5  53 55.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.66667      a
+## WHT:Buck      55.00000     ab
+## BLK:Buck      54.00000    abc
+## WT/BR:Buck    54.00000    abc
+## BL/BR:Buck    53.33333   abcd
+## WT/BLK:Buck   52.33333   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BLK:Doe    51.33333    bcd
+## BLK:Doe       51.00000     cd
+## WHT:Doe       51.00000     cd
+## WT/BR:Doe     51.00000     cd
+## BL/BR:Doe     49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM58 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24878,8 +27215,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.38889      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.388889 24 52.52778 2.243596 3.469518
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.00000 1.7320508 3  53  56 54.5  56 56.0
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      55.33333 0.5773503 3  55  56 55.0  55 55.5
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      55.00000 1.7320508 3  54  57 54.0  54 55.5
+## WHT:Doe       49.66667 2.0816660 3  48  52 48.5  49 50.5
+## WT/BLK:Buck   53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.33333      a
+## BL/BR:Buck    55.00000      a
+## WHT:Buck      55.00000      a
+## WT/BR:Buck    54.33333     ab
+## BLK:Buck      53.33333    abc
+## WT/BLK:Buck   53.33333    abc
+## BRN:Doe       51.33333    bcd
+## BL/BR:Doe     51.00000    bcd
+## BLK:Doe       51.00000    bcd
+## WT/BLK:Doe    50.66667     cd
+## WT/BR:Doe     50.33333     cd
+## WHT:Doe       49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM59 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -24945,8 +27323,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.94444      a
 ## Doe    50.77778      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.055556 24 52.36111 1.962148 3.024656
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BLK:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BLK:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## BRN:Buck      55.33333 1.1547005 3  54  56 55.0  56 56.0
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WHT:Doe       49.33333 0.5773503 3  49  50 49.0  49 49.5
+## WT/BLK:Buck   51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    54.33333 2.3094011 3  53  57 53.0  53 55.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.33333      a
+## BLK:Buck      55.00000     ab
+## WT/BR:Buck    54.33333    abc
+## BL/BR:Buck    54.00000   abcd
+## WHT:Buck      53.33333  abcde
+## BLK:Doe       52.00000  bcdef
+## WT/BLK:Buck   51.66667   cdef
+## BRN:Doe       51.33333   cdef
+## WT/BR:Doe     51.00000    def
+## WT/BLK:Doe    50.66667     ef
+## BL/BR:Doe     50.33333     ef
+## WHT:Doe       49.33333      f
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM60 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25012,8 +27431,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.00000      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.666667 24 52.44444 2.461642 3.800667
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.7320508 3  52  55 52.0  52 53.5
+## BL/BR:Doe     48.66667 0.5773503 3  48  49 48.5  49 49.0
+## BLK:Buck      55.33333 2.0816660 3  53  57 54.5  56 56.5
+## BLK:Doe       51.66667 1.1547005 3  51  53 51.0  51 52.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Buck   51.66667 1.5275252 3  50  53 51.0  52 52.5
+## WT/BLK:Doe    50.66667 1.5275252 3  49  52 50.0  51 51.5
+## WT/BR:Buck    55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.33333      a
+## WHT:Buck      55.00000     ab
+## WT/BR:Buck    55.00000     ab
+## BRN:Buck      54.00000    abc
+## BL/BR:Buck    53.00000    abc
+## WHT:Doe       52.00000   abcd
+## BLK:Doe       51.66667   abcd
+## WT/BLK:Buck   51.66667   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BR:Doe     51.00000     cd
+## WT/BLK:Doe    50.66667     cd
+## BL/BR:Doe     48.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM61 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25079,8 +27539,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.33333      a
 ## Doe    51.11111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.055556 24 52.72222 1.948708 3.024656
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      54.33333 1.1547005 3  53  55 54.0  55 55.0
+## BLK:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BRN:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BRN:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WHT:Buck      54.33333 1.1547005 3  53  55 54.0  55 55.0
+## WHT:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BLK:Buck   54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BLK:Doe    50.00000 0.0000000 3  50  50 50.0  50 50.0
+## WT/BR:Buck    54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.66667      a
+## WT/BR:Buck    54.66667      a
+## BLK:Buck      54.33333     ab
+## WHT:Buck      54.33333     ab
+## BL/BR:Buck    54.00000     ab
+## WT/BLK:Buck   54.00000     ab
+## BLK:Doe       52.33333    abc
+## BRN:Doe       52.00000    abc
+## WHT:Doe       51.33333     bc
+## BL/BR:Doe     50.66667      c
+## WT/BR:Doe     50.33333      c
+## WT/BLK:Doe    50.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM62 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25146,8 +27647,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    50.22222      b
+## $statistics
+##     MSerror Df     Mean       CV      MSD
+##   0.8611111 24 51.91667 1.787404 2.731901
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BL/BR:Doe     49.33333 0.5773503 3  49  50 49.0  49 49.5
+## BLK:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BLK:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## WHT:Doe       48.00000 1.0000000 3  47  49 47.5  48 48.5
+## WT/BLK:Buck   52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    54.33333      a
+## WT/BR:Buck    54.33333      a
+## WHT:Buck      54.00000     ab
+## BRN:Buck      53.66667    abc
+## BLK:Buck      53.33333   abcd
+## WT/BLK:Buck   52.00000  abcde
+## WT/BLK:Doe    51.33333   bcde
+## BRN:Doe       51.00000    cde
+## WT/BR:Doe     51.00000    cde
+## BLK:Doe       50.66667    def
+## BL/BR:Doe     49.33333     ef
+## WHT:Doe       48.00000      f
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM63 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25213,8 +27755,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.94444      a
 ## Doe    50.55556      b
+## $statistics
+##    MSerror Df  Mean       CV     MSD
+##   1.333333 24 52.25 2.209953 3.39942
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## BRN:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## WHT:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    54.66667 2.3094011 3  52  56 54.0  56 56.0
+## WT/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## WT/BR:Buck    54.66667      a
+## BL/BR:Buck    54.00000     ab
+## BRN:Buck      54.00000     ab
+## BLK:Buck      53.33333    abc
+## WT/BLK:Buck   53.00000    abc
+## BRN:Doe       51.33333    abc
+## BLK:Doe       51.00000     bc
+## WHT:Doe       50.66667     bc
+## WT/BLK:Doe    50.33333      c
+## BL/BR:Doe     50.00000      c
+## WT/BR:Doe     50.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM64 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25280,8 +27863,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    50.77778      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.694444 24 52.30556 2.488662 3.832208
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## BLK:Buck      53.66667 2.5166115 3  51  56 52.5  54 55.0
+## BLK:Doe       50.33333 1.5275252 3  49  52 49.5  50 51.0
+## BRN:Buck      55.00000 1.7320508 3  53  56 54.5  56 56.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    50.33333 1.1547005 3  49  51 50.0  51 51.0
+## WT/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.00000      a
+## WHT:Buck      55.00000      a
+## BLK:Buck      53.66667     ab
+## WT/BR:Buck    53.33333     ab
+## BL/BR:Buck    53.00000     ab
+## WT/BLK:Buck   53.00000     ab
+## BRN:Doe       51.66667     ab
+## WT/BR:Doe     51.00000      b
+## BL/BR:Doe     50.66667      b
+## WHT:Doe       50.66667      b
+## BLK:Doe       50.33333      b
+## WT/BLK:Doe    50.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM65 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25347,8 +27971,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.05556      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.166667 24 52.47222 2.058467 3.179866
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.33333 0.5773503 3  55  56 55.0  55 55.5
+## BL/BR:Doe     49.66667 0.5773503 3  49  50 49.5  50 50.0
+## BLK:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BLK:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BRN:Buck      54.66667 2.0816660 3  53  57 53.5  54 55.5
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    55.33333      a
+## BRN:Buck      54.66667     ab
+## WHT:Buck      54.66667     ab
+## BLK:Buck      53.66667    abc
+## WT/BLK:Buck   53.33333    abc
+## WT/BR:Buck    52.66667   abcd
+## BRN:Doe       51.66667    bcd
+## WT/BLK:Doe    51.33333     cd
+## WT/BR:Doe     51.33333     cd
+## BLK:Doe       50.66667     cd
+## WHT:Doe       50.66667     cd
+## BL/BR:Doe     49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM66 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25414,8 +28079,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.277778 24 52.44444 2.155401 3.327845
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BL/BR:Doe     50.33333 2.0816660 3  48  52 49.5  51 51.5
+## BLK:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BLK:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## BRN:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WHT:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BLK:Buck   52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BLK:Doe    51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BR:Buck    54.00000 1.7320508 3  52  55 53.5  55 55.0
+## WT/BR:Doe     51.33333 1.1547005 3  50  52 51.0  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## BL/BR:Buck    54.33333     ab
+## WHT:Buck      54.33333     ab
+## WT/BR:Buck    54.00000     ab
+## BRN:Buck      53.33333    abc
+## WT/BLK:Buck   52.33333   abcd
+## BRN:Doe       51.66667   abcd
+## WT/BLK:Doe    51.66667   abcd
+## BLK:Doe       51.33333    bcd
+## WT/BR:Doe     51.33333    bcd
+## BL/BR:Doe     50.33333     cd
+## WHT:Doe       50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM67 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25481,8 +28187,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.555556 24 52.27778 2.385754 3.671793
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     49.00000 1.0000000 3  48  50 48.5  49 49.5
+## BLK:Buck      55.33333 1.1547005 3  54  56 55.0  56 56.0
+## BLK:Doe       51.00000 2.6457513 3  48  53 50.0  52 52.5
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WHT:Buck      54.00000 1.7320508 3  52  55 53.5  55 55.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    53.33333 1.1547005 3  52  54 53.0  54 54.0
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.33333      a
+## WHT:Buck      54.00000     ab
+## BRN:Buck      53.66667     ab
+## BL/BR:Buck    53.33333     ab
+## WT/BLK:Buck   53.33333     ab
+## WT/BR:Buck    53.33333     ab
+## BRN:Doe       52.00000    abc
+## WT/BR:Doe     51.33333     bc
+## BLK:Doe       51.00000     bc
+## WHT:Doe       50.66667     bc
+## WT/BLK:Doe    50.33333     bc
+## BL/BR:Doe     49.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM68 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25548,8 +28295,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.27778      a
 ## Doe    51.00000      b
+## $statistics
+##     MSerror Df     Mean       CV      MSD
+##   0.8888889 24 52.13889 1.808265 2.775615
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 1.1547005 3  52  54 52.0  52 53.0
+## BL/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BRN:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BRN:Doe       51.66667 1.1547005 3  51  53 51.0  51 52.0
+## WHT:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.00000      a
+## BLK:Buck      54.00000     ab
+## WT/BR:Buck    54.00000     ab
+## WHT:Buck      53.33333    abc
+## BL/BR:Buck    52.66667    abc
+## BRN:Doe       51.66667     bc
+## WT/BLK:Doe    51.33333     bc
+## WT/BR:Doe     51.00000      c
+## BL/BR:Doe     50.66667      c
+## BLK:Doe       50.66667      c
+## WHT:Doe       50.66667      c
+## WT/BLK:Buck   50.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM69 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25615,8 +28403,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean      CV      MSD
+##   2.416667 24 52.27778 2.97366 4.576609
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.33333 2.0816660 3  48  52 49.5  51 51.5
+## BLK:Buck      55.33333 2.0816660 3  53  57 54.5  56 56.5
+## BLK:Doe       52.66667 1.1547005 3  52  54 52.0  52 53.0
+## BRN:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WHT:Doe       49.00000 1.0000000 3  48  50 48.5  49 49.5
+## WT/BLK:Buck   51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WT/BLK:Doe    50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BR:Buck    54.33333 2.5166115 3  52  57 53.0  54 55.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.33333      a
+## WT/BR:Buck    54.33333     ab
+## BL/BR:Buck    54.00000     ab
+## BRN:Buck      54.00000     ab
+## WHT:Buck      54.00000     ab
+## BLK:Doe       52.66667    abc
+## WT/BLK:Buck   51.33333    abc
+## BRN:Doe       51.00000    abc
+## WT/BR:Doe     51.00000    abc
+## BL/BR:Doe     50.33333     bc
+## WT/BLK:Doe    50.33333     bc
+## WHT:Doe       49.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM70 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25682,8 +28511,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    51.11111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.111111 24 52.41667 2.010987 3.103232
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       52.33333 1.1547005 3  51  53 52.0  53 53.0
+## BRN:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## WHT:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BLK:Buck   52.33333 1.1547005 3  51  53 52.0  53 53.0
+## WT/BLK:Doe    51.00000 0.0000000 3  51  51 51.0  51 51.0
+## WT/BR:Buck    53.00000 0.0000000 3  53  53 53.0  53 53.0
+## WT/BR:Doe     51.66667 0.5773503 3  51  52 51.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.66667      a
+## BL/BR:Buck    54.33333     ab
+## BLK:Buck      54.00000    abc
+## WHT:Buck      54.00000    abc
+## WT/BR:Buck    53.00000   abcd
+## BLK:Doe       52.33333   abcd
+## WT/BLK:Buck   52.33333   abcd
+## WT/BR:Doe     51.66667   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BLK:Doe    51.00000     cd
+## WHT:Doe       50.33333      d
+## BL/BR:Doe     50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM71 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25749,8 +28619,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    50.47059      b
+## $statistics
+##   MSerror Df     Mean       CV
+##   1.42029 23 52.08571 2.288073
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12         5.120705  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BL/BR:Doe     49.66667 1.5275252 3  48  51 49.0  50 50.5
+## BLK:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## BLK:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BRN:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BRN:Doe       52.00000 0.0000000 2  52  52 52.0  52 52.0
+## WHT:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Doe       49.66667 1.5275252 3  48  51 49.0  50 50.5
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    54.00000 0.0000000 3  54  54 54.0  54 54.0
+## WT/BR:Doe     51.00000 1.7320508 3  49  52 50.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## BRN:Buck      54.33333     ab
+## WT/BR:Buck    54.00000     ab
+## WHT:Buck      53.66667     ab
+## BL/BR:Buck    52.66667    abc
+## WT/BLK:Buck   52.33333    abc
+## BRN:Doe       52.00000    abc
+## BLK:Doe       51.00000     bc
+## WT/BR:Doe     51.00000     bc
+## WT/BLK:Doe    50.00000      c
+## BL/BR:Doe     49.66667      c
+## WHT:Doe       49.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM72 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25816,8 +28727,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.33333      a
 ## Doe    50.94444      b
+## $statistics
+##     MSerror Df     Mean      CV     MSD
+##   0.7777778 24 52.63889 1.67541 2.59635
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      55.33333 0.5773503 3  55  56 55.0  55 55.5
+## BLK:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## BRN:Buck      54.33333 1.1547005 3  53  55 54.0  55 55.0
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BLK:Buck   52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WT/BR:Doe     51.33333 0.5773503 3  51  52 51.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.33333      a
+## WHT:Buck      54.66667     ab
+## WT/BR:Buck    54.66667     ab
+## BL/BR:Buck    54.33333    abc
+## BRN:Buck      54.33333    abc
+## WT/BLK:Buck   52.66667    bcd
+## BLK:Doe       52.00000    cde
+## BRN:Doe       51.33333     de
+## WT/BR:Doe     51.33333     de
+## BL/BR:Doe     50.66667     de
+## WHT:Doe       50.33333     de
+## WT/BLK:Doe    50.00000      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM73 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25883,8 +28835,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.44444      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.361111 24 52.16667 2.236422 3.434648
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BL/BR:Doe     50.33333 1.5275252 3  49  52 49.5  50 51.0
+## BLK:Buck      54.66667 2.0816660 3  53  57 53.5  54 55.5
+## BLK:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## BRN:Buck      53.00000 0.0000000 3  53  53 53.0  53 53.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WHT:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BLK:Buck   53.33333 1.5275252 3  52  55 52.5  53 54.0
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.33333 1.1547005 3  50  52 51.0  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.66667      a
+## WT/BR:Buck    54.00000     ab
+## WHT:Buck      53.33333    abc
+## WT/BLK:Buck   53.33333    abc
+## BRN:Buck      53.00000    abc
+## BL/BR:Buck    52.33333    abc
+## BLK:Doe       52.00000    abc
+## WT/BR:Doe     51.33333    abc
+## BRN:Doe       51.00000     bc
+## WHT:Doe       50.66667     bc
+## BL/BR:Doe     50.33333      c
+## WT/BLK:Doe    50.00000      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM74 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -25950,8 +28943,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.44444      a
 ## Doe    50.38889      b
+## $statistics
+##     MSerror Df     Mean       CV      MSD
+##   0.8611111 24 52.41667 1.770354 2.731901
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## BLK:Doe       52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       48.66667 0.5773503 3  48  49 48.5  49 49.0
+## WT/BLK:Buck   53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BLK:Doe    50.00000 2.0000000 3  48  52 49.0  50 51.0
+## WT/BR:Buck    56.33333 0.5773503 3  56  57 56.0  56 56.5
+## WT/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    56.33333      a
+## BL/BR:Buck    54.66667     ab
+## BLK:Buck      54.33333     ab
+## WHT:Buck      54.00000     ab
+## BRN:Buck      53.66667     ab
+## WT/BLK:Buck   53.66667     ab
+## BLK:Doe       52.33333     bc
+## BL/BR:Doe     50.66667     cd
+## BRN:Doe       50.33333     cd
+## WT/BR:Doe     50.33333     cd
+## WT/BLK:Doe    50.00000     cd
+## WHT:Doe       48.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM75 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26017,8 +29051,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    51.16667      b
+## $statistics
+##     MSerror Df     Mean       CV      MSD
+##   0.8055556 24 52.44444 1.711387 2.642306
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## BRN:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## BRN:Buck      54.33333      a
+## WT/BR:Buck    53.66667     ab
+## BL/BR:Buck    53.33333    abc
+## BLK:Buck      53.33333    abc
+## WT/BLK:Buck   53.00000   abcd
+## BLK:Doe       51.66667    bcd
+## BRN:Doe       51.66667    bcd
+## BL/BR:Doe     51.00000     cd
+## WHT:Doe       51.00000     cd
+## WT/BLK:Doe    51.00000     cd
+## WT/BR:Doe     50.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM76 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26084,8 +29159,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    50.72222      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.277778 24 52.22222 2.164573 3.327845
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 1.1547005 3  52  54 53.0  54 54.0
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BLK:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BRN:Buck      53.33333 1.5275252 3  52  55 52.5  53 54.0
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WHT:Doe       49.66667 2.0816660 3  48  52 48.5  49 50.5
+## WT/BLK:Buck   53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BLK:Doe    50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      55.00000      a
+## WHT:Buck      54.00000     ab
+## WT/BLK:Buck   53.66667    abc
+## BL/BR:Buck    53.33333    abc
+## BRN:Buck      53.33333    abc
+## WT/BR:Buck    53.00000   abcd
+## BLK:Doe       52.00000  abcde
+## BRN:Doe       51.33333   bcde
+## BL/BR:Doe     50.66667    cde
+## WT/BR:Doe     50.66667    cde
+## WT/BLK:Doe    50.00000     de
+## WHT:Doe       49.66667      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM77 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26151,8 +29267,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.61111      a
 ## Doe    51.11111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.361111 24 52.36111 2.228117 3.434648
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BL/BR:Doe     51.33333 1.1547005 3  50  52 51.0  52 52.0
+## BLK:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BLK:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BRN:Buck      53.33333 2.0816660 3  51  55 52.5  54 54.5
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## WHT:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BLK:Buck   52.33333 1.1547005 3  51  53 52.0  53 53.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    55.33333 1.1547005 3  54  56 55.0  56 56.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.33333      a
+## BLK:Buck      54.66667     ab
+## WHT:Buck      53.66667    abc
+## BRN:Buck      53.33333   abcd
+## BL/BR:Buck    52.33333   abcd
+## BLK:Doe       52.33333   abcd
+## WT/BLK:Buck   52.33333   abcd
+## BL/BR:Doe     51.33333    bcd
+## BRN:Doe       51.33333    bcd
+## WT/BLK:Doe    51.00000     cd
+## WT/BR:Doe     50.66667     cd
+## WHT:Doe       50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM78 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26218,8 +29375,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.44444      a
 ## Doe    51.16667      b
+## $statistics
+##    MSerror Df     Mean       CV     MSD
+##   2.111111 24 52.30556 2.777843 4.27751
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## BLK:Doe       52.00000 2.6457513 3  50  55 50.5  51 53.0
+## BRN:Buck      52.66667 1.5275252 3  51  54 52.0  53 53.5
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WHT:Doe       50.66667 1.5275252 3  49  52 50.0  51 51.5
+## WT/BLK:Buck   51.66667 1.5275252 3  50  53 51.0  52 52.5
+## WT/BLK:Doe    51.00000 1.7320508 3  49  52 50.5  52 52.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BLK:Buck      54.33333      a
+## WHT:Buck      54.33333      a
+## WT/BR:Buck    54.00000      a
+## BL/BR:Buck    53.66667      a
+## BRN:Buck      52.66667      a
+## BLK:Doe       52.00000      a
+## WT/BLK:Buck   51.66667      a
+## BRN:Doe       51.33333      a
+## BL/BR:Doe     51.00000      a
+## WT/BLK:Doe    51.00000      a
+## WT/BR:Doe     51.00000      a
+## WHT:Doe       50.66667      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM79 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26285,8 +29483,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.972222 24 52.47222 2.676384 4.134408
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.7320508 3  52  55 52.0  52 53.5
+## BL/BR:Doe     49.33333 2.0816660 3  47  51 48.5  50 50.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## WHT:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WHT:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WT/BLK:Buck   53.33333 2.3094011 3  52  56 52.0  52 54.0
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    55.00000 1.7320508 3  53  56 54.5  56 56.0
+## WT/BR:Doe     51.33333 1.5275252 3  50  53 50.5  51 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.00000      a
+## WHT:Buck      54.33333     ab
+## BLK:Buck      54.00000     ab
+## BRN:Buck      53.66667     ab
+## WT/BLK:Buck   53.33333    abc
+## BL/BR:Buck    53.00000    abc
+## BRN:Doe       52.00000    abc
+## BLK:Doe       51.66667    abc
+## WHT:Doe       51.33333    abc
+## WT/BR:Doe     51.33333    abc
+## WT/BLK:Doe    50.66667     bc
+## BL/BR:Doe     49.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM80 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26352,8 +29591,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.11111      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df Mean       CV      MSD
+##   1.777778 24 52.5 2.539683 3.925312
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     49.66667 1.5275252 3  48  51 49.0  50 50.5
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       52.66667 2.5166115 3  50  55 51.5  53 54.0
+## BRN:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       50.00000 1.7320508 3  48  51 49.5  51 51.0
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    55.33333 1.5275252 3  54  57 54.5  55 56.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WT/BR:Buck    55.33333      a
+## WHT:Buck      55.00000      a
+## BLK:Buck      54.00000     ab
+## BRN:Buck      54.00000     ab
+## BL/BR:Buck    53.33333    abc
+## WT/BLK:Buck   53.00000    abc
+## BLK:Doe       52.66667    abc
+## BRN:Doe       51.00000     bc
+## WT/BLK:Doe    51.00000     bc
+## WT/BR:Doe     51.00000     bc
+## WHT:Doe       50.00000      c
+## BL/BR:Doe     49.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM81 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26419,8 +29699,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.33333      a
 ## Doe    50.88889      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.111111 24 52.11111 2.022779 3.103232
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## BL/BR:Doe     49.66667 1.1547005 3  49  51 49.0  49 50.0
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       52.33333 0.5773503 3  52  53 52.0  52 52.5
+## BRN:Buck      53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       49.66667 0.5773503 3  49  50 49.5  50 50.0
+## WT/BLK:Buck   51.66667 1.5275252 3  50  53 51.0  52 52.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.00000 1.7320508 3  52  55 53.5  55 55.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## BLK:Buck      54.00000     ab
+## WT/BR:Buck    54.00000     ab
+## BRN:Buck      53.00000     ab
+## BL/BR:Buck    52.66667    abc
+## BLK:Doe       52.33333    abc
+## BRN:Doe       51.66667    abc
+## WT/BLK:Buck   51.66667    abc
+## WT/BLK:Doe    51.00000     bc
+## WT/BR:Doe     51.00000     bc
+## BL/BR:Doe     49.66667      c
+## WHT:Doe       49.66667      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM82 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26486,8 +29807,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.88889      a
 ## Doe    50.94444      b
+## $statistics
+##    MSerror Df     Mean      CV      MSD
+##   1.138889 24 52.41667 2.03597 3.141783
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    55.00000 1.0000000 3  54  56 54.5  55 55.5
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BLK:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## BRN:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BRN:Doe       50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WHT:Buck      55.00000 0.0000000 3  55  55 55.0  55 55.0
+## WHT:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BLK:Buck   53.00000 2.0000000 3  51  55 52.0  53 54.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    52.66667 0.5773503 3  52  53 52.5  53 53.0
+## WT/BR:Doe     51.66667 0.5773503 3  51  52 51.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BL/BR:Buck    55.00000      a
+## WHT:Buck      55.00000      a
+## BLK:Buck      54.00000     ab
+## BRN:Buck      53.66667    abc
+## WT/BLK:Buck   53.00000   abcd
+## WT/BR:Buck    52.66667   abcd
+## WT/BR:Doe     51.66667    bcd
+## BLK:Doe       51.33333    bcd
+## WHT:Doe       51.00000    bcd
+## WT/BLK:Doe    51.00000    bcd
+## BRN:Doe       50.66667     cd
+## BL/BR:Doe     50.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM83 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26553,8 +29915,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    50.77778      b
+## $statistics
+##   MSerror Df  Mean       CV      MSD
+##      1.75 24 52.25 2.531819 3.894525
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 2.0000000 3  52  56 53.0  54 55.0
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BLK:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## BRN:Buck      53.66667 2.0816660 3  52  56 52.5  53 54.5
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.33333 1.5275252 3  53  56 53.5  54 55.0
+## WHT:Doe       50.00000 1.0000000 3  49  51 49.5  50 50.5
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     50.66667 1.5275252 3  49  52 50.0  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.33333      a
+## BL/BR:Buck    54.00000      a
+## BLK:Buck      54.00000      a
+## WT/BR:Buck    54.00000      a
+## BRN:Buck      53.66667     ab
+## WT/BLK:Buck   52.33333     ab
+## BLK:Doe       51.33333     ab
+## BRN:Doe       51.00000     ab
+## WT/BLK:Doe    51.00000     ab
+## BL/BR:Doe     50.66667     ab
+## WT/BR:Doe     50.66667     ab
+## WHT:Doe       50.00000      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM84 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26620,8 +30023,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.77778      a
 ## Doe    51.11111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.777778 24 52.44444 2.542373 3.925312
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## BLK:Buck      53.66667 2.5166115 3  51  56 52.5  54 55.0
+## BLK:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## BRN:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## WHT:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WT/BLK:Buck   52.33333 0.5773503 3  52  53 52.0  52 52.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.33333 2.3094011 3  52  56 52.0  52 54.0
+## WT/BR:Doe     50.33333 1.5275252 3  49  52 49.5  50 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      54.66667      a
+## WHT:Buck      54.66667      a
+## BL/BR:Buck    54.00000     ab
+## BLK:Buck      53.66667     ab
+## WT/BR:Buck    53.33333     ab
+## WT/BLK:Buck   52.33333     ab
+## BLK:Doe       51.66667     ab
+## BRN:Doe       51.66667     ab
+## WHT:Doe       51.33333     ab
+## WT/BLK:Doe    51.00000     ab
+## BL/BR:Doe     50.66667      b
+## WT/BR:Doe     50.33333      b
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM85 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26687,8 +30131,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.00000      a
 ## Doe    51.05556      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.416667 24 52.52778 2.265921 3.504042
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.00000 1.0000000 3  52  54 52.5  53 53.5
+## BL/BR:Doe     49.00000 1.0000000 3  48  50 48.5  49 49.5
+## BLK:Buck      54.66667 1.5275252 3  53  56 54.0  55 55.5
+## BLK:Doe       52.33333 1.5275252 3  51  54 51.5  52 53.0
+## BRN:Buck      53.66667 1.5275252 3  52  55 53.0  54 54.5
+## BRN:Doe       51.33333 1.1547005 3  50  52 51.0  52 52.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WT/BLK:Buck   54.00000 1.7320508 3  53  56 53.0  53 54.5
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    53.66667 0.5773503 3  53  54 53.5  54 54.0
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.00000      a
+## BLK:Buck      54.66667     ab
+## WT/BLK:Buck   54.00000    abc
+## BRN:Buck      53.66667    abc
+## WT/BR:Buck    53.66667    abc
+## BL/BR:Buck    53.00000    abc
+## BLK:Doe       52.33333   abcd
+## WHT:Doe       51.66667   abcd
+## BRN:Doe       51.33333    bcd
+## WT/BLK:Doe    51.00000     cd
+## WT/BR:Doe     51.00000     cd
+## BL/BR:Doe     49.00000      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM86 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26754,8 +30239,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.66667      a
 ## Doe    50.94444      b
+## $statistics
+##   MSerror Df     Mean       CV      MSD
+##      2.25 24 52.30556 2.867764 4.415976
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.7320508 3  52  55 53.5  55 55.0
+## BL/BR:Doe     50.00000 1.0000000 3  49  51 49.5  50 50.5
+## BLK:Buck      53.00000 3.0000000 3  50  56 51.5  53 54.5
+## BLK:Doe       52.66667 1.5275252 3  51  54 52.0  53 53.5
+## BRN:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BRN:Doe       51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WHT:Buck      54.33333 0.5773503 3  54  55 54.0  54 54.5
+## WHT:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BLK:Buck   53.00000 1.7320508 3  51  54 52.5  54 54.0
+## WT/BLK:Doe    50.33333 1.5275252 3  49  52 49.5  50 51.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.00000 1.7320508 3  49  52 50.5  52 52.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.33333      a
+## BL/BR:Buck    54.00000      a
+## WT/BR:Buck    54.00000      a
+## BRN:Buck      53.66667      a
+## BLK:Buck      53.00000      a
+## WT/BLK:Buck   53.00000      a
+## BLK:Doe       52.66667      a
+## BRN:Doe       51.33333      a
+## WT/BR:Doe     51.00000      a
+## WHT:Doe       50.33333      a
+## WT/BLK:Doe    50.33333      a
+## BL/BR:Doe     50.00000      a
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM87 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26821,8 +30347,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.55556      a
 ## Doe    50.83333      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.194444 24 52.19444 2.093913 3.217499
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.33333 0.5773503 3  53  54 53.0  53 53.5
+## BLK:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## BRN:Buck      54.00000 0.0000000 3  54  54 54.0  54 54.0
+## BRN:Doe       50.66667 1.1547005 3  50  52 50.0  50 51.0
+## WHT:Buck      55.00000 1.0000000 3  54  56 54.5  55 55.5
+## WHT:Doe       50.33333 1.5275252 3  49  52 49.5  50 51.0
+## WT/BLK:Buck   53.00000 1.0000000 3  52  54 52.5  53 53.5
+## WT/BLK:Doe    51.33333 0.5773503 3  51  52 51.0  51 51.5
+## WT/BR:Buck    52.66667 1.1547005 3  52  54 52.0  52 53.0
+## WT/BR:Doe     49.66667 2.0816660 3  48  52 48.5  49 50.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.00000      a
+## BRN:Buck      54.00000     ab
+## BL/BR:Buck    53.33333    abc
+## BLK:Buck      53.33333    abc
+## WT/BLK:Buck   53.00000    abc
+## WT/BR:Buck    52.66667   abcd
+## BLK:Doe       52.00000   abcd
+## WT/BLK:Doe    51.33333    bcd
+## BL/BR:Doe     51.00000    bcd
+## BRN:Doe       50.66667     cd
+## WHT:Doe       50.33333     cd
+## WT/BR:Doe     49.66667      d
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM88 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26888,8 +30455,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   54.22222      a
 ## Doe    50.66667      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.166667 24 52.44444 2.059557 3.179866
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## BLK:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## BRN:Buck      55.66667 0.5773503 3  55  56 55.5  56 56.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.66667 0.5773503 3  54  55 54.5  55 55.0
+## WHT:Doe       49.00000 1.0000000 3  48  50 48.5  49 49.5
+## WT/BLK:Buck   52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## WT/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## BRN:Buck      55.66667      a
+## BLK:Buck      54.66667     ab
+## WHT:Buck      54.66667     ab
+## BL/BR:Buck    54.00000    abc
+## WT/BR:Buck    54.00000    abc
+## WT/BLK:Buck   52.33333    bcd
+## BLK:Doe       51.33333    cde
+## BL/BR:Doe     51.00000    cde
+## BRN:Doe       51.00000    cde
+## WT/BR:Doe     51.00000    cde
+## WT/BLK:Doe    50.66667     de
+## WHT:Doe       49.00000      e
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM89 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -26955,8 +30563,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.83333      a
 ## Doe    51.11111      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.611111 24 52.47222 2.418986 3.736786
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
 ##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     51.00000 1.0000000 3  50  52 50.5  51 51.5
+## BLK:Buck      53.66667 0.5773503 3  53  54 53.5  54 54.0
+## BLK:Doe       52.00000 0.0000000 3  52  52 52.0  52 52.0
+## BRN:Buck      53.33333 1.1547005 3  52  54 53.0  54 54.0
+## BRN:Doe       51.66667 0.5773503 3  51  52 51.5  52 52.0
+## WHT:Buck      55.00000 1.7320508 3  53  56 54.5  56 56.0
+## WHT:Doe       50.33333 0.5773503 3  50  51 50.0  50 50.5
+## WT/BLK:Buck   52.66667 2.5166115 3  50  55 51.5  53 54.0
+## WT/BLK:Doe    51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WT/BR:Buck    54.33333 2.0816660 3  52  56 53.5  55 55.5
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      55.00000      a
+## WT/BR:Buck    54.33333     ab
+## BL/BR:Buck    54.00000    abc
+## BLK:Buck      53.66667    abc
+## BRN:Buck      53.33333    abc
+## WT/BLK:Buck   52.66667    abc
+## BLK:Doe       52.00000    abc
+## BRN:Doe       51.66667    abc
+## BL/BR:Doe     51.00000     bc
+## WT/BLK:Doe    51.00000     bc
+## WT/BR:Doe     50.66667     bc
+## WHT:Doe       50.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;
 ## [1] &quot;---- RECTEM90 ----&quot;
 ## Analysis of Variance Table
 ## 
@@ -27022,8 +30671,49 @@ div.tocify {
 ##      data1[[i]] groups
 ## Buck   53.72222      a
 ## Doe    51.00000      b
+## $statistics
+##    MSerror Df     Mean       CV      MSD
+##   1.305556 24 52.36111 2.182171 3.363823
+## 
+## $parameters
 ##    test     name.t ntr StudentizedRange alpha
-##   Tukey Colour:Sex  12          5.09913  0.05</code></pre>
+##   Tukey Colour:Sex  12          5.09913  0.05
+## 
+## $means
+##             data1[[i]]       std r Min Max  Q25 Q50  Q75
+## BL/BR:Buck    54.00000 1.0000000 3  53  55 53.5  54 54.5
+## BL/BR:Doe     50.33333 0.5773503 3  50  51 50.0  50 50.5
+## BLK:Buck      54.00000 1.7320508 3  53  56 53.0  53 54.5
+## BLK:Doe       51.33333 1.5275252 3  50  53 50.5  51 52.0
+## BRN:Buck      53.66667 1.1547005 3  53  55 53.0  53 54.0
+## BRN:Doe       51.00000 1.0000000 3  50  52 50.5  51 51.5
+## WHT:Buck      54.66667 1.1547005 3  54  56 54.0  54 55.0
+## WHT:Doe       52.00000 1.0000000 3  51  53 51.5  52 52.5
+## WT/BLK:Buck   52.33333 1.5275252 3  51  54 51.5  52 53.0
+## WT/BLK:Doe    50.66667 0.5773503 3  50  51 50.5  51 51.0
+## WT/BR:Buck    53.66667 1.1547005 3  53  55 53.0  53 54.0
+## WT/BR:Doe     50.66667 0.5773503 3  50  51 50.5  51 51.0
+## 
+## $comparison
+## NULL
+## 
+## $groups
+##             data1[[i]] groups
+## WHT:Buck      54.66667      a
+## BL/BR:Buck    54.00000     ab
+## BLK:Buck      54.00000     ab
+## BRN:Buck      53.66667    abc
+## WT/BR:Buck    53.66667    abc
+## WT/BLK:Buck   52.33333    abc
+## WHT:Doe       52.00000    abc
+## BLK:Doe       51.33333    abc
+## BRN:Doe       51.00000     bc
+## WT/BLK:Doe    50.66667     bc
+## WT/BR:Doe     50.66667     bc
+## BL/BR:Doe     50.33333      c
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;group&quot;</code></pre>
 </div>
 
 

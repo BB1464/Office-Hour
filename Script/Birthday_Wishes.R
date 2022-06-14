@@ -3,7 +3,7 @@ require(ggplot2)
 require(grid)
 require(gridExtra)
 require(yyplot) # For the cake
-#library(ggdark)
+library(ggdark)
 
 cake1 <- yyplot:::cakeCandleGrob("#FF3399")
 cake2 <- yyplot:::cakeCandleGrob("steelblue")
@@ -18,7 +18,7 @@ x <- 16*sin(t)^3
 y <- 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
 d <- data.frame(x = x, y = y)
 
-p1 <- ggplot(d, aes(x, y)) + geom_cake()+theme_void()
+p1 <- ggplot(d, aes(x, y)) + geom_cake(aes(color.cake=color.cake))+theme_void()
 
 p1 + annotate("text", x = 0, y = 0, label = "Happy birthday to Aunty Ola and Mr Ekundayo, \n Age Graciously !!!",
               colour = "red", size = 9)+
@@ -54,4 +54,40 @@ p3 <- ggplot(d, aes(x, y)) +
 p3 + annotate("text", x = 0, y = 0, label = "Happy birthday,sweetheart",
               colour = "red", size = 9)
 
+
+
+
+# Birthday Appreciation
+
+require(ggplot2)
+require(grid)
+require(gridExtra)
+require(yyplot) # For the cake
+library(ggdark)
+
+
+
+
+t <- seq(0,2*pi, by = 0.16)
+x <- 16*sin(t)^3
+y <- 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+d <- data.frame(x = x, y = y)
+
+
+
+#p1 <- ggplot(d, aes(x, y)) + geom_cake()+theme_void()
+
+p1 <- ggplot(d, aes(x, y)) + geom_cake(aes(color.cake=color.cake,color.candle=color.candle))+dark_theme_void()+
+  labs(caption = 'Oluwafemi Oyedele\nR Studio Instructor')+
+  theme(plot.caption = element_text(family = 'serif',colour = 'purple',face = 'bold',size = 19))
+
+
+
+
+p1 + annotate("text", x = 0, y = 0, label = "Another year older, another year with amazing family and friends.\n Thank you for all of the birthday wishes !!!",
+              colour = "green", size = 9)+
+  theme(text = element_text(family = 'serif',size = 6,face = 'bold'))
+
+
+ggsave('Femi_birthday_appreciation.png',path = 'Plot',width = 17,height = 12,dpi = 400)
 

@@ -105,6 +105,6 @@ lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
 lala=HSD.test(y = mod,trt = 'Sex',console = TRUE,main = 'Sex')
 lala=HSD.test(y = mod,trt = c('Colour','Sex'),console = FALSE)
 
-print(lala$parameters)
+print(lala)
 }
 ```
