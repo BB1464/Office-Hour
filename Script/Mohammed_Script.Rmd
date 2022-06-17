@@ -1,0 +1,102 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Data Analysis
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+# Load the Required library
+
+
+```{r}
+library(pacman)
+
+p_load('tidyverse','readxl','lubridate','here','janitor','agricolae')
+
+```
+
+# Import the dataset into R
+
+```{r}
+
+data <- read_excel(here::here('Data/MUHAMMAD DATA.xlsx'),sheet = 3)
+
+```
+
+# Data Wrangling
+```{r}
+data <- data |> mutate(across(.cols = c(1:6),.fns = factor))
+
+```
+
+# Fit the model by running a for loop in R
+```{r}
+for (i in 7:ncol(data)) {
+  print(paste('----',names(data[i]),'----'))
+
+model <- lm(data[[i]]~REP+`CLONES NO`*WATERED*INNOCULUM,data=data)
+
+print(anova(model))
+
+CV=cv.model(x = model)
+
+print(CV)
+Post_hoc=LSD.test(y = model,trt = 'CLONES NO',console = TRUE,p.adj = 'bonferroni')
+
+Post_hoc=LSD.test(y = model,trt = 'WATERED',console = TRUE,p.adj = 'bonferroni')
+
+Post_hoc=LSD.test(y = model,trt = 'INNOCULUM',console = TRUE,p.adj = 'bonferroni')
+
+
+print(Post_hoc)
+  
+}
+
+```
+
+# Interraction Plot for Plant Height at 1 Month
+```{r}
+library(ggplot2)
+
+ggplot(data=data,aes(x = `CLONES NO`,y = `HEIGHT(1M)`,fill=INNOCULUM))+
+stat_summary(geom = 'errorbar',position = position_dodge(.9),fun.data = mean_se,width=0.5)+
+stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+  scale_fill_brewer(name='Innoculum',palette = 'Dark2')+
+  coord_cartesian(expand = FALSE,clip = 'off',ylim = c(0,100))+
+  labs(y='Plant Height at 1 MAP',x='Clone number')+
+  theme_classic()
+
+
+ggplot2::ggsave('Height_1MAP.png',path = here::here('Plot'),width = 9,height = 7,dpi = 450)
+
+```
+
+
+# Three Way Interraction Plot
+```{r, Height_at_1_Month}
+library(ggplot2)
+
+ggplot(data=data,aes(x = `CLONES NO`,y =`CMD(3M)`,fill=INNOCULUM))+
+stat_summary(geom = 'errorbar',position = position_dodge(.9),fun.data = mean_se,width=0.5)+
+stat_summary(geom = 'col',position = 'dodge',fun = 'mean')+
+  scale_fill_brewer(name='Innoculum',palette = 'Dark2')+
+  coord_cartesian(expand = FALSE,clip = 'off',ylim = c(0,3))+
+  facet_grid(~WATERED)+
+  labs(y='CMD at 3 MAP',x='Clone number')+
+  theme_test()+
+  theme(strip.background = element_rect(fill = NA),text = element_text(family = 'serif'))
+
+
+ggsave('CMD_3MAP.png',path = here::here('Plot'),width = 9,height = 7,dpi = 450)
+
+```
