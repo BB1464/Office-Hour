@@ -16,8 +16,6 @@ Plot |> pull()
 map2(paste(.x=Plot$Species,'.png'),.y=Plot$plot,.f = ggsave,height=6,width=10,dpi=400,path='Plot')
 
 
-
-
 Plot <- iris  |>
 group_by(Species) |> nest() |> mutate(plot=map2(.x = data,.y = Species,~ggplot(data = .x)+theme_minimal()+geom_point(aes(x = Sepal.Length,y = Sepal.Width,group=1))+
 labs(title = .y)))
