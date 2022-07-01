@@ -1,6 +1,6 @@
 ---
 title: "Penguins Report"
-author: "Shannon Pileggi"
+author: "Oluwafemi Oyedele"
 date: "`r Sys.Date()`"
 output:
   pdf_document: 
