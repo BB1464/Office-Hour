@@ -114,13 +114,15 @@ dat2 |> mutate(Month = factor(
       'Feb 2021',
       'Mar 2021'
     )
-  ) +coord_cartesian(expand = FALSE,ylim = c(0,250))+
+  ) +coord_cartesian(expand = FALSE,ylim = c(0,350))+
   theme_classic()+
   theme(
     text = element_text(family = 'serif', size = 15),
     axis.line = element_line(size = 1),
-    axis.ticks = element_line(size = 1)
-  )
+    axis.ticks = element_line(size = 1),panel.border = element_rect(fill = NA,size = 1),
+    axis.text.x = element_text(family = 'serif',size = 15,hjust = 1,angle = 45)
+  )+facet_grid(~Location)
+
 
 
 
