@@ -1,0 +1,96 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Cluster and PCA Analysis
+subtitle: Natasha
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(factoextra)
+library(ggsci)
+library(ggbiplot)
+```
+
+```{r}
+dat2 <- read_excel(path = here::here('Data/CLUSTER ANALYSIS AND PCA.xlsx'),skip = 1)
+
+dat2 <- dat2 |> select(-1)
+
+```
+
+# Data Wrangling
+
+```{r}
+dat3 <- dat2 |> group_by(Accessions) |> 
+  summarise_all(.funs = mean)
+
+dat4 <- dat3 |> column_to_rownames(var = 'Accessions')
+
+```
+# Compute the dissimilarity matrix
+
+```{r}
+DIST <- dist(x = dat4,method = 'euclidean')
+```
+
+# Compute the Hierrachical Clusters  using function from base R
+
+```{r}
+CLUST <- hclust(d = DIST,method = 'ward.D')
+```
+
+# Visualize the Cluster Using  Base R
+```{r}
+plot(CLUST)
+```
+
+# Advance Plotting of High Quality Using Facto-Extra Package in R
+```{r}
+fviz_dend(x = CLUST,k = 4,k_colors = 'aaas')+
+  labs(title = NULL)+
+  theme_void()
+```
+
+# Save the plot
+```{r}
+ggsave('Natasha_Cluster.png',path = here::here('Plot'),width = 10,height = 8,dpi = 450,bg = 'white')
+```
+
+
+# Principal Component Analysis
+
+```{r}
+PC <- prcomp(x = dat2[,2:14],center = TRUE,scale. = TRUE)
+```
+# Get important output from the PCA
+```{r}
+summary(PC) # This shows all the PC
+fviz_screeplot(PC)+theme_light()
+get_eig(X = PC)
+
+```
+
+
+```{r}
+fviz_pca_biplot(X = PC)+
+  theme_light()
+```
+
+# Note: Each numbers from the biplot was  obtained from the row number of your PCA excelsheet, so you have to look at that sheet to know the exact genotype we are making  reference to
+
+# Save the plot
+```{r}
+ggsave('Natasha.png',path = here::here('Plot'),width = 10,height = 8,dpi = 450)
+```
+
