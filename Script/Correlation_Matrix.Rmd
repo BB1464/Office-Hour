@@ -1,0 +1,41 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Correlation Matrix
+subtitle: Natasha
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+# Load the necessary library for the Correlation Analysis
+
+```{r}
+library(correlation)
+library(tidyverse)
+library(readxl)
+```
+
+# Import the dataset
+```{r}
+cor <- read_excel(path = here::here('Data/ANALYSIS OF THE CORRELATION AMONG TRAITS.xlsx'),skip = 1)
+
+Cor <- cor |> select(-c(1,2))
+
+```
+
+# Fit the corerelation Showing both the Upper and Lower Diagonal
+```{r}
+result <- correlation(data = Cor,p_adjust = 'bonferroni',method = 'pearson',redundant = TRUE)
+summary(object = result,redundant = TRUE) |> insight::print_html()
+```
+# Here I show only the upper diagonal for the correlation matrix
+```{r}
+result <- correlation(data = Cor,p_adjust = 'bonferroni',method = 'pearson')
+summary(object = result,redundant = FALSE) |> insight::print_html()
+```

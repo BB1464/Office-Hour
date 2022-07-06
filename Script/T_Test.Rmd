@@ -1,0 +1,15 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: T Test
+subtitle: Natasha
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
