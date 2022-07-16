@@ -49,6 +49,6 @@ mtcars %>%
   stat_summary(geom = 'line', fun = mean) +
   stat_summary(geom = 'point', fun = mean, color = 'black') +
   stat_summary(geom = 'errorbar', width = 0.1, alpha = 0.8, size = 0.3,fun.data = mean_se) +
-  labs(color = 'Conditions') +
-  scale_color_brewer(palette = 'Set1') +
-  theme_minimal(base_size = 16)
+  labs(color = 'Conditions',x='cyl') +
+  scale_color_brewer(palette = 'Set2') +
+  theme_test(base_size = 16)

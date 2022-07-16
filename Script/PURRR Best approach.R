@@ -53,7 +53,7 @@ iris |>
   unnest(tidy)
 
 
-iris |>
+p=iris |>
   nest(data = -Species) |>
   mutate(chart=map(.x = data,.f = function(x){
     ggplot(data = x,aes(x = Sepal.Length,y = Petal.Width))+
@@ -62,3 +62,6 @@ iris |>
   })) |>
   select(Species,chart) |>
   walk(print)
+
+# Save the Plot
+map2(paste(p$Species,'.png'),p$chart,.f = ggsave,path=here::here('Plot'))
