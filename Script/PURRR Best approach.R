@@ -65,3 +65,29 @@ p=iris |>
 
 # Save the Plot
 map2(paste(p$Species,'.png'),p$chart,.f = ggsave,path=here::here('Plot'))
+
+
+# Add Alternative Function
+
+iris |>
+  nest(data=-Species) |>
+  mutate(plot=map2(.x = data,.y = Species,.f = ~ggplot(data = .x,aes(x = Sepal.Length,y = Petal.Length))+geom_point(position = position_jitter())+
+                     geom_smooth()+
+                     theme_classic()+
+                     scale_color_viridis_d()+
+                     labs(title = .y)
+  )) |>
+  select(Species,plot) |>
+  walk(print)
+
+
+iris |>
+  nest(data=-Species) |>
+  mutate(plot=map2(.x = data,.y = Species,.f = function(x,y){
+    ggplot(data = x,aes(x = Sepal.Length,y = Petal.Width))+
+      geom_point(position = position_jitter())+
+      geom_smooth()+
+      labs(title = y)
+  })) |>
+  select(Species,plot) |>
+  pull('plot')
