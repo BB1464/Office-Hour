@@ -1,0 +1,119 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: NATACHA ANALYSIS
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Load the necessary library
+```{r}
+library(rio)
+library(tidyverse)
+library(factoextra)
+library(readxl)
+library(ggsci)
+library(correlation)
+```
+# Import the dataset into R for Year 1
+
+```{r}
+dat1 <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),skip = 2,sheet = 'year 1')
+```
+
+# Year One Analysis
+
+# Prepare the dataset by adding rownames for all accessions
+```{r}
+dat11 <- dat1 |> select(5:15) |> group_by(Accessions) |> summarise_all(.funs = mean) |> column_to_rownames(var = 'Accessions')
+
+```
+
+# Calculate the dissimilarity matrix
+
+```{r}
+DT <- dist(x = dat11,method = 'euclidean')
+```
+
+# Computes the Clusters using base R
+
+```{r}
+Clust <- hclust(d = DT,method = 'ward.D')
+```
+
+# Visualize the cluster using base R
+```{r}
+plot(Clust)
+```
+
+# Visualize the Cluster using factoextra
+
+```{r}
+fviz_dend(x = Clust,k = 3,k_colors = 'aaas')+
+  theme_void()
+```
+# Save the plot for year 1 cluster
+```{r}
+ggsave('year 1 Cluster.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400,bg = 'white')
+```
+
+# Principal Component Analysis for Year 1
+
+```{r}
+dat <- dat1 |> select(-c(1:4)) |> drop_na() |> group_by(Accessions) |> 
+  summarise_all(.funs = mean) |> 
+  column_to_rownames(var = 'Accessions')
+
+PC <- prcomp(x = dat,center = TRUE,scale. = TRUE)
+
+```
+# Get the eigenvalues
+```{r}
+get_eig(X = PC)
+```
+# Summary of the PCA
+```{r}
+summary(PC)
+```
+
+# Screeplot
+```{r}
+fviz_screeplot(PC)
+```
+
+# Bi-Plot for Year One
+```{r}
+fviz_pca_biplot(X = PC)
+```
+# Save the Plot
+```{r}
+ggsave('PCA-Biplot for Year_One.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400)
+```
+
+# Year One Correlation Analysis for both upper and lower diagonal
+```{r}
+dat <- dat1 |> select(-c(1:5))
+
+res <- correlation(data = dat)
+
+summary(object = res,redundant = TRUE) |> insight::print_html()
+```
+
+# Upper diagonal only
+```{r}
+dat <- dat1 |> select(-c(1:5))
+
+res <- correlation(data = dat)
+
+summary(object = res,redundant = FALSE) |> insight::print_html()
+```
+
+
