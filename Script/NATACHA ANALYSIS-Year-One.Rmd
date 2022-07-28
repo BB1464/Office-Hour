@@ -68,16 +68,15 @@ ggsave('year 1 Cluster.png',path = here::here('Plot'),width = 15,height = 8,dpi 
 # Principal Component Analysis for Year 1
 
 ```{r}
-dat <- dat1 |> select(-c(1:4)) |> drop_na() |> group_by(Accessions) |> 
-  summarise_all(.funs = mean) |> 
-  column_to_rownames(var = 'Accessions')
+dat <- dat1 |> select(-c(1:5)) |> drop_na() 
+write.csv(x = dat,file = here::here('Data/Year One.csv'),row.names = FALSE)
 
 PC <- prcomp(x = dat,center = TRUE,scale. = TRUE)
 
 ```
 # Get the eigenvalues
 ```{r}
-get_eig(X = PC)
+get_eigenvalue(X = PC)
 ```
 # Summary of the PCA
 ```{r}
@@ -115,4 +114,5 @@ res <- correlation(data = dat)
 
 summary(object = res,redundant = FALSE) |> insight::print_html()
 ```
+
 
