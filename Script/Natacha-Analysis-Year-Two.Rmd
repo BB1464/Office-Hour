@@ -23,17 +23,18 @@ library(readxl)
 library(ggsci)
 library(correlation)
 ```
-# Import the dataset into R for Year 1
+# Import the dataset into R for Year  Two
 
 ```{r}
-dat1 <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),skip = 2,sheet = 'year 1')
+dat1 <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),skip = 2,sheet = 'year 2')
 ```
 
 # Year One Analysis
 
 # Prepare the dataset by adding rownames for all accessions
 ```{r}
-dat11 <- dat1 |> select(5:15) |> group_by(Accessions) |> summarise_all(.funs = mean) |> column_to_rownames(var = 'Accessions')
+dat11 <- dat1 |> select(5:15) |> group_by(Accessions) |> drop_na() |> 
+  summarise_all(.funs = mean) |> column_to_rownames(var = 'Accessions')
 
 ```
 
@@ -57,27 +58,27 @@ plot(Clust)
 # Visualize the Cluster using factoextra
 
 ```{r}
-fviz_dend(x = Clust,k = 3,k_colors = 'aaas')+
+fviz_dend(x = Clust,k = 2,k_colors = 'aaas')+
   theme_void()
 ```
-# Save the plot for year 1 cluster
+# Save the plot for year 2 cluster
 ```{r}
-ggsave('year 1 Cluster.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400,bg = 'white')
+ggsave('year 2 Cluster.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400,bg = 'white')
 ```
 
-# Principal Component Analysis for Year 1
+# Principal Component Analysis for Year Two
 
 ```{r}
-dat <- dat1 |> select(-c(1:4)) |> drop_na() |> group_by(Accessions) |> 
-  summarise_all(.funs = mean) |> 
-  column_to_rownames(var = 'Accessions')
+dat <- dat1 |> select(-c(1:5)) |> drop_na() 
+# Write the dataset to disc
+write.csv(x = dat,file = here::here('Data/Year Two.csv'),row.names = FALSE)
 
 PC <- prcomp(x = dat,center = TRUE,scale. = TRUE)
 
 ```
 # Get the eigenvalues
 ```{r}
-get_eig(X = PC)
+get_eigenvalue(X = PC)
 ```
 # Summary of the PCA
 ```{r}
@@ -89,18 +90,18 @@ summary(PC)
 fviz_screeplot(PC)
 ```
 
-# Bi-Plot for Year One
+# Bi-Plot for Year Two
 ```{r}
 fviz_pca_biplot(X = PC)
 ```
 # Save the Plot
 ```{r}
-ggsave('PCA-Biplot for Year_One.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400)
+ggsave('PCA-Biplot for Year_TWO.png',path = here::here('Plot'),width = 15,height = 8,dpi = 400)
 ```
 
-# Year One Correlation Analysis for both upper and lower diagonal
+# Year Two Correlation Analysis for both upper and lower diagonal
 ```{r}
-dat <- dat1 |> select(-c(1:5))
+dat <- dat1 |> select(-c(1:5)) |> drop_na()
 
 res <- correlation(data = dat)
 
@@ -109,7 +110,7 @@ summary(object = res,redundant = TRUE) |> insight::print_html()
 
 # Upper diagonal only
 ```{r}
-dat <- dat1 |> select(-c(1:5))
+dat <- dat1 |> select(-c(1:5)) |> drop_na()
 
 res <- correlation(data = dat)
 
