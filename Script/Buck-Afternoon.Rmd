@@ -1,0 +1,117 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance for Buck Afternoon
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+## Working with Buck Afternoon that has three sheet  
+
+```{r}
+library(tidyverse)
+library(rio)
+library(readxl)
+library(agricolae)
+library(here)
+library(broom)
+```
+
+# Import the three sheet as a list into R
+
+```{r}
+dat <- import_list(file = here::here('Data/buckAfternoon.xlsx'))
+```
+
+
+# Respiratory rate
+
+```{r}
+data1 <- dat[[2]]
+data1 <- data1 |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+
+#names <- names(data1[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the first model for Respiratory Rate  
+```{r}
+for (i in 6:ncol(data1)) {
+  print(paste('----',names(data1[i]),'----'))
+  
+mod <- lm(data1[[i]]~Colour*THIregime,data=data1)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE,main = 'THIregime')
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = FALSE)
+
+print(lala)
+}
+```
+
+# Pulse Rate (Sheet Two for Morning High THI)
+
+```{r}
+data2 <- dat[[1]]
+data2 <- data2 |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+#names <- names(data2[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the second model for Pulse Rate
+```{r}
+for (i in 6:ncol(data2)) {
+  print(paste('----',names(data2[i]),'----'))
+  
+mod <- lm(data2[[i]]~Colour*THIregime,data=data2)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE,main = 'THIregime')
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = FALSE)
+
+print(lala)
+}
+
+```
+
+
+# Rectal Temperature (Sheet three)
+
+```{r}
+data3 <- dat[[3]]
+data3 <- data3 |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+#names <- names(data3[5:50])
+
+#label=paste('RESPRT',sep = '',1:90)
+```
+# Fit the Third model for Rectal Temperature
+```{r}
+for (i in 6:ncol(data3)) {
+  print(paste('----',names(data3[i]),'----'))
+  
+mod <- lm(data1[[i]]~Colour*THIregime,data=data3)
+print(anova(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE,main = 'Colour')
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE,main = 'THIregime')
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = FALSE)
+
+print(lala$group)
+}
+```
