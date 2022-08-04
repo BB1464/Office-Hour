@@ -18,6 +18,20 @@ data1 <- read_excel('Data/Copy of Field data Mature trait.xlsx')
 data1 <- data1 %>% mutate(across(.cols = c(1:2),.fns = factor))
 
 # Vigour
+p_demo <- data1 |>
+  group_by(Species,Category...4) |>
+  summarise(count=n()) |>
+  mutate(percent=count/sum(count)*100) |>
+  ggplot(mapping = aes(x = Species,y = percent,fill=Category...4))+
+  geom_col(position = 'stack')+labs(y='Vigour',fill='')+
+  scale_y_continuous(breaks = c(0,25,50,75,100),labels = c('0%','25%','50%','75%','100%'),expand = c(0,0))+
+  scale_fill_brewer(palette = 'Set1')
+
+
+
+
+
+
 p11 <- data1 %>% count(Species,Category...4) %>%
   mutate(Perc_Stem_Color=n/sum(n)) %>%
   ggplot(mapping = aes(x = Species,y = Perc_Stem_Color,fill=Category...4))+
