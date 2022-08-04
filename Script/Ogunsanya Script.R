@@ -10,6 +10,7 @@
 library(tidyverse)
 library(readxl)
 library(cowplot)
+library(MetBrewer)
 theme_set(theme_classic())
 
 data1 <- read_excel('Data/Copy of Field data Mature trait.xlsx')
@@ -25,7 +26,7 @@ p_demo <- data1 |>
   ggplot(mapping = aes(x = Species,y = percent,fill=Category...4))+
   geom_col(position = 'stack')+labs(y='Vigour',fill='')+
   scale_y_continuous(breaks = c(0,25,50,75,100),labels = c('0%','25%','50%','75%','100%'),expand = c(0,0))+
-  scale_fill_brewer(palette = 'Set1')
+  scale_fill_met_d(name='Hokusai1')
 
 
 
