@@ -1,0 +1,142 @@
+---
+title: "Data Analysis"
+author: "Oluwafemi Oyedele"
+format: html
+editor: visual
+---
+
+# Load the necessary library
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(readxl)
+library(tidyverse)
+library(augmentedRCBD)
+```
+
+# Import the dataset
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+year_one <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),sheet = 'year 1',skip = 2)
+
+year_one <- year_one |>
+  drop_na()
+
+```
+# Get the check for year one
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+year_one_check <- c('P-K-I corm 2','P-K-I corm 6','P-K-I corm 5')
+
+year_one <- year_one |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+```
+# Year One Analysis
+# Plant Height
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$PH,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+# NLP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$NLP,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$LL,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$LW,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+
+# NOST
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$NOST,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# NOSUP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$NOSUP,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$CL,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CC
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$CC,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$CW,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# WOCM
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$WOCM,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
