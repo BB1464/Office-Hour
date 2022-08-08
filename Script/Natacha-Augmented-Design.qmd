@@ -140,3 +140,260 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$WOCM,checks = year_one_check,method.comp = 'tukey',console = FALSE)
 
 ```
+
+
+# Import the dataset
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+year_two <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),sheet = 'year 2',skip = 2)
+
+year_two <- year_two |>
+  drop_na()
+
+```
+# Get the check for year one
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+year_two_check <- c('P-K-I corm 5','P-K-I corm 6')
+
+year_two <- year_two |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+```
+
+# Year Two Analysis
+
+# Plant Height
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$PH,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+# NLP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$NLP,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$LL,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$LW,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+
+# NOST
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$NOST,checks = year_one_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# NOSUP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$NOSUP,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$CL,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CC
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$CC,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$CW,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# WOCM
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$WOCM,checks = year_two_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# Combined Analysis
+
+# Import the dataset
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+combined <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),sheet = 'combined data year1 year2',skip = 2)
+
+combined <- combined |>
+  drop_na()
+
+```
+# Get the check for year one
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+combined_check <- c('P-K-I corm 2','P-K-I corm 6','P-K-I corm 5')
+
+combined <- combined |> 
+  mutate(across(.cols = c(1:5),.fns = factor))
+
+```
+# Year One Analysis
+# Plant Height
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$PH,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+# NLP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$NLP,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$LL,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# LW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$LW,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+
+# NOST
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$NOST,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# NOSUP
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$NOSUP,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CL
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CL,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CC
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CC,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# CW
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CW,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
+
+# WOCM
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$WOCM,checks = combined_check,method.comp = 'tukey',console = FALSE)
+
+```
