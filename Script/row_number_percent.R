@@ -26,7 +26,7 @@ mpg |>
     accuracy = .1,
     trim = FALSE
   ))  |>
-  mutate(perct = if_else(row_number() == 3, paste(perct, 'of all car models'), perct)) |>
+  mutate(perct = if_else(condition = row_number() == 3, true = paste(perct, 'of all car models'), false = perct)) |>
   ggplot(aes(
     x = fct_reorder(.f = manufacturer, .x = perct, .desc = FALSE),
     y = count
