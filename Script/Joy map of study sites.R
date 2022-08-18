@@ -13,6 +13,7 @@ library(tidyverse)
 library(readxl)
 library(rnaturalearth)
 library(sf)
+library(MetBrewer)
 
 # Import the Agromophological maps data
 
@@ -49,6 +50,18 @@ dat$gn_name <- str_replace(string =dat$gn_name,pattern = 'Federal Capital Territ
 
 # data Wrangling for the Agro-Ecological Zones
 
+dat <- dat |> mutate(across(.cols = 'name',.fns = as.character))
+
+
+# dat |>
+#   mutate(name=case_when(str_detect(name%in%c('Kebbi','Kano','Sokoto','Zamfara','Katsina','Jigawa','Katsina','Borno')~'Humid Savannah'),
+#                         str_detect(name %in%c('Kaduna','Bauchi','Gombe')~'Northern Guinea Savanna'),str_detect(name %in%c('Oyo','Ogun','Osun','Ekiti','Nassarawa','Kwara','Federal Capital Territory','Benue','Taraba','Enugu','Ebonyi','Cross River','Kogi')~'Derived Savanna'),
+#                         str_detect(name %in%c('Ondo','Lagos','Edo','Delta','Bayelsa','Rivers','Abia','Imo','Anambra','Akwa Ibom')~'Humid Forest'),
+#                         str_detect(name %in%c('Niger','Adamawa'))~'Southern Guinea Savanna',TRUE~'MidAltitude'))
+#
+
+
+
 dat <- dat |>
   mutate(name2=name) |>
   mutate(name=if_else(condition = name=='Kebbi',true = 'Humid Savannah',false = name)) |>
@@ -72,7 +85,7 @@ mutate(name=if_else(condition = name=='Oyo',true = 'Derived Savanna',false = nam
   mutate(name=if_else(condition = name=='Benue',true = 'Derived Savanna',false = name)) |>
   mutate(name=if_else(condition = name=='Taraba',true = 'Derived Savanna',false = name)) |>
   mutate(name=if_else(condition = name=='Enugu',true = 'Derived Savanna',false = name)) |>
-  mutate(name=if_else(condition = name=='Ebonyi',true = 'Derived Savanna',false = name)) |>
+  mutate(name=if_else(condition = name=='Ebonyi',true = 'Humid Forest',false = name)) |>
   mutate(name=if_else(condition = name=='Cross River',true = 'Derived Savanna',false = name)) |>
   mutate(name=if_else(condition = name=='Kogi',true = 'Derived Savanna',false = name)) |>
   mutate(name=if_else(condition = name=='Ondo',true = 'Humid Forest',false = name)) |>
@@ -118,10 +131,15 @@ ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text
   theme_void()
 
 # Updated Script
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude,fill=name))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = NULL,aes(x = 3.91,y = 7.51),size=3,inherit.aes = FALSE,col='red')+
-#geom_point(data = dat2,mapping = aes(x = Longitude,Latitude,col=State),size=3)+
-  theme_void()+scale_fill_brewer(name='Agro Ecological Zones',palette = 'Dark2',direction = -1)
+
+ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf(show.legend = FALSE)+
+  geom_sf(data = dat,aes(fill=name))+
+  geom_text(data = dat,aes(label=gn_name))+
+  geom_point(data=AG,aes(x = Longitude,y = Latitude,shape='19'),size=3)+theme_void()+labs(fill='Agroecological Zones')+
+scale_shape_manual(label='Sampling sites',breaks = 19,values = 19,guide=guide_legend(direction = 'vertical',title = ''))+
+scale_fill_met_d(name = 'Lakota',override.order = TRUE)+
+  theme(legend.title = element_text(family = 'serif',face = 'bold',size = 14))
+
 
 # Export the map
 
