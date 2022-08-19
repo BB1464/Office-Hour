@@ -14,7 +14,7 @@ dt <- iris |> pivot_longer(-Species) |>
 dt|>
   pluck('anova') |> set_names(dt$name)
 
-
+dt |> pluck('HSD') |> set_names(dt$name)
 
 
 

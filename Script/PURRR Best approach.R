@@ -91,3 +91,13 @@ iris |>
   })) |>
   select(Species,plot) |>
   pull('plot')
+
+
+mpg |>
+  group_by(manufacturer) |>
+  nest() |>
+  mutate(plot=map2(.x = data,.y = manufacturer,.f = function(x,y){
+    ggplot(data = x,aes(x = year,y = displ))+geom_point()
+  })) |>
+  select(plot) |>
+  walk(print)
