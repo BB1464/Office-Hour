@@ -1,0 +1,74 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: YIELD 2
+subtitle: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(agricolae)
+library(MetBrewer)
+library(report)
+library(readxl)
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+# Set the path to the dataset
+```{r}
+path <- here::here('Data/YIELD (2).xlsx')
+```
+
+
+
+# Import the dataset into R
+```{r}
+walk(.x = excel_sheets(path = path),.f = ~assign(tolower(.x),read_excel(path = path,sheet = .x),envir = .GlobalEnv))
+```
+# Convert Characters to Factor
+
+```{r}
+dat <- sheet1 |> mutate(across(.cols = c(1:5),.fns = factor))
+```
+# fit the model
+```{r}
+for (i in 6:ncol(dat)) {
+print(paste('----',names(dat[i]),'----'))
+mod <- lm(formula = dat[[i]]~rep+variety*trt*LOCATION*MONTH,data=dat)
+
+print(anova(mod))
+
+print(report(anova(mod)))
+
+print(cv.model(mod))
+
+
+lala=HSD.test(y = mod,trt = 'variety',console = TRUE)
+lala=HSD.test(y = mod,trt = 'trt',console = TRUE)
+lala=HSD.test(y = mod,trt = 'LOCATION',console = TRUE)
+lala=HSD.test(y = mod,trt = 'MONTH',console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','trt'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','LOCATION'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','MONTH'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('trt','LOCATION'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('trt','MONTH'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','trt','LOCATION'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','LOCATION','MONTH'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('trt','LOCATION','MONTH'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('variety','trt','LOCATION','MONTH'))
+
+
+print(lala)
+
+  
+}
+```
+
