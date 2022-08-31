@@ -1,0 +1,129 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(readxl)
+library(agricolae)
+library(report)
+library(MetBrewer)
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+# Set the path for the dataset
+
+```{r}
+path <- here::here('Data/REAL BIOMASS.xlsx')
+```
+
+# Import the dataset to the global environment
+```{r}
+walk(.x = excel_sheets(path = path),.f = ~assign(tolower(.x),read_excel(path = path,sheet = .x),envir = .GlobalEnv))
+```
+# Convert Characters to factor
+```{r}
+vegetative <- vegetative|> mutate(across(.cols = c(1:5),.fns = factor))
+```
+
+
+
+# Fit the model
+
+```{r}
+for (i in 6:ncol(vegetative)) {
+print(paste('---',names(vegetative[i]),'---'))
+
+model <- lm(vegetative[[i]]~REP+MONTH*LOCATION*VARIETY*TRT,data=vegetative)
+print(anova(model))
+
+print(report(anova(model)))
+print(cv.model(model))
+
+
+lala=LSD.test(y = model,trt = 'TRT',console = TRUE)
+lala=LSD.test(y = model,trt = 'LOCATION',console = TRUE)
+lala=LSD.test(y = model,trt = 'MONTH',console = TRUE)
+lala=LSD.test(y = model,trt = 'VARIETY',console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','LOCATION'),console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','VARIETY'),console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','TRT'),console = TRUE)
+lala=LSD.test(y = model,trt = c('LOCATION','VARIETY'),console = TRUE)
+lala=LSD.test(y = model,trt = c('LOCATION','TRT'),console = TRUE)
+lala=LSD.test(y = model,trt = c('VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','LOCATION','VARIETY'),console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = model,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = model,trt = c('MONTH','LOCATION','VARIETY','TRT'),console = TRUE)
+
+print(lala)
+
+}
+```
+
+# Visualize the Interraction term
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- vegetative |> 
+  pivot_longer(cols = -c(1:5)) |> 
+  group_by(name) |> 
+  nest() |> 
+  mutate(Month_Location=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = LOCATION,y = value,fill=MONTH))+labs(y=str_to_title(.y),fill=NULL,x=str_to_title('LOCATION'))+stat_summary(geom = 'errorbar',fun.data = mean_se,width=0.8,position = 'dodge',size=1)+stat_summary(geom = 'col',position = position_dodge(),fun = mean,width=.9)+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,NA))+theme_classic()+theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL)))|> 
+  mutate(Month_Variety=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = VARIETY,y = value,fill=MONTH))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,NA))+theme_classic()+
+theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL)))|> mutate(Location_Variety=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = LOCATION,y = value,fill=VARIETY))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+
+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,NA))+theme_classic()+
+  theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL))) |> 
+mutate(Location_TRT=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = TRT,y = value,fill=LOCATION))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,NA))+theme_classic()+
+                           theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL))) |> 
+mutate(Month_TRT=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = TRT,y = value,fill=MONTH))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,NA))+theme_classic()+
+                        theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL))) |> 
+  mutate(Month_LoCATION_TRT=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = TRT,y = value,fill=MONTH))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+facet_grid(~LOCATION)+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,45))+theme_test()+labs(y=str_to_title(.y),fill=NULL)+
+                                   theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black')))) |> 
+  mutate(Month_LoCATION_Variety=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = VARIETY,y = value,fill=MONTH))+stat_summary(geom = 'errorbar',fun.data = mean_se,position = 'dodge')+stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+facet_grid(~LOCATION)+scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,45))+theme_test()+
+                                       theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))+labs(y=str_to_title(.y),fill=NULL,x=str_to_title('VARIETY'))))
+```
+
+
+# Save the plot
+```{r}
+
+# Always Change the plot and the path to the plot before saving
+#Location_TRT
+map2(paste(plot$name,'.png'),.y = plot$Location_TRT,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Location_TRT'))
+
+
+# Month_TRT
+map2(paste(plot$name,'.png'),.y = plot$Month_TRT,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Month_TRT'))
+
+
+# Month_Variety
+map2(paste(plot$name,'.png'),.y = plot$Month_Variety,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Month_Variety'))
+
+
+# Location_Variety
+map2(paste(plot$name,'.png'),.y = plot$Location_Variety,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Location_Variety'))
+
+# Month_Location
+map2(paste(plot$name,'.png'),.y = plot$Month_Location,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Month_Location'))
+
+
+
+# Month_Location_TRT
+map2(paste(plot$name,'.png'),.y = plot$Month_LoCATION_TRT,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Month_Location_TRT'))
+
+
+# Month_LoCATION_Variety
+map2(paste(plot$name,'.png'),.y = plot$Month_LoCATION_Variety,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/Real_Biomass/Vegetative/Month_LoCATION_Variety'))
+
+
+
+```
+
