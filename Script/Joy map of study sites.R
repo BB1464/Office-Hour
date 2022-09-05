@@ -14,10 +14,11 @@ library(readxl)
 library(rnaturalearth)
 library(sf)
 library(MetBrewer)
+library(ggspatial)
 
 # Import the Agromophological maps data
 
-agro <- read_excel(path = here::here('Data/Agromorphological map coordinates.xlsx'),sheet = 2)
+agro <- read_excel(path = here::here('Data/Farm and Market collections gps_ (1).xlsx'),sheet = 1)
 
 #col <- read_excel(path = here::here('Data/Agro-Joy.xlsx'))
 
@@ -27,7 +28,7 @@ agro <- read_excel(path = here::here('Data/Agromorphological map coordinates.xls
 
 
 # Farms
-dat2=read_excel('Data/maps.xlsx',sheet ='Farms')
+#dat2=read_excel('Data/maps.xlsx',sheet ='Farms')
 
 
 
@@ -64,14 +65,14 @@ dat <- dat |> mutate(across(.cols = 'name',.fns = as.character))
 
 dat <- dat |>
   mutate(name2=name) |>
-  mutate(name=if_else(condition = name=='Kebbi',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Kano',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Sokoto',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Zamfara',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Katsina',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Jigawa',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Yobe',true = 'Humid Savannah',false = name)) |>
-  mutate(name=if_else(condition = name=='Borno',true = 'Humid Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Kebbi',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Kano',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Sokoto',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Zamfara',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Katsina',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Jigawa',true = 'Sudan Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Yobe',true = 'Sahel Savannah',false = name)) |>
+  mutate(name=if_else(condition = name=='Borno',true = 'Sahel Savannah',false = name)) |>
   mutate(name=if_else(condition = name=='Kaduna',true = 'Northern Guinea Savanna',false = name)) |>
   mutate(name=if_else(condition = name=='Bauchi',true = 'Northern Guinea Savanna',false = name)) |>
 mutate(name=if_else(condition = name=='Gombe',true = 'Northern Guinea Savanna',false = name)) |>
@@ -126,114 +127,31 @@ dat$name <- as.factor(dat$name)
 
 # Visualization
 
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = dat2,mapping = aes(x = Longitude,Latitude),size=3)+
-  theme_void()
+# ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
+#   geom_point(data = dat2,mapping = aes(x = Longitude,Latitude),size=3)+
+#   theme_void()
 
 # Updated Script
 
 ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf(show.legend = FALSE)+
   geom_sf(data = dat,aes(fill=name))+
   geom_text(data = dat,aes(label=gn_name))+
-  geom_point(data=AG,aes(x = Longitude,y = Latitude,shape='19'),size=3)+theme_void()+labs(fill='Agroecological Zones')+
+  geom_point(data=agro,aes(x = Longitude,y = Latitude,shape='19'),size=3,col='#981234')+theme_void()+labs(fill='Agroecological Zones')+
 scale_shape_manual(label='Sampling sites',breaks = 19,values = 19,guide=guide_legend(direction = 'vertical',title = ''))+
-scale_fill_met_d(name = 'Lakota',override.order = TRUE)+
-  theme(legend.title = element_text(family = 'serif',face = 'bold',size = 14))
+scale_fill_met_d(name = 'Lakota')+
+  theme(legend.title = element_text(family = 'serif',face = 'bold',size = 14),text = element_text(family = 'serif',size = 20))+
+  annotation_scale(location='bl',bar_cols = c("grey60", "white"),    text_family = "serif")+
+  annotation_north_arrow(location = "tl", which_north = "true",pad_x = unit(0.4, "in"), pad_y = unit(0.2, "in"),style =north_arrow_nautical(fill = c("grey40", "white"),line_col = "grey20",text_family = "serif"))
 
-
-# Export the map
-
-ggsave(path = 'Plot','Farms.png',width = 12,height = 8,dpi = 400)
-
-
-
-
-
-
-# Markets
-
-dat3=read_excel('Data/maps.xlsx',sheet = 'Markets')
-
-
-##################################################################
-##                        Data Wrangling                        ##
-##################################################################
-
-
-dat <- ne_states(country = 'Nigeria',returnclass = 'sf')
-
-
-
-# String replacement
-dat$gn_name <- str_replace(string = dat$gn_name,pattern = 'State',replacement = '')
-
-
-dat$gn_name <- str_replace(string =dat$gn_name,pattern = 'Federal Capital Territory',replacement = 'FCT')
-
-dat3$Latitude <- as.numeric(dat3$Latitude)
-
-
-# Visualization
-
-
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = dat3,mapping = aes(x = Longitude,Latitude),size=3)+
-  theme_void()
-
-
-# Updated Script
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = dat3,mapping = aes(x = Longitude,Latitude,col=State),size=3)+
-  theme_void()+scale_color_brewer(palette = 'Dark2',direction = -1)
-
-
-# Export the map
-
-ggsave(path = 'Plot','Market.png',width = 12,height = 8,dpi = 400)
-
-
-# Survey locs
-
-dat4=read_excel('Data/maps.xlsx',sheet = 3)
-
-
-##################################################################
-##                        Data Wrangling                        ##
-##################################################################
-
-
-dat <- ne_states(country = 'Nigeria',returnclass = 'sf')
-
-
-
-# String replacement
-dat$gn_name <- str_replace(string = dat$gn_name,pattern = 'State',replacement = '')
-
-
-dat$gn_name <- str_replace(string =dat$gn_name,pattern = 'Federal Capital Territory',replacement = 'FCT')
-
-#dat4$Latitude <- as.numeric(dat4$Latitude)
-
-
-# Visualization
-
-
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = dat4,mapping = aes(x = Longitude,Latitude),size=3)+
-  theme_void()
-
-
-# Updated Script
-
-ggplot(data = dat,mapping = aes(x = longitude,y = latitude))+geom_sf()+geom_text(aes(label=gn_name))+
-  geom_point(data = dat4,mapping = aes(x = Longitude,Latitude,col=State),size=3)+
-  theme_void()+scale_color_brewer(palette = 'Dark2',direction = -1)
 
 
 
 # Export the map
 
-ggsave(path = 'Plot','Survey.png',width = 12,height = 8,dpi = 400)
+ggsave(path = 'Plot','Farms.png',width = 14,height = 8,dpi = 320,bg = 'white')
+
+
+
 
 
 

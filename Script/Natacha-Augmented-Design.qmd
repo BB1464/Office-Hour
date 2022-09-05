@@ -6,6 +6,7 @@ editor: visual
 ---
 
 # Load the necessary library
+
 ```{r}
 #| echo: false
 #| message: false
@@ -16,6 +17,7 @@ library(augmentedRCBD)
 ```
 
 # Import the dataset
+
 ```{r}
 #| echo: false
 #| message: false
@@ -27,6 +29,7 @@ year_one <- year_one |>
   drop_na()
 
 ```
+
 # Get the check for year one
 
 ```{r}
@@ -40,8 +43,11 @@ year_one <- year_one |>
   mutate(across(.cols = c(1:5),.fns = factor))
 
 ```
+
 # Year One Analysis
+
 # Plant Height
+
 ```{r}
 #| echo: false
 #| message: false
@@ -50,7 +56,9 @@ year_one <- year_one |>
 augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_one$PH,checks = year_one_check,method.comp = 'tukey',console = FALSE)
 
 ```
+
 # NLP
+
 ```{r}
 #| echo: false
 #| message: false
@@ -61,6 +69,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # LL
+
 ```{r}
 #| echo: false
 #| message: false
@@ -71,6 +80,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # LW
+
 ```{r}
 #| echo: false
 #| message: false
@@ -80,8 +90,8 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 
 ```
 
-
 # NOST
+
 ```{r}
 #| echo: false
 #| message: false
@@ -92,6 +102,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # NOSUP
+
 ```{r}
 #| echo: false
 #| message: false
@@ -102,6 +113,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # CL
+
 ```{r}
 #| echo: false
 #| message: false
@@ -112,6 +124,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # CC
+
 ```{r}
 #| echo: false
 #| message: false
@@ -122,6 +135,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # CW
+
 ```{r}
 #| echo: false
 #| message: false
@@ -132,6 +146,7 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 ```
 
 # WOCM
+
 ```{r}
 #| echo: false
 #| message: false
@@ -141,8 +156,8 @@ augmentedRCBD(block = year_one$Block,treatment = year_one$Accessions,y = year_on
 
 ```
 
-
 # Import the dataset
+
 ```{r}
 #| echo: false
 #| message: false
@@ -154,6 +169,7 @@ year_two <- year_two |>
   drop_na()
 
 ```
+
 # Get the check for year one
 
 ```{r}
@@ -171,6 +187,7 @@ year_two <- year_two |>
 # Year Two Analysis
 
 # Plant Height
+
 ```{r}
 #| echo: false
 #| message: false
@@ -179,7 +196,9 @@ year_two <- year_two |>
 augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_two$PH,checks = year_two_check,method.comp = 'tukey',console = FALSE)
 
 ```
+
 # NLP
+
 ```{r}
 #| echo: false
 #| message: false
@@ -190,6 +209,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # LL
+
 ```{r}
 #| echo: false
 #| message: false
@@ -200,6 +220,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # LW
+
 ```{r}
 #| echo: false
 #| message: false
@@ -209,8 +230,8 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 
 ```
 
-
 # NOST
+
 ```{r}
 #| echo: false
 #| message: false
@@ -221,6 +242,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # NOSUP
+
 ```{r}
 #| echo: false
 #| message: false
@@ -231,6 +253,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # CL
+
 ```{r}
 #| echo: false
 #| message: false
@@ -241,6 +264,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # CC
+
 ```{r}
 #| echo: false
 #| message: false
@@ -251,6 +275,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # CW
+
 ```{r}
 #| echo: false
 #| message: false
@@ -261,6 +286,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 ```
 
 # WOCM
+
 ```{r}
 #| echo: false
 #| message: false
@@ -273,6 +299,7 @@ augmentedRCBD(block = year_two$Block,treatment = year_two$Accessions,y = year_tw
 # Combined Analysis
 
 # Import the dataset
+
 ```{r}
 #| echo: false
 #| message: false
@@ -284,6 +311,7 @@ combined <- combined |>
   drop_na()
 
 ```
+
 # Get the check for year one
 
 ```{r}
@@ -297,17 +325,22 @@ combined <- combined |>
   mutate(across(.cols = c(1:5),.fns = factor))
 
 ```
-# Year One Analysis
+
+# Combined Analysis
+
 # Plant Height
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$PH,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$PH,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
+
 # NLP
+
 ```{r}
 #| echo: false
 #| message: false
@@ -318,82 +351,89 @@ augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combine
 ```
 
 # LL
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$LL,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$LL,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # LW
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$LW,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$LW,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
-
 # NOST
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$NOST,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$NOST,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # NOSUP
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$NOSUP,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$NOSUP,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # CL
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CL,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$CL,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # CC
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CC,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$CC,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # CW
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$CW,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$CW,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```
 
 # WOCM
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 
-augmentedRCBD(block = combined$Block,treatment = year_one$Accessions,y = combined$WOCM,checks = combined_check,method.comp = 'tukey',console = FALSE)
+augmentedRCBD(block = combined$Block,treatment = combined$Accessions,y = combined$WOCM,checks = combined_check,method.comp = 'tukey',console = FALSE)
 
 ```

@@ -15,27 +15,26 @@ fontsize: 12pt
 library(tidyverse)
 library(agricolae)
 library(readxl)
-knitr::opts_chunk$set(echo = TRUE)
+library(report)
+library(MetBrewer)
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
 ```
 
 # Set the path for the excel Sheet
-```{r}
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
 path <- here::here('Data/OBA FLOWER.xlsx')
 ```
 
 
 # Import the dataset
-```{r}
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
 walk(.x = excel_sheets(path = path),.f =~assign(tolower(.x),read_excel(path = path,sheet = .x),envir = .GlobalEnv))
 ```
 
-```{r}
-flowering <- flowering |> mutate(across(.cols = c(1:5),.fns = factor))
-```
 
 Data Cleaning
 
-```{r}
+```{r,echo =FALSE,message = FALSE,warning = FALSE}
 flowering <- flowering |> 
   mutate(LOCATION=if_else(str_detect(LOCATION,'1BADAN'),true = 'IBADAN',false = LOCATION))
 
@@ -43,17 +42,21 @@ flowering <- flowering |>
 flowering <- flowering |> 
   mutate(LOCATION=if_else(str_detect(LOCATION,'IGBOOR'),true = 'IGBOORA',false = LOCATION))
 
-# Conver the Month to the correct order
+# Convert the Month to the correct order
 flowering <- flowering |> 
   mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST')))
 
 
 ```
 
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+flowering <- flowering |> mutate(across(.cols = c(1:5),.fns = factor))
+```
+
 
 
 # Fit the model for all the trait
-```{r}
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
 for (i in 6:ncol(flowering)) {
 print(paste('----',names(flowering[i])))
   
@@ -61,13 +64,26 @@ mod <- lm(formula = flowering[[i]]~REP+TRT*LOCATION*MONTH*VARIETY,data=flowering
 
 print(anova(mod))
 
+print(report(anova(mod)))
+
 print(cv.model(mod))
 
 lala=LSD.test(y = mod,trt = 'TRT',console = TRUE)
 lala=LSD.test(y = mod,trt = 'LOCATION',console = TRUE)
 lala=LSD.test(y = mod,trt = 'MONTH',console = TRUE)
 lala=LSD.test(y = mod,trt = 'VARIETY',console = TRUE)
-lala=LSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','LOCATION'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','VARIETY'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','TRT'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('LOCATION','VARIETY'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('LOCATION','TRT'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','LOCATION','VARIETY'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+lala=LSD.test(y = mod,trt = c('MONTH','LOCATION','VARIETY','TRT'),console = TRUE)
+
+print(lala)
 
 print(lala)
   
@@ -76,7 +92,7 @@ print(lala)
 
 
 
-```{r}
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
 plot <- flowering |> 
   pivot_longer(cols = -c(1:5)) |> 
   group_by(name) |> 
@@ -86,11 +102,35 @@ stat_summary(geom = 'errorbar',fun.data = mean_se,width=0.8,position = 'dodge',s
 stat_summary(geom = 'col',position = position_dodge(),fun = mean,width=.9)+
   scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,200))+
   theme_classic()+
-  theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'))
+  theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black')) 
+  
 ))
 ```
 
-```{r}
-map2(paste(plot$name,'.png'),.y = plot$plot,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/OBA_Flower'))
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+map2(paste(plot$name,'.png'),.y = plot$plot,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/OBA_Flower/Location_Month'))
+```
+
+
+
+
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- flowering |> 
+  pivot_longer(cols = -c(1:5)) |> 
+  group_by(name) |> 
+  nest() |> 
+  mutate(plot=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = LOCATION,y = value,fill=MONTH))+labs(y=str_to_title(.y),fill=NULL,x=str_to_title('LOCATION'))+
+stat_summary(geom = 'errorbar',fun.data = mean_se,width=0.8,position = 'dodge',size=1)+
+stat_summary(geom = 'col',position = position_dodge(),fun = mean,width=.9)+
+  scale_fill_met_d(name = 'Lakota')+coord_cartesian(expand = FALSE,ylim = c(0,250))+facet_grid(~VARIETY)+
+  theme_test()+
+  theme(legend.position = 'top',text = element_text(family = 'serif',size = 16,face = 'bold',colour = 'black'),axis.text.x = element_text(size = 12,hjust = 1,angle = 45)) 
+  
+))
+```
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+map2(paste(plot$name,'.png'),.y = plot$plot,ggsave,width=12,height=8,dpi=380,path=here::here('Plot/OBA_Flower/Location_Variety'))
 ```
 
