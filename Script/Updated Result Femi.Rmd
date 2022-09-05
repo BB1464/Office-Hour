@@ -1,0 +1,150 @@
+---
+title: "Data Analysis"
+author: "Oluwafemi OYEDELE"
+date: "`r format(Sys.Date())`"
+output:
+  html_document:
+    toc_float: yes
+    theme: darkly
+    toc: yes
+  word_document:
+    toc: yes
+fontfamily: serif
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE,echo=FALSE,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(agricolae)
+library(readxl)
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE,message = FALSE)
+```
+
+# Set the path to import the excel files into R
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+path <- here::here('Data/6x2x2x2 CRD.xls')
+
+```
+# Import the dataset into R
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+walk(.x = excel_sheets(path),.f = ~assign(tolower(.x),read_excel(path,sheet = .x),envir=.GlobalEnv))
+```
+# Convert characters to factor
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+pulse <- pulse |> 
+  mutate(across(.cols = c(1:6),.fns = factor))
+```
+
+
+# Pulse Rate
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+for (i in 7:ncol(pulse)) {
+  
+print(paste('----',names(pulse[i]),'----'))
+
+mod <- lm(formula = pulse[[i]]~Colour*THIregime*Sex*Time,data=pulse)
+
+print(anova(mod))
+print(cv.model(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE)
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Time',console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Sex','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Sex','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Sex','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime','Sex','Time'),console = TRUE)
+
+print(lala)
+
+}
+```
+
+
+# Rectal Temperature
+
+# Convert characters to factor
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+rect <- rect |> 
+  mutate(across(.cols = c(1:6),.fns = factor))
+```
+
+
+# Rectal Temperature
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+for (i in 7:ncol(rect)) {
+  
+print(paste('----',names(rect[i]),'----'))
+
+mod <- lm(formula = rect[[i]]~Colour*THIregime*Sex*Time,data=rect)
+
+print(anova(mod))
+print(cv.model(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE)
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Time',console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Sex','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime','Sex','Time'),console = TRUE)
+
+print(lala)
+
+}
+```
+
+
+# Respiratory Rate
+
+# Convert characters to factor
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+resp <- resp |> 
+  mutate(across(.cols = c(1:6),.fns = factor))
+```
+
+
+# Respiratory Rate
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+for (i in 7:ncol(resp)) {
+  
+print(paste('----',names(resp[i]),'----'))
+
+mod <- lm(formula = resp[[i]]~Colour*THIregime*Sex*Time,data=resp)
+
+print(anova(mod))
+print(cv.model(mod))
+
+lala=HSD.test(y = mod,trt = 'Colour',console = TRUE)
+lala=HSD.test(y = mod,trt = 'THIregime',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Sex',console = TRUE)
+lala=HSD.test(y = mod,trt = 'Time',console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Sex'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('THIregime','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Sex','Time'),console = TRUE)
+lala=HSD.test(y = mod,trt = c('Colour','THIregime','Sex','Time'),console = TRUE)
+
+print(lala)
+
+}
+```
+
+
+
+
+
+
