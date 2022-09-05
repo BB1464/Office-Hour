@@ -1,12 +1,14 @@
 ---
-author: Oluwafemi OYEDELE
-date: '`r format(Sys.Date())`'
-title: Analysis of Variance for Buck Morning 
+title: "Analysis of Variance for Buck Morning"
+author: "Oluwafemi OYEDELE"
+date: "`r format(Sys.Date())`"
 output:
+  word_document:
+    toc: yes
   html_document:
-    toc_float: true
+    toc_float: yes
     theme: darkly
-    toc: true
+    toc: yes
 fontsize: 12pt
 ---
 

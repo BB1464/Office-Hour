@@ -1,0 +1,427 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+# Load the necessary R package
+```{r setup, include = FALSE}
+library(tidyverse)
+library(agricolae)
+library(MetBrewer)
+library(report)
+library(readxl)
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+```
+
+# Set the path to import the sheet
+```{r}
+path <- here::here('Data/THOLAR GROWTH PARAMETER MAY & AUG.xlsx')
+
+```
+
+# Import the excel sheet
+```{r}
+walk(.x = excel_sheets(path = path),.f = ~assign(tolower(.x),read_excel(path = path,sheet = .x),envir = .GlobalEnv))
+```
+
+# Leaf Area
+```{r}
+Leaf_Area <- `leaf area` |> 
+  pivot_longer(cols = 6:ncol(`leaf area`),names_to = 'Week',names_prefix = 'LAWK',values_to = 'LA') |> 
+  relocate(Week,REP,.after = MONTH) |> 
+  mutate(across(.cols = c(1:6),.fns = factor)) #Assign the result to a new variable
+```
+
+# Fit the Model for Leaf Area
+```{r}
+mod <- lm(LA~REP+LOCATION*MONTH*Week*VARIETY*TRT,data=Leaf_Area)
+
+anova(mod)
+report(anova(mod))
+cv.model(mod)
+
+HSD.test(y = mod,trt = 'LOCATION',console = TRUE)
+HSD.test(y = mod,trt = 'MONTH',console = TRUE)
+HSD.test(y = mod,trt = 'Week',console = TRUE)
+HSD.test(y = mod,trt = 'Variety',console = TRUE)
+HSD.test(y = mod,trt = 'TRT',console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY','TRT'),console = TRUE)
+
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week','VARIETY','TRT'),console = TRUE)
+```
+
+# Number of Leaf
+
+```{r}
+Number_of_Leaf <- `number of leaf` |> 
+  pivot_longer(cols = 6:ncol(`number of leaf`),names_to = 'Week',names_prefix = 'NLWK',values_to = 'NL') |> 
+  relocate(Week,REP,.after = MONTH) |> 
+  mutate(across(.cols = c(1:6),.fns = factor)) #Assign the result to a new variable
+```
+
+# Fit the Model for Number of Leaf
+```{r}
+mod <- lm(NL~REP+LOCATION*MONTH*Week*VARIETY*TRT,data=Number_of_Leaf)
+
+anova(mod)
+report(anova(mod))
+cv.model(mod)
+
+HSD.test(y = mod,trt = 'LOCATION',console = TRUE)
+HSD.test(y = mod,trt = 'MONTH',console = TRUE)
+HSD.test(y = mod,trt = 'Week',console = TRUE)
+HSD.test(y = mod,trt = 'Variety',console = TRUE)
+HSD.test(y = mod,trt = 'TRT',console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY','TRT'),console = TRUE)
+
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week','VARIETY','TRT'),console = TRUE)
+```
+
+# Stem Diameter
+
+
+```{r}
+Stem_Diameter <- `stem diameter` |> 
+  pivot_longer(cols = 6:ncol(`stem diameter`),names_to = 'Week',names_prefix = 'SD',values_to = 'SD') |> 
+  relocate(Week,REP,.after = MONTH) |> 
+  mutate(across(.cols = c(1:6),.fns = factor)) #Assign the result to a new variable
+```
+
+# Fit the Model for Stem Diameter
+```{r}
+mod <- lm(SD~REP+LOCATION*MONTH*Week*VARIETY*TRT,data=Stem_Diameter)
+
+anova(mod)
+report(anova(mod))
+cv.model(mod)
+
+HSD.test(y = mod,trt = 'LOCATION',console = TRUE)
+HSD.test(y = mod,trt = 'MONTH',console = TRUE)
+HSD.test(y = mod,trt = 'Week',console = TRUE)
+HSD.test(y = mod,trt = 'Variety',console = TRUE)
+HSD.test(y = mod,trt = 'TRT',console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY','TRT'),console = TRUE)
+
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week','VARIETY','TRT'),console = TRUE)
+```
+
+
+# Stem Height
+```{r}
+Stem_Height <- `stem height` |> 
+  pivot_longer(cols = 6:ncol(`stem height`),names_to = 'Week',names_prefix = 'SH',values_to = 'SH') |> 
+  relocate(Week,REP,.after = MONTH) |> 
+  mutate(across(.cols = c(1:6),.fns = factor)) #Assign the result to a new variable
+```
+
+# Fit the Model for Stem Height
+```{r}
+mod <- lm(SH~REP+LOCATION*MONTH*Week*VARIETY*TRT,data=Stem_Height)
+
+anova(mod)
+report(anova(mod))
+cv.model(mod)
+
+HSD.test(y = mod,trt = 'LOCATION',console = TRUE)
+HSD.test(y = mod,trt = 'MONTH',console = TRUE)
+HSD.test(y = mod,trt = 'Week',console = TRUE)
+HSD.test(y = mod,trt = 'Variety',console = TRUE)
+HSD.test(y = mod,trt = 'TRT',console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('LOCATION','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','Week','VARIETY'),console = TRUE)
+HSD.test(y = mod,trt = c('MONTH','VARIETY','TRT'),console = TRUE)
+HSD.test(y = mod,trt = c('Week','VARIETY','TRT'),console = TRUE)
+
+HSD.test(y = mod,trt = c('LOCATION','MONTH','Week','VARIETY','TRT'),console = TRUE)
+```
+
+# Interraction Plot for Leaf Area
+
+# What are the names of the Varieties ?
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `leaf area` |> pivot_longer(cols = -c(1:5),names_prefix = 'LAWK') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |>
+  mutate(VARIETY=factor(VARIETY)) |> 
+  group_by(name) |> 
+  drop_na() |> 
+  ggplot(aes(x = TRT,y = value,fill=fct_reorder2(.f = VARIETY,.x = TRT,.y = value,.desc = FALSE)))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = mean_se)+
+  stat_summary(geom = 'col',position = position_dodge(.9),fun = 'mean')+
+  scale_fill_met_d(name = 'Hokusai1')+
+  facet_grid(LOCATION~MONTH)+
+  scale_y_continuous(expand = expansion(mult = c(0,.1)))+
+  theme_test()+
+  labs(x='Treatment',y='Leaf Area',fill='Variety')+
+  theme(axis.text.y = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),
+        panel.background = element_rect(colour = 'black'),panel.grid = element_blank(),axis.text.x = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15,hjust = 1,angle = 45),axis.title = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),legend.title = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),legend.text = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),strip.text = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15))
+```
+
+# Save the plot for Leaf Area
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Leaf_Area/Location_Month_Varieties_TRT/Leaf_Area.png',plot = plot,device = 'png',path = here::here('Plot'),width = 12,height = 10,dpi = 400,bg = 'white')
+```
+
+
+# Interraction Plot for Leaf Number
+
+
+# What is the value of Varieties ?
+
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `number of leaf` |> pivot_longer(cols = -c(1:5),names_prefix = 'NLWK') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |> 
+  mutate(VARIETY=factor(VARIETY)) |>  # What is the value of Varieties ?
+  group_by(name) |> 
+  ggplot(aes(x = name,y = value,col=MONTH,group=MONTH))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se',size=1)+
+  stat_summary(geom = 'line',position = position_dodge(.9),fun = 'mean')+
+  stat_summary(geom = 'point',position = position_dodge(.9),fun = 'mean',size=1)+
+  scale_color_met_d(name = 'Lakota')+
+  labs(x='Time (Weeks)',y='Number of Leaf',col=NULL)+
+  facet_grid(~LOCATION)+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='top',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+# Save the plot for Number of Leaf
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Leaf_Number/LOCATION_MONTH_Week/Number_of_Leaf.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+# Interraction Plot for Leaf Number  (Location_Week_Variety)
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `number of leaf` |> pivot_longer(cols = -c(1:5),names_prefix = 'NLWK') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |> 
+  mutate(VARIETY=factor(VARIETY)) |>  # What is the value of Varieties ?
+  group_by(name) |> 
+  ggplot(aes(x = name,y = value,col=MONTH,group=MONTH))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se',size=1)+
+  stat_summary(geom = 'line',position = position_dodge(.9),fun = 'mean')+
+  stat_summary(geom = 'point',position = position_dodge(.9),fun = 'mean',size=1)+
+  scale_color_met_d(name = 'Lakota')+
+  labs(x='Time (Weeks)',y='Number of Leaf',col=NULL)+
+  facet_grid(~VARIETY)+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='top',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+# Save the plot for Leaf Number
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Leaf_Number/Month_Week_VARIETY/Leaf_Number.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+
+
+# Interraction Plot of Location_Month_Week
+
+# What are the names of the varieties ?
+
+
+# Correct the colours and the procced to the next Visualization
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `number of leaf` |> pivot_longer(cols = -c(1:5),names_prefix = 'NLWK') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |> 
+  mutate(VARIETY=factor(VARIETY)) |>  # What is the value of Varieties ?
+  group_by(name) |> 
+  ggplot(aes(x = name,y = value,col=TRT,group=TRT))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se',size=1)+
+  stat_summary(geom = 'line',position = position_dodge(.9),fun = 'mean')+
+  stat_summary(geom = 'point',position = position_dodge(.9),fun = 'mean',size=1)+
+  #scale_color_brewer(palette = 'Set1')+
+  scale_color_manual(values = c("black","green","blue","gray75","red","lightblue","purple"))+
+  labs(x='Time (Week)',y='Number of Leaf',col=NULL)+
+  facet_grid(~MONTH)+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='top',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+# Save the plot for Leaf Number
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Leaf_Number/Month_Week_TRT/Leaf_Number.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+# Interraction Plot for Stem Diameter  (Month_Variety)
+# What are the names of the varieties ?
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `stem diameter` |>select(1:15) |> pivot_longer(cols = -c(1:5),names_prefix = 'SD') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |> 
+  mutate(VARIETY=factor(VARIETY,levels =c(1,2,3,4))) |> 
+  group_by(name) |> 
+  ggplot(aes(x = name,y = value,col=LOCATION,group=LOCATION))+
+  stat_summary(geom = 'line',fun = 'mean',size=1,position = position_dodge(.9))+
+  stat_summary(geom = 'point',fun = 'mean',size=2,position = position_dodge(.9))+
+  stat_summary(geom = 'errorbar',position = position_dodge(.5),fun.data = mean_se,size=1)+
+  scale_color_met_d(name = 'Hokusai1')+
+  coord_cartesian(ylim = c(0,15))+
+  facet_grid(~MONTH)+
+  labs(colour='Location',x=str_to_title('Time (Weeks)'),y= str_to_title('Stem Diameter'))+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='right',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+# Save the plot for Stem Diameter
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Stem_Diameter/Location_Month_Week/Stem_Diameter.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+# Interraction Plot (Location_Month_Variety)
+
+# What are the names of the varieties ?
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `stem diameter` |>select(1:15) |> pivot_longer(cols = -c(1:5),names_prefix = 'SD') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:11))) |> 
+  mutate(VARIETY=factor(VARIETY,levels =c(1,2,3,4))) |> 
+  group_by(name) |> 
+  ggplot(aes(x = VARIETY,y = value,fill=MONTH))+
+  stat_summary(geom = 'errorbar',fun.data  = 'mean_se',position = 'dodge',size=0.7)+
+  stat_summary(geom = 'col',fun = 'mean',position =position_dodge(.9))+
+  scale_fill_met_d(name = 'Lakota')+
+  coord_cartesian(ylim = c(0,15),expand = FALSE,clip = 'off')+
+  facet_wrap(~LOCATION)+
+  labs(fill='',x='Variety',y= str_to_title('Stem Diameter'))+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='top',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+# Save the plot for Stem Diameter
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Stem_Diameter/Location_Month_Variety/Stem_Diameter.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+
+# Interraction Plot for (Location _Month_Week)
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `stem height` |>select(1:15) |> pivot_longer(cols = -c(1:5),names_prefix = 'SH') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:10))) |> 
+  mutate(VARIETY=factor(VARIETY,levels =c(1,2,3,4))) |> 
+  group_by(name) |> 
+  ggplot(aes(x = name,y = value,col=LOCATION,group=LOCATION))+
+  stat_summary(geom = 'line',fun = 'mean',size=1,position = position_dodge(.9))+
+  stat_summary(geom = 'point',fun = 'mean',size=2,position = position_dodge(.9))+
+  stat_summary(geom = 'errorbar',position = position_dodge(.5),fun.data = mean_se,size=1)+
+  scale_color_met_d(name = 'Hokusai1')+
+  coord_cartesian(ylim = c(0,15))+
+  facet_grid(~MONTH)+
+  labs(colour='Location',x=str_to_title('Time (Weeks)'),y= str_to_title('Stem Height'))+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='right',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+
+
+# Save the plot for Stem Height
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Stem_Height/Location_Month_Week/Stem_Height1.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```
+
+
+# Stem Height
+
+# Location_Month_Variety
+
+```{r,echo = FALSE,message = FALSE,warning = FALSE}
+plot <- `stem diameter` |>select(1:15) |> pivot_longer(cols = -c(1:5),names_prefix = 'SH') |> mutate(MONTH=factor(MONTH,levels = c('MAY','AUGUST'))) |> 
+  mutate(name=factor(name,levels = c(1:11))) |> 
+  mutate(VARIETY=factor(VARIETY,levels =c(1,2,3,4))) |> 
+  group_by(name) |> 
+  ggplot(aes(x = VARIETY,y = value,fill=LOCATION))+
+  stat_summary(geom = 'errorbar',fun.data  = 'mean_se',position = 'dodge',size=0.7)+
+  stat_summary(geom = 'col',fun = 'mean',position =position_dodge(.9))+
+  scale_fill_met_d(name = 'Lakota')+
+  #coord_cartesian(ylim = c(0,15),expand = FALSE,clip = 'off')+
+  scale_y_continuous(expand = expansion(mult = c(0,.1)))+
+  facet_grid(~MONTH)+
+  labs(fill='',x='Variety',y= str_to_title('Stem Height'))+
+  theme_test()+
+  theme(text=element_text(family = 'serif',size = 14,colour = 'black'),
+        strip.background = element_rect(fill = 'white',colour = 'black'),legend.position ='top',axis.text = element_text(family = 'serif',colour = 'black',size = 14),axis.ticks = element_line(colour = 'black',size = 1,linetype = 'solid'))
+```
+
+
+
+```{r}
+ggsave(filename = 'THOLAR_Growth_Parameter/Stem_Height/Location_Month_Variety/Stem_Height2.png',plot = plot,device = 'png',path = here::here('Plot'),width = 10,height = 8,dpi = 400,bg = 'white')
+```

@@ -27,6 +27,9 @@ library(correlation)
 
 ```{r}
 dat1 <- read_excel(here::here('Data/TARO DATA NATACHA.xlsx'),skip = 2,sheet = 'year 1')
+
+
+dat1 <- dat1 |> drop_na()
 ```
 
 # Year One Analysis
@@ -99,7 +102,7 @@ ggsave('PCA-Biplot for Year_One.png',path = here::here('Plot'),width = 15,height
 
 # Year One Correlation Analysis for both upper and lower diagonal
 ```{r}
-dat <- dat1 |> select(-c(1:5))
+dat <- dat1 |> select(-c(1:5)) |> drop_na()
 
 res <- correlation(data = dat)
 
