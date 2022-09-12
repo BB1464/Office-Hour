@@ -4,7 +4,10 @@ library(readxl)
 library(tidyverse)
 
 # Import the dataset
-data_2021 <- read_excel(path = here::here('Data/100 Seed WGHT Combined 2021.xlsx'),sheet = 'All env 2021',na = '.')
+# data_2021 <- read_excel(path = here::here('Data/100 Seed WGHT Combined 2021.xlsx'),sheet = 'All env 2021',na = '.')
+
+
+data_2021 <- read_excel(path=here::here('Data/Ben 100 Seed WGHT Combined 2021.xlsx'),sheet = 'All env 2021',na = c('.',''))
 
 
 # Drop the missing data
@@ -130,7 +133,8 @@ map2(paste(plot$name,'.png'),plot$plot,
 
 
 # Location by WaterRegime Continue tommorow
-stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se')+stat_summary(geom = 'col',fun = 'mean',position = position_dodge(.9))+labs(y=y)+scale_y_log10()
+
+# stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se')+stat_summary(geom = 'col',fun = 'mean',position = position_dodge(.9))+labs(y=y)+scale_y_log10()
 
 plot_function <- function(df,y){
 ggplot(data = df,aes(x =  Location,y =  value,fill= WaterRegimes))+
