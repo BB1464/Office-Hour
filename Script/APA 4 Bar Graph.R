@@ -9,7 +9,7 @@
 
 
 
-
+# import the required library 
 library(tidyverse)
 
 viz_data_one <- tibble(
