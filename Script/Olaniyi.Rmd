@@ -1,0 +1,204 @@
+---
+author: Olaniyi
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+
+############################################################################
+############################################################################
+###                                                                      ###
+###                       DATA ANLYSIS FOR OLANIYI                       ###
+###                                                                      ###
+############################################################################
+############################################################################
+
+
+```{r setup, include = FALSE}
+
+library(tidyverse)
+library(readxl)
+library(agricolae)
+library(RColorBrewer)
+
+dat <- excel_sheets(path = here::here('Data/G. OLANIYI  PROJECT DATA.xlsx')) |> map(.f = ~read_excel(path = here::here('Data/G. OLANIYI  PROJECT DATA.xlsx'),sheet = .))
+
+
+knitr::opts_chunk$set(echo = FALSE,message = FALSE,warning = FALSE)
+```
+
+
+```{r}
+# Import the first sheet into R
+
+dat1 <- dat[[1]]
+
+# get the second sheet
+
+dat2 <- dat[[2]]
+
+
+dat3 <- dat[[3]]
+# Select the variables to use for ANOVA
+
+NN <- dat1 |> select(1,2,4,5:7) |> 
+  pivot_longer(cols = c(3:6),names_to = 'Week',values_to = 'Number_of_Leaf')
+
+```
+
+# Fit the first model for Number of Leaf
+
+```{r}
+mod1 <- lm(Number_of_Leaf~factor(Rep)+Variety*Week,data=NN)
+anova(mod1)
+cv.model(mod1)
+
+report::report(anova(mod1))
+
+HSD.test(y = mod1,trt = 'Variety',console = TRUE)
+HSD.test(y = mod1,trt = 'Week',console = TRUE)
+
+# Interraction Plot
+
+ col <- brewer.pal(n = 10, name = "BrBG")
+
+ggplot(data = NN,aes(x = Week,y = Number_of_Leaf,fill=Variety))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se')+
+  stat_summary(geom = 'col',position = position_dodge(.9),fun = mean)+
+  scale_fill_manual(values = col)+
+  labs(x=NULL,y='Number of Leaf')+
+  scale_x_discrete(label=c('Week2','Week4','Week6','Week8'))+
+  scale_y_continuous(expand = expansion(mult = c(0,0)))+
+  theme_classic()+
+  theme(text=element_text(family = 'serif',face = 'bold',colour = 'black',size = 15))
+
+ggsave(path = here::here('Plot/Olaniyi'),'Number_of_leaf.png',width = 12,height = 12,dpi = 400,bg = 'white')
+
+```
+
+# Fit the second model for Plant Height
+
+```{r}
+
+PH <- dat1 |> select(1,2,8:11) |> 
+  pivot_longer(cols = c(3:6),names_to = 'Week',values_to = 'Plant_Height')
+
+
+mod2 <- lm(Plant_Height~factor(Rep)+Variety*Week,data=PH)
+anova(mod2)
+cv.model(mod2)
+
+report::report(anova(mod2))
+
+HSD.test(y = mod2,trt = 'Variety',console = TRUE)
+HSD.test(y = mod2,trt = 'Week',console = TRUE)
+```
+
+
+# Fit the model for Leaf Area
+```{r}
+
+LA <- dat1 |> select(1,2,12:15) |> 
+  pivot_longer(cols = c(3:6),names_to = 'Week',values_to = 'Leaf_Area')
+
+
+mod3 <- lm(Leaf_Area~factor(Rep)+Variety*Week,data=LA)
+anova(mod3)
+cv.model(mod3)
+
+report::report(anova(mod3))
+
+HSD.test(y = mod3,trt = 'Variety',console = TRUE)
+HSD.test(y = mod3,trt = 'Week',console = TRUE)
+
+
+ col <- brewer.pal(n = 10, name = "BrBG")
+
+ggplot(data = LA,aes(x = Week,y = Leaf_Area,fill=Variety))+
+  stat_summary(geom = 'errorbar',position = 'dodge',fun.data = 'mean_se')+
+  stat_summary(geom = 'col',position = position_dodge(.9),fun = mean)+
+  scale_fill_manual(values = col)+
+  labs(x=NULL,y='Leaf Area')+
+  scale_x_discrete(label=c('Week2','Week4','Week6','Week8'))+
+  scale_y_continuous(expand = expansion(mult = c(0,0)))+
+  theme_classic()+
+  theme(text=element_text(family = 'serif',face = 'bold',colour = 'black',size = 15))
+
+ggsave(path = here::here('Plot/Olaniyi'),'Leaf_Area.png',width = 12,height = 12,dpi = 400,bg = 'white')
+
+
+```
+
+# Stem Girth
+```{r}
+
+SG <- dat1 |> select(1,2,16:19) |> 
+  pivot_longer(cols = c(3:6),names_to = 'Week',values_to = 'Stem_Girth')
+
+
+mod4 <- lm(Stem_Girth~factor(Rep)+Variety*Week,data=SG)
+anova(mod4)
+cv.model(mod4)
+
+report::report(anova(mod4))
+
+HSD.test(y = mod4,trt = 'Variety',console = TRUE)
+HSD.test(y = mod4,trt = 'Week',console = TRUE)
+```
+
+
+# Fit the last model with a for loop
+```{r}
+dat_clean <- dat2 |> 
+  mutate(across(.cols = c(1:2),.fns = factor))
+
+# Create a for loop for all the model
+
+for (i in 3:ncol(dat_clean)) {
+  print(paste('---',names(dat_clean[i]),'---'))
+model5 <- lm(dat_clean[[i]]~Rep+Variety,data=dat_clean)
+print(anova(model5))
+print(cv.model(model5))
+
+report::report(anova(model5))
+
+print(report::report(anova(model5)))
+
+lala=HSD.test(y = model5,trt = 'Variety',console = FALSE)
+
+print(lala)
+}
+
+
+```
+
+
+# Fit the model for grain yield
+
+```{r}
+dat_clean <- dat3 |> 
+  mutate(across(.cols = c(1:2),.fns = factor))
+
+# Create a for loop for all the model
+
+for (i in 3:ncol(dat_clean)) {
+  print(paste('---',names(dat_clean[i]),'---'))
+model6<- lm(dat_clean[[i]]~Rep+Variety,data=dat_clean)
+print(anova(model6))
+print(cv.model(model6))
+
+report::report(anova(model6))
+
+print(report::report(anova(model6)))
+
+lala=HSD.test(y = model6,trt = 'Variety',console = FALSE)
+
+print(lala)
+}
+```
+
