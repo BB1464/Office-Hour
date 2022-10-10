@@ -1,0 +1,372 @@
+---
+author: BB1464
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+```{r setup, include = FALSE}
+
+
+## Import the necessary library
+
+library(tidyverse)
+library(lmerTest)
+library(inti)
+library(emmeans) 
+library(readxl)
+library(corrr)
+library(correlation)
+# Import the dataset into R
+# Average
+# dat <- read_excel(path=here::here('~/../Desktop/REANALYSED DATA.xlsx'),sheet = 'AVERAGE')
+# 
+
+
+dat <- read_excel(path = here::here('Data/REANALYSED DATA.xlsx'),sheet = 'AVERAGE') |> filter(name!='TPv-694')
+
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+```
+
+# Data Cleaning
+```{r}
+# Data Wrangling Step
+###
+###
+
+dat_clean <- dat |> filter(if_all(.cols = everything(),.fns = ~!is.na(.)))
+
+
+# Convert Character to factor
+
+dat_clean <- dat_clean |> mutate(across(.cols = c(2:5),.fns = factor)) 
+
+# Check the structure of the data
+
+glimpse(dat_clean)
+
+
+```
+
+
+
+# Convert the dataset for all the trait into a long format
+
+```{r}
+dat_long <- dat_clean |> 
+  pivot_longer(cols = c(6:20),names_repair = 'minimal') |> 
+  rename(Genotype='name') |> 
+  filter(Genotype!='TPv-694') |> 
+  group_by(name) |> 
+  nest()
+
+```
+
+
+# Create a function for all the model
+
+```{r}
+model_fun <- function(df,name){
+  model <- lmer(formula = value~Genotype+(1|Rep)+(1|Rep:block),data = df)
+}
+
+
+```
+
+
+
+
+# Fit the model for all the trait at once using purrr
+
+
+```{r}
+mod <- dat_long |> 
+  mutate(model=map2(.x = data,.y = name,.f = model_fun)) |> 
+  mutate(anova=map(.x = model,.f = anova)) |> 
+  mutate(Post_Hoc=map(.x = model,.f = ~emmeans(object = .x,specs =pairwise ~Genotype))) |> 
+select(anova,Post_Hoc) 
+
+
+## Extract the anova table for all the model
+mod |> pluck('anova') |> 
+  set_names(mod$name)
+
+## Extract the means to show which Genotype is significantly different
+mod |> 
+  pluck('Post_Hoc') |> 
+  set_names(mod$name)
+
+```
+
+
+## Get the BLUPS from the model
+
+```{r}
+
+library(inti)
+
+dt <- dat_long
+
+
+MOD <- function(df,name){
+  
+hr <- H2cal(data = df
+              , trait = "value"
+              , gen.name = "Genotype"
+              , rep.n = 5
+              , fixed.model = "1 + (1|block) + Genotype"
+              , random.model = "0 + (1|block) + (1|Genotype)"
+              , emmeans = TRUE
+              , plot_diag = FALSE
+              , outliers.rm = TRUE
+  ) 
+return(hr)
+}
+
+```
+
+
+
+# Get the output from inti
+
+```{r}
+
+Blubs <- dt |>
+  mutate(res=map2(.x = data,.y = name,.f = MOD)) |> 
+  select(-data)
+```
+
+# Extract the blubs  and heritability for Terminal length
+```{r}
+Blubs$res[[1]]$blups
+Blubs$res[[1]]$tabsmr |> knitr::kable()
+```
+
+# Extract the blubs  and Heritability for Terminal width
+
+```{r}
+Blubs$res[[2]]$blups
+Blubs$res[[2]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs for Petiole length
+
+```{r}
+Blubs$res[[3]]$blups
+Blubs$res[[3]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and Heitability for Leaf Rachis
+```{r}
+Blubs$res[[4]]$blups
+Blubs$res[[4]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and Heritability for Plant Height
+```{r}
+Blubs$res[[5]]$blups
+Blubs$res[[5]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and Heritability for Number of Branchis
+```{r}
+Blubs$res[[6]]$blups
+Blubs$res[[6]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and Heritability for Pod Weight
+
+```{r}
+Blubs$res[[7]]$blups
+Blubs$res[[7]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and Heritability for Number of Pods
+```{r}
+Blubs$res[[8]]$blups
+Blubs$res[[8]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Pod Length
+```{r}
+Blubs$res[[9]]$blups
+Blubs$res[[9]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Pod Width
+
+```{r}
+Blubs$res[[10]]$blups
+Blubs$res[[10]]$tabsmr |> knitr::kable()
+
+```
+
+
+# Extract the blubs and heritability for Pod Length
+
+```{r}
+Blubs$res[[11]]$blups
+Blubs$res[[11]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Seed Weight
+```{r}
+Blubs$res[[12]]$blups
+Blubs$res[[12]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Seed Length
+
+```{r}
+Blubs$res[[13]]$blups
+Blubs$res[[13]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Seed Width
+```{r}
+Blubs$res[[14]]$blups
+Blubs$res[[14]]$tabsmr |> knitr::kable()
+
+```
+
+# Extract the blubs and heritability for Seed Thickness
+```{r}
+Blubs$res[[15]]$blups
+Blubs$res[[15]]$tabsmr |> knitr::kable()
+
+```
+
+
+```{r}
+
+############################################################################
+############################################################################
+###                                                                      ###
+###                           CLUSTER ANALYSIS                           ###
+###                                                                      ###
+############################################################################
+############################################################################
+
+cluster_dat <- dat_clean |> select(-c(sn,barcode,Rep,block)) |> 
+  group_by(name) |> 
+  filter(name!='TPv-694') |> 
+  summarise_all(.funs = mean) |> 
+  column_to_rownames(var = 'name')
+
+
+DIST <- dist(x = cluster_dat,method = 'euclidean')
+
+
+Cluster <- hclust(d = DIST,method = 'ward.D')
+
+## Plot the cluster using base R Function
+
+plot(Cluster)
+
+
+### Advance plotting using factoextra and ggplot2
+
+library(factoextra)
+library(ggsci)
+library(MetBrewer)
+
+fviz_dend(x = Cluster,k = 4,k_colors = 'lancet',lwd = 0.8,cex = 1)+
+  theme_void()+
+  theme(plot.title = element_text(family = 'serif',face = 'bold',size = 14,hjust = 0.5),text = element_text(family = 'serif',face = 'bold',size = 12))
+
+```
+
+
+## Save the output
+
+```{r}
+ggsave('Cluster_Dendogram_Tobi.png',path = here::here('Plot'),width = 10,height = 10,dpi = 320,bg = 'white')  
+```
+
+
+## Principal Component Analysis
+
+```{r}
+Pca_dat <-  
+  dat_clean |> select(2,6:ncol(dat_clean)) |> 
+  rename(PL=`POD LENGTH`,PTL=`PETIOLE LENGTH`,LR=`LEAF RACHIS`,SL=`SEED LENGTH`,LPP=`LOCULE PER POD`,TW=`terminal width`,NB=`NUMBER OF BRANCHES`,PW=`POD WEIGHT`,SW=`SEED WEIGHT`,NP=`NO OF PODS`,PH=`PLANT HEIGHT @6WEEKS`,SOW=`SEED WIDTH`,POW=`POD WIDTH`,ST=`SEED THICKNESS`,TL=`Terminal length`) |> 
+  group_by(name) |> 
+  summarise_all(.funs = mean)
+
+## Principal Component Function
+
+PCA <- prcomp(x = Pca_dat[,2:ncol(Pca_dat)],scale=TRUE,center=TRUE)
+
+summary(PCA)
+
+# Get all the eigen value
+get_eigenvalue(X = PCA)
+
+# Visualuaze the number of cluster
+fviz_screeplot(PCA)
+
+
+# fviz_pca_biplot(X = PCA)+
+#   theme(text = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'),axis.title = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'),axis.text = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'))
+
+fviz_pca_biplot(X = PCA)+
+    theme(text = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'),axis.title = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'),axis.text = element_text(family = 'serif',face = 'bold',size = 14,colour = 'black'),panel.grid = element_blank(),axis.line = element_line(size = 1,color = 'black'),axis.ticks = element_line(size = 1),plot.title = element_blank())+geom_hline(yintercept = 0,size=0.5,colour='black')+geom_vline(xintercept = 0,colour='black',size=0.5)
+
+```
+
+
+### Save the output the second output for 
+### 
+
+```{r}
+ggsave('PCA_Tobi.png',path = here::here('Plot'),width = 10,height = 10,dpi = 320,bg = 'white')  
+```
+
+# save the pca dataset to get all the accession
+
+```{r}
+write.csv(x = Pca_dat,file = here::here('Data/tobiPCA_dat.csv'),row.names = FALSE)
+```
+
+
+# Correlation Analysis
+```{r}
+corr <- dat_clean |> select(where(is.numeric)) |> select(-1)
+
+cor <- correlation(data = corr)
+
+
+summary(cor,redundant=TRUE) |> insight::print_md()
+
+```
+
+## Plot the correlation matrix visually
+
+```{r}
+corr |>  
+  drop_na() |> 
+  rename(`PLANT HEIGHT`=`PLANT HEIGHT @6WEEKS`,`TERMINAL LENGTH`=`Terminal length`,`TERMINAL WIDTH`=`terminal width`) |> 
+  correlate(use = 'everything') |> 
+  autoplot(triangular='lower',barheight=20,low='#B2182B',mid='#F1F1F1',high='#2166AC',)+
+  theme(text = element_text(family = 'serif',face = 'bold',size = 15,colour = 'black'))
+```
+
+```{r}
+ggsave('corr_Matrix_Tobi.png',path = here::here('Plot'),width = 10,height = 10,dpi = 320,bg = 'white')
+```
+
