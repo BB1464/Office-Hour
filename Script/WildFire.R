@@ -26,3 +26,6 @@ scale_fill_manual(values = c('#800026','#A91A27','#FC4E2A'))
 ## Example 2
 
 ggplot(data = iris,aes(x = Species,y = Sepal.Length,fill=Species))+geom_col()+scale_fill_viridis_d(option = 'rocket',direction = -1,alpha = 0.8)+theme_void()
+
+
+
