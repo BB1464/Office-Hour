@@ -330,35 +330,9 @@ mutate(across(.cols=c(6:7),.fns=as.numeric))
 ```
 
 ## Stop 2
-## Fit the Model for days_to_emergence
-
-```{r}
-model1 <- augmentedRCBD(market_quantitative_tidy$block,treatment=market_quantitative_tidy$collections,y=market_quantitative_tidy$days_to_emergence,checks = c('Check 1','Check 2'),method.comp = 'tukey')
-```
-
-## Descriptive Statistics of the Output
-```{r}
-augmentedRCBD::describe.augmentedRCBD(aug = model1)
-```
-
-## Fit the Model for Petiole Length
-```{r}
-market_quantitative_tidy <- market_quantitative 
-
-market_quantitative_tidy <- market_quantitative_tidy |> 
-  mutate(across(.cols=c(1:4),.fns=factor))
-
-market_quantitative_tidy <- market_quantitative_tidy |> 
-  mutate(across(.cols=c(6),.fns=as.numeric))
 
 
-model1 <- augmentedRCBD(market_quantitative_tidy$block,treatment=market_quantitative_tidy$collections,y=market_quantitative_tidy$petiole_length,checks = c('Check 1','Check 2'),method.comp = 'tukey')
-```
-
-## Descriptive Statistics of the Output
-```{r}
-augmentedRCBD::describe.augmentedRCBD(aug = model1)
-```
+### Stop Here the model size is too large
 
 ### This is where we are having issues
 
