@@ -12,6 +12,14 @@ ggplot(data = world)+
   geom_rect(aes(xmin=-8,xmax=10,ymin=-8,ymax=10),col='black',alpha=0.05,fill=NA,linewidth=1)+
   theme_light()
 
+## Scico scale
+
+ggplot(data = world)+
+  geom_sf(aes(fill=gdp_md_est,shape='No Data\nAvailable'))+
+  scico::scale_fill_scico(direction = -1,palette = 'lajolla',name='GDP\nEstimate')+
+  #scale_fill_gradient2(name='GDP\nEstimate',low = 'blue',mid = 'green',high = 'red',midpoint = 0)+
+  geom_rect(aes(xmin=-8,xmax=10,ymin=-8,ymax=10),col='black',alpha=0.05,fill=NA)+
+  theme_light()
 
 
 
