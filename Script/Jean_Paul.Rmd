@@ -1,0 +1,102 @@
+---
+author: Jean Paul
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+    toc_float: true
+    theme: darkly
+    toc: true
+---
+
+## Load the Required Packages
+```{r setup, include = FALSE}
+library(tidyverse)
+library(readxl)
+library(agricolae)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import the dataset
+```{r}
+power_marker <- read_excel(here::here('Data/power marker analysis.xlsx'))
+
+phenotyping_data <- read_excel(here::here('Data/phenotyping data collection.xlsx'))
+```
+
+## Data Wrangling
+```{r}
+phenotyping_data <- phenotyping_data |> 
+  fill(c(`Heterotic group`,Entry,Line))
+```
+
+## Convert all Characters to Factor
+```{r}
+phenotyping_data <- phenotyping_data |> 
+  mutate(across(.cols = c(1:4),.fns = factor))
+
+
+phenotyping_data$Height <- as.numeric(phenotyping_data$Height)
+```
+
+## Drop all the missing data
+```{r}
+phenotyping_data <- 
+  phenotyping_data |> 
+  drop_na() |> 
+  janitor::clean_names()
+```
+
+## Fit the model for all trait using a for loop
+
+```{r}
+for (i in 5:ncol(phenotyping_data)) {
+  print(paste('----',names(phenotyping_data[i]),'----'))
+  
+model <- lm(phenotyping_data[[i]]~rep+heterotic_group*line,data=phenotyping_data)
+
+print(anova(model))
+
+print(cv.model(model))
+
+print(HSD.test(y = model,trt = 'heterotic_group',console = TRUE))
+
+print(HSD.test(y = model,trt = 'line',console = TRUE))
+
+print(HSD.test(y = model,trt = c('heterotic_group','line'),console = TRUE))
+
+  
+}
+```
+
+## Diversity Study for Genotyping Data
+
+## Data Wrangling
+```{r}
+power_marker_clean <- power_marker |> select(1,2,7,8:10) |> group_by(Marker) |>mutate(Heterozygosity=as.numeric(Heterozygosity)) |> summarise_all(.funs = 'mean') |> column_to_rownames(var = 'Marker')
+```
+
+
+# Compute the dissimilarity Matrix
+
+```{r}
+Dist <- dist(x = power_marker_clean,method = 'euclidean')
+```
+
+## Compute the Cluster
+```{r}
+Hclust <- hclust(d = Dist,method = 'ward.D')
+```
+
+## Visualize the Cluster using base R
+```{r}
+plot(Hclust)
+```
+
+## Visualize the Result using Factoextra
+
+```{r}
+factoextra::fviz_dend(x = Hclust,k = 4,type = 'phylogenic')
+```
+
+
