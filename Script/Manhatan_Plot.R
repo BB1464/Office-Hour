@@ -1,4 +1,9 @@
 
+# Install the required package for generating random data for GWAS --------
+
+devtools::install_github("norment/normentR")
+
+
 # GWAS Study --------------------------------------------------------------
 
 library(tidyverse)
@@ -80,3 +85,10 @@ manhplot <- ggplot(gwas_data, aes(x = bp_cum, y = -log10(p),
     axis.title.y = element_markdown(),
     axis.text.x = element_text(angle = 60, size = 8, vjust = 0.5)
   )
+
+
+
+# View the plot -----------------------------------------------------------
+
+
+print(manhplot)
