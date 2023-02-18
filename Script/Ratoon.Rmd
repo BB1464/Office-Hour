@@ -1,0 +1,126 @@
+---
+author: Oluwafemi OYEDELE
+date: '`r format(Sys.Date())`'
+title: Analysis of Variance
+output:
+  html_document:
+  toc_float: true
+theme: darkly
+toc: true
+fontfamily: serif
+fontsize: 12pt
+---
+
+# Load the necessary R package
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(agricolae)
+library(MetBrewer)
+library(report)
+library(readxl)
+
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+```
+
+# Set the path to import the sheet
+```{r}
+path <- here::here('Data/NEW RATOON.xlsx')
+
+```
+
+# Import the excel sheet
+```{r}
+walk(.x = excel_sheets(path = path),.f = ~assign(tolower(.x),read_excel(path = path,sheet = .x),envir = .GlobalEnv))
+```
+## Data Wrangling
+
+```{r}
+dat <- may |> 
+  bind_rows(august)
+```
+
+## Convert Characters to Factor
+```{r}
+dat <- dat |> 
+  mutate(across(.cols = c(1:6),.fns = factor))
+```
+
+
+
+
+# Fit the Model
+```{r}
+for (i in 7:ncol(dat)) {
+  print(paste('----',names(dat[i]),'----'))
+model <- lm(dat[[i]]~REP+LOCATION*TRT*`CROP STATE`*VARIETY,data=dat)
+
+print(anova(model))
+print(cv.model(model))
+
+print(report(anova(model)))
+
+lala=HSD.test(y = model,trt = 'LOCATION',console = TRUE)
+lala=HSD.test(y = model,trt = 'TRT',console = TRUE)
+lala=HSD.test(y = model,trt = "CROP STATE",console = TRUE)
+lala=HSD.test(y = model,trt = 'VARIETY',console = TRUE)
+
+
+lala=HSD.test(y = model,trt = c('LOCATION','TRT'),console = TRUE)
+lala=HSD.test(y = model,trt = c('LOCATION','`CROP STATE`'),console = TRUE)
+
+lala=HSD.test(y = model,trt = c('LOCATION','VARIETY'),console = TRUE)
+
+lala=HSD.test(y = model,trt = c('TRT','CROP STATE'),console = TRUE)
+lala=HSD.test(y = model,trt = c('TRT','VARIETY'),console = TRUE)
+
+
+
+lala=HSD.test(y = model,trt = c('LOCATION','TRT','CROP STATE'),console = TRUE)
+
+lala=HSD.test(y = model,trt = c('LOCATION','CROP STATE','VARIETY'),console = TRUE)
+
+lala=HSD.test(y = model,trt = c('TRT','CROP STATE','VARIETY'),console = TRUE)
+
+lala=HSD.test(y = model,trt = c('LOCATION','TRT','CROP STATE','VARIETY'),console = TRUE)
+
+
+}
+```
+
+
+
+# FOUR Way Interraction Plot 
+
+
+```{r ,echo = FALSE,message = FALSE,warning = FALSE}
+
+plot <- dat |> 
+  drop_na() |> 
+  pivot_longer(cols = c(7:12)) |> 
+  group_by(name) |> 
+  nest() |> 
+  mutate(plot=map2(.x = data,.y = name,.f = ~ggplot(data = .x,aes(x = TRT,y = value,fill=VARIETY))+
+stat_summary(geom = "errorbar", position = position_dodge(.9), fun.data = mean_se,width=0.7,col='black',size=0.7) +
+stat_summary(geom = "col", position = "dodge", fun = "mean") +
+theme_light()+scale_fill_met_d(name = 'Hokusai1')+
+  scale_y_continuous(expand = expansion(mult = c(0,.1)))+
+labs(y = .y,x='Treatment',fill='Variety')+facet_grid(`CROP STATE`~LOCATION)+  theme(axis.text.y = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),panel.background = element_rect(colour = 'white'),panel.grid = element_blank(),axis.text.x = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15,hjust = 1,angle = 45),axis.title = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),legend.title = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),legend.text = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15),strip.text = element_text(family = 'serif',colour = 'black',face = 'bold',size = 15))
+))
+
+
+print(plot$plot)
+    
+```
+
+# Save the plot for Four Way Interraction
+
+
+
+```{r}
+# Save the plot to path
+
+map2(paste(.x=plot$name,'.png'),.y=plot$plot,.f = ggsave,height=6,width=10,dpi=400,path=here::here('Plot/Ratoon/Four_Way_Interraction'))
+
+```
+
