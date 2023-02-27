@@ -19,7 +19,6 @@ Temp |>
   mutate(Year=year(Time)) |>
   unite(col = Month,c('Month','Year'),sep = '-') |>
   mutate(Month=factor(Month,levels = c('Oct-2020','Nov-2020','Dec-2020','Jan-2021','Feb-2021','Mar-2021'))) |>
-  drop_na() |>
 ggplot(aes(x = Month,y = `Celsius(°C)`,group=2))+
   stat_summary(geom = 'point',fun = mean,size=2,col='green',shape=19)+
   stat_summary(mapping = aes(x = Month,y = `Humidity(%rh)`,group=2),geom = 'point',fun = mean,size=2,col='red',shape=19)+
@@ -52,7 +51,6 @@ Temp |>
   rename(`Relative Humidity (%)`=`Humidity(%rh)`) |>
   rename('Dew Point (\u00B0C)'=`dew point(°C)`) |>
   pivot_longer(cols = c('Temperature (\u00B0C)',`Relative Humidity (%)`,'Dew Point (\u00B0C)')) |>
-  drop_na() |>
   ggplot(aes(x = Month,y = value,group=2,col=name))+
   stat_summary(geom = 'point',fun = mean,size=2.5,shape=19)+
   stat_summary(geom = 'line',fun = mean,size=1)+
@@ -64,7 +62,7 @@ Temp |>
   scale_color_brewer(palette = 'Dark2')
 
 
-# Save the Plot -----------------------------------------------
+# Save the Plot -----------------------------------------------------------
 
 
 ggsave('clim2.png',width = 11,height = 9,dpi = 270,bg = 'white',path = here::here('Plot'))
